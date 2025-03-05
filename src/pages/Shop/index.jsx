@@ -116,7 +116,7 @@ export default function Shop() {
         <div className="section">
           <div className="container">
             <div className="row">
-              <div className="col-lg-9">
+              <div className="col-lg-9 order-lg-1 order-2">
                 <div className="row align-items-center mb-4 pb-1">
                   <div className="col-12">
                     <div className="row align-items-center mb-4 pb-1">
@@ -164,49 +164,6 @@ export default function Shop() {
                         </div>
                       </div>
                     </div>
-                    {/* <div className="product_header">
-                      <div className="product_header_left">
-                        <div className="custom_select">
-                          <select className="form-control form-control-sm">
-                            <option value="order">Default sorting</option>
-                            <option value="popularity">
-                              Sort by popularity
-                            </option>
-                            <option value="date">Sort by newness</option>
-                            <option value="price">
-                              Sort by price: low to high
-                            </option>
-                            <option value="price-desc">
-                              Sort by price: high to low
-                            </option>
-                          </select>
-                        </div>
-                      </div>
-                      <div className="product_header_right">
-                        <div className="products_view">
-                          <a
-                            href="javascript:Void(0);"
-                            className="shorting_icon grid"
-                          >
-                            <i className="ti-view-grid"></i>
-                          </a>
-                          <a
-                            href="javascript:Void(0);"
-                            className="shorting_icon list active"
-                          >
-                            <i className="ti-layout-list-thumb"></i>
-                          </a>
-                        </div>
-                        <div className="custom_select">
-                          <select className="form-control form-control-sm">
-                            <option value="">Showing</option>
-                            <option value="9">9</option>
-                            <option value="12">12</option>
-                            <option value="18">18</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div> */}
                   </div>
                 </div>
                 <div
@@ -444,7 +401,7 @@ export default function Shop() {
                   </div>
                 </div> */}
               </div>
-              <div className="col-lg-3 mt-4 pt-2 mt-lg-0 pt-lg-0">
+              <div className="col-lg-3 mt-4 pt-2 mt-lg-0 pt-lg-0 order-lg-2 order-1">
                 <div className="sidebar">
                   <div className="widget">
                     <h5 className="widget_title">Categories</h5>
