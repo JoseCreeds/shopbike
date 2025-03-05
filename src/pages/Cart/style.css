@@ -1,0 +1,5 @@
+.disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+    /* Griser le bouton */
+}

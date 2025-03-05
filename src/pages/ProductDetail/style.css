@@ -1,0 +1,54 @@
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    /* Met les miniatures en ligne */
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-thumbnails img {
+    width: 80px;
+    /* Taille des miniatures */
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
+}
+
+.image-thumbnails img.active {
+    border-color: #007bff;
+    /* Bordure bleue pour l'image sélectionnée */
+    transform: scale(1.1);
+}
+
+.image-thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Ralated part */
+
+
+.slick-slide {
+    margin: 0 5px;
+    /* Ajoute de l'espace entre les slides */
+}
+
+.slick-list {
+    padding-bottom: 0px !important;
+    /* Supprime l'espace sous le slider */
+}

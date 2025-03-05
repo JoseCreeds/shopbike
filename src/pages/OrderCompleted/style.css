@@ -1,0 +1,33 @@
+/* Séparateur horizontal pour petits écrans (y compris le dernier élément) */
+.border-separator,
+.border-separator-last {
+    position: relative;
+}
+
+.border-separator::after,
+.border-separator-last::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+/* Séparateur vertical pour grands écrans, sauf le dernier élément */
+@media (min-width: 768px) {
+    .border-separator::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #ccc;
+    }
+
+    /* Supprimer le trait du dernier élément en ligne */
+    .border-separator-last::after {
+        content: none;
+    }
+}
