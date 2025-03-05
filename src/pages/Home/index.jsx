@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 import NewLetters from '@/components/NewLetters'
 import Banner from '@/components/Banner'
 import Products from '@/components/Products'
@@ -7,9 +9,19 @@ import BannerImage33 from '@/assets/images/BannerImage3.avif'
 import Loader from '@/utils/loader'
 
 function Home() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1000) // Arrêter après 1s
+
+    return () => clearTimeout(timer) // Nettoyage du timer
+  }, [])
   return (
     <>
-      {/* <Loader /> */}
+      <>{loading ? <Loader /> : <div></div>}</>
+
       <Banner />
 
       <div className="main_content">

@@ -73,7 +73,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
   }, [id])
 
   if (!product) {
-    return <p>Produit introuvable...</p>
+    return <p></p>
   }
 
   // product part end
