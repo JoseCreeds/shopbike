@@ -376,13 +376,13 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                           activeTab === 'description' ? 'active' : ''
                         }`}
                         onClick={() => setActiveTab('description')}
-                        id="Description-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#Description"
-                        type="button"
-                        role="tab"
-                        aria-controls="Description"
-                        aria-selected="true"
+                        // id="Description-tab"
+                        // data-bs-toggle="tab"
+                        // data-bs-target="#Description"
+                        // type="button"
+                        // role="tab"
+                        // aria-controls="Description"
+                        // aria-selected="true"
                       >
                         Description
                       </button>
@@ -405,13 +405,13 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                           activeTab === 'reviews' ? 'active' : ''
                         }`}
                         onClick={() => setActiveTab('reviews')}
-                        id="Reviews-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#Reviews"
-                        type="button"
-                        role="tab"
-                        aria-controls="Reviews"
-                        aria-selected="true"
+                        // id="Reviews-tab"
+                        // data-bs-toggle="tab"
+                        // data-bs-target="#Reviews"
+                        // type="button"
+                        // role="tab"
+                        // aria-controls="Reviews"
+                        // aria-selected="true"
                       >
                         Reviews
                       </button>
@@ -421,9 +421,9 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                     {activeTab === 'description' && (
                       <div
                         className="tab-pane fade show active"
-                        id="Description"
-                        role="tabpanel"
-                        aria-labelledby="Description-tab"
+                        // id="Description"
+                        // role="tabpanel"
+                        // aria-labelledby="Description-tab"
                       >
                         <p>{product.description}</p>
                         <p>{product.description1}</p>
@@ -433,9 +433,9 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                     {activeTab === 'reviews' && (
                       <div
                         className="tab-pane fade active"
-                        id="Reviews"
-                        role="tabpanel"
-                        aria-labelledby="Reviews-tab"
+                        // id="Reviews"
+                        // role="tabpanel"
+                        // aria-labelledby="Reviews-tab"
                       >
                         <div className="review_form field_form">
                           <h5>Add a review</h5>
