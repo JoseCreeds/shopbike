@@ -1128,7 +1128,12 @@ export default function Header() {
                       <button
                         className="btn-close d-block d-lg-none"
                         type="button"
-                        onClick={toggleMenu}
+                        onClick={() => {
+                          const menu =
+                            document.getElementById('navbarSidetoggle')
+                          menu.classList.remove('show') // Ferme le menu
+                          toggleMenu()
+                        }}
                         aria-label="Close"
                         style={{
                           width: '30px',
