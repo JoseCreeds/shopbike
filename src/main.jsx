@@ -9,25 +9,25 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Provider store={store}>
-      <LoadingProvider>
-        <App />
+  //<StrictMode>
+  <Provider store={store}>
+    <LoadingProvider>
+      <App />
 
-        {/* Ajout du ToastContainer pour afficher les notifications */}
-        <ToastContainer
-          position="top-right"
-          autoClose={3000} // Ferme après 3s
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light" // Tu peux mettre "dark" aussi
-        />
-      </LoadingProvider>
-    </Provider>
-  </StrictMode>
+      {/* Ajout du ToastContainer pour afficher les notifications */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000} // Ferme après 3s
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light" // Tu peux mettre "dark" aussi
+      />
+    </LoadingProvider>
+  </Provider>
+  //</StrictMode>
 )
