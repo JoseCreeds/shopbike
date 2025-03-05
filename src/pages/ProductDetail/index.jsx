@@ -432,7 +432,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
 
                     {activeTab === 'reviews' && (
                       <div
-                        className="tab-pane fade"
+                        className="tab-pane fade active"
                         id="Reviews"
                         role="tabpanel"
                         aria-labelledby="Reviews-tab"

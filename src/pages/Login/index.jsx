@@ -83,7 +83,7 @@ export default function Login() {
                       </div>
                       <div className="form-group mb-3">
                         <button
-                          type="submit"
+                          // type="submit"
                           className="btn btn-fill-out btn-block"
                           name="login"
                         >

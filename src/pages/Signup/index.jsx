@@ -103,7 +103,7 @@ export default function Signup() {
                       </div>
                       <div className="form-group mb-3">
                         <button
-                          type="submit"
+                          // type="submit"
                           className="btn btn-fill-out btn-block"
                           name="register"
                         >
@@ -111,21 +111,7 @@ export default function Signup() {
                         </button>
                       </div>
                     </form>
-                    {/* <div className="different_login">
-                      <span> or</span>
-                    </div>
-                    <ul className="btn-login list_none text-center">
-                      <li>
-                        <a href="#" className="btn btn-facebook">
-                          <i className="ion-social-facebook"></i>Facebook
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="btn btn-google">
-                          <i className="ion-social-googleplus"></i>Google
-                        </a>
-                      </li>
-                    </ul> */}
+
                     <div className="form-note text-center">
                       Vous avez déjà un compte ?{' '}
                       <a href="login">Se connecter</a>
