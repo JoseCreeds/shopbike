@@ -135,7 +135,6 @@ export default function Cart() {
                                   name="quantity"
                                   value={item.quantity}
                                   className="qty"
-                                  size="4"
                                   readOnly
                                 />
                                 <input

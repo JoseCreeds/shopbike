@@ -219,7 +219,7 @@ export default function Pc() {
                     <strong>Adresse :</strong> [adresse de l&apos;entreprise]
                   </p>
 
-                  <span>Dernière mise à jour : [Date]</span>
+                  <span>Dernière mise à jour : 05/01/2024</span>
                 </div>
               </div>
             </div>

@@ -27,7 +27,7 @@ export default function Products() {
           <div className="row">
             <div className="col-md-12">
               <div
-                className="product_slider product_list carousel_slider owl-carousel owl-theme nav_style3"
+                className="product_slider product_list "
                 data-loop="false"
                 data-dots="false"
                 data-nav="true"
@@ -105,7 +105,7 @@ export default function Products() {
                 ))}
               </div>
               <div
-                className="product_slider product_list carousel_slider owl-carousel owl-theme nav_style3"
+                className="product_slider product_list "
                 data-loop="false"
                 data-dots="true"
                 data-nav="false"

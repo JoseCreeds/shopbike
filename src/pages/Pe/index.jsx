@@ -183,7 +183,7 @@ export default function Pe() {
                     la modification avant que votre commande ne soit expédiée.
                   </p>
 
-                  <span>Dernière mise à jour : [Date]</span>
+                  <span>Dernière mise à jour : 05/01/2024</span>
                 </div>
               </div>
             </div>

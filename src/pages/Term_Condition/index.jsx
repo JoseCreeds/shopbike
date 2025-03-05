@@ -227,6 +227,8 @@ export default function TermCondition() {
                     nous estimons que vous avez violé cette politique
                     d&apos;utilisation.
                   </p>
+
+                  <span>Dernière mise à jour : 05/01/2024</span>
                 </div>
               </div>
             </div>

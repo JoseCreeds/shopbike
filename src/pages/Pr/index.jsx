@@ -152,7 +152,7 @@ export default function Pr() {
                     l&apos;adresse suivante : [VotreEmail@exemple.com].
                   </p>
 
-                  <span>Dernière mise à jour : [Date]</span>
+                  <span>Dernière mise à jour : 05/01/2024</span>
                 </div>
               </div>
             </div>
