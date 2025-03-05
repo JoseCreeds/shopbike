@@ -15,10 +15,10 @@ export default function Account() {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#!">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Pages</a>
+                  <a href="#!">Pages</a>
                 </li>
                 <li className="breadcrumb-item active">My Account</li>
               </ol>
@@ -166,7 +166,7 @@ export default function Account() {
                                 <td>$78.00 for 1 item</td>
                                 <td>
                                   <a
-                                    href="#"
+                                    href="#!"
                                     className="btn btn-fill-out btn-sm"
                                   >
                                     View
@@ -180,7 +180,7 @@ export default function Account() {
                                 <td>$81.00 for 1 item</td>
                                 <td>
                                   <a
-                                    href="#"
+                                    href="#!"
                                     className="btn btn-fill-out btn-sm"
                                   >
                                     View
@@ -216,7 +216,7 @@ export default function Account() {
                               1212
                             </address>
                             <p>New York</p>
-                            <a href="#" className="btn btn-fill-out">
+                            <a href="#!" className="btn btn-fill-out">
                               Edit
                             </a>
                           </div>
@@ -239,7 +239,7 @@ export default function Account() {
                               1212
                             </address>
                             <p>New York</p>
-                            <a href="#" className="btn btn-fill-out">
+                            <a href="#!" className="btn btn-fill-out">
                               Edit
                             </a>
                           </div>
@@ -260,7 +260,7 @@ export default function Account() {
                       <div className="card-body">
                         <p>
                           Already have an account?{' '}
-                          <a href="#">Log in instead!</a>
+                          <a href="#!">Log in instead!</a>
                         </p>
                         <form method="post" name="enq">
                           <div className="row">

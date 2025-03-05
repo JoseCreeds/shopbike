@@ -40,17 +40,17 @@ export default function Header() {
                     <span className="me-3">Télécharger App</span>
                     <ul className="icon_list text-center text-lg-start">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="fab fa-apple"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="fab fa-android"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="fab fa-windows"></i>
                         </a>
                       </li>
@@ -142,7 +142,7 @@ export default function Header() {
               <ul className="navbar-nav attr-nav align-items-center">
                 <li>
                   <a
-                    href="#"
+                    href="#!"
                     className="nav-link"
                     onClick={(e) => {
                       e.preventDefault()
@@ -153,7 +153,7 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="nav-link">
+                  <a href="#!" className="nav-link">
                     <i className="linearicons-heart"></i>
                     <span className="wishlist_count">0</span>
                   </a>
@@ -161,7 +161,7 @@ export default function Header() {
                 <li className="dropdown cart_dropdown">
                   <a
                     className="nav-link cart_trigger"
-                    href="#"
+                    href="#!"
                     data-bs-toggle="dropdown"
                     onClick={(e) => {
                       e.preventDefault()
@@ -181,10 +181,10 @@ export default function Header() {
                     ) : (
                       // <ul className="cart_list">
                       //   <li>
-                      //     <a href="#" className="item_remove">
+                      //     <a href="#!" className="item_remove">
                       //       <i className="ion-close"></i>
                       //     </a>
-                      //     <a href="#">
+                      //     <a href="#!">
                       //       <img
                       //         src="assets/images/cart_thamb1.jpg"
                       //         alt="cart_thumb1"
@@ -202,10 +202,10 @@ export default function Header() {
                       //     </span>
                       //   </li>
                       //   <li>
-                      //     <a href="#" className="item_remove">
+                      //     <a href="#!" className="item_remove">
                       //       <i className="ion-close"></i>
                       //     </a>
-                      //     <a href="#">
+                      //     <a href="#!">
                       //       <img
                       //         src="assets/images/cart_thamb2.jpg"
                       //         alt="cart_thumb2"
@@ -229,7 +229,7 @@ export default function Header() {
                           {cartItems.map((item) => (
                             <li key={item.id}>
                               <a
-                                href="#"
+                                href="#!"
                                 className="item_remove"
                                 onClick={() =>
                                   dispatch(removeFromCart(item.id))
@@ -237,7 +237,7 @@ export default function Header() {
                               >
                                 <i className="ion-close"></i>
                               </a>
-                              <a href="#">
+                              <a href="#!">
                                 <img src={item.picture} alt={item.libelle} />
                                 {item.libelle}
                               </a>
@@ -262,7 +262,7 @@ export default function Header() {
                           </p>
                           <p className="cart_buttons">
                             <a
-                              href="#"
+                              href="#!"
                               className="btn btn-fill-line view-cart"
                               onClick={(e) => {
                                 e.preventDefault()
@@ -272,7 +272,7 @@ export default function Header() {
                               Panier
                             </a>
                             <a
-                              href="#"
+                              href="#!"
                               className="btn btn-fill-out checkout"
                               onClick={(e) => {
                                 e.preventDefault()
@@ -332,7 +332,7 @@ export default function Header() {
                       {/* <li className="dropdown dropdown-mega-menu">
                         <a
                           className="dropdown-item nav-link dropdown-toggler"
-                          href="#"
+                          href="#!"
                           data-bs-toggle="dropdown"
                         >
                           <i className="flaticon-tv"></i> <span>Computer</span>
@@ -349,7 +349,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Vestibulum sed
                                       </a>
@@ -357,7 +357,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec porttitor
                                       </a>
@@ -365,7 +365,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae facilisis
                                       </a>
@@ -373,7 +373,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Curabitur tempus
                                       </a>
@@ -381,7 +381,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Vivamus in tortor
                                       </a>
@@ -389,7 +389,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae ante ante
                                       </a>
@@ -397,7 +397,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Etiam ac rutrum
                                       </a>
@@ -405,7 +405,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Quisque condimentum
                                       </a>
@@ -420,7 +420,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Curabitur laoreet
                                       </a>
@@ -428,7 +428,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Vivamus in tortor
                                       </a>
@@ -436,7 +436,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae facilisis
                                       </a>
@@ -444,7 +444,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Quisque condimentum
                                       </a>
@@ -452,7 +452,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Etiam ac rutrum
                                       </a>
@@ -460,7 +460,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae ante ante
                                       </a>
@@ -468,7 +468,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec porttitor
                                       </a>
@@ -476,7 +476,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Curabitur tempus
                                       </a>
@@ -495,7 +495,7 @@ export default function Header() {
                                 <div className="banne_info">
                                   <h6>10% Off</h6>
                                   <h4>Computers</h4>
-                                  <a href="#">Shop now</a>
+                                  <a href="#!">Shop now</a>
                                 </div>
                               </div>
                               <div className="header-banner2">
@@ -507,7 +507,7 @@ export default function Header() {
                                 <div className="banne_info">
                                   <h6>15% Off</h6>
                                   <h4>Top Laptops</h4>
-                                  <a href="#">Shop now</a>
+                                  <a href="#!">Shop now</a>
                                 </div>
                               </div>
                             </li>
@@ -517,7 +517,7 @@ export default function Header() {
                       <li className="dropdown dropdown-mega-menu">
                         <a
                           className="dropdown-item nav-link dropdown-toggler"
-                          href="#"
+                          href="#!"
                           data-bs-toggle="dropdown"
                         >
                           <i className="flaticon-responsive"></i>{' '}
@@ -535,7 +535,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Vestibulum sed
                                       </a>
@@ -543,7 +543,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec porttitor
                                       </a>
@@ -551,7 +551,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae facilisis
                                       </a>
@@ -559,7 +559,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Curabitur tempus
                                       </a>
@@ -567,7 +567,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Vivamus in tortor
                                       </a>
@@ -575,7 +575,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae ante ante
                                       </a>
@@ -583,7 +583,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Etiam ac rutrum
                                       </a>
@@ -598,7 +598,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Curabitur laoreet
                                       </a>
@@ -606,7 +606,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Vivamus in tortor
                                       </a>
@@ -614,7 +614,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae facilisis
                                       </a>
@@ -622,7 +622,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Quisque condimentum
                                       </a>
@@ -630,7 +630,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Etiam ac rutrum
                                       </a>
@@ -638,7 +638,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae ante ante
                                       </a>
@@ -646,7 +646,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec porttitor
                                       </a>
@@ -657,7 +657,7 @@ export default function Header() {
                             </li>
                             <li className="mega-menu-col col-lg-5">
                               <div className="header-banner2">
-                                <a href="#"><img src="assets/images/menu_banner6.jpg" alt="menu_banner" /></a>
+                                <a href="#!"><img src="assets/images/menu_banner6.jpg" alt="menu_banner" /></a>
                                  
                               </div>
                             </li>
@@ -667,7 +667,7 @@ export default function Header() {
                       <li className="dropdown dropdown-mega-menu">
                         <a
                           className="dropdown-item nav-link dropdown-toggler"
-                          href="#"
+                          href="#!"
                           data-bs-toggle="dropdown"
                         >
                           <i className="flaticon-camera"></i>{' '}
@@ -685,7 +685,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Vestibulum sed
                                       </a>
@@ -693,7 +693,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec porttitor
                                       </a>
@@ -701,7 +701,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae facilisis
                                       </a>
@@ -709,7 +709,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Curabitur tempus
                                       </a>
@@ -717,7 +717,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Vivamus in tortor
                                       </a>
@@ -725,7 +725,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae ante ante
                                       </a>
@@ -733,7 +733,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Etiam ac rutrum
                                       </a>
@@ -748,7 +748,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Curabitur laoreet
                                       </a>
@@ -756,7 +756,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Vivamus in tortor
                                       </a>
@@ -764,7 +764,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae facilisis
                                       </a>
@@ -772,7 +772,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Quisque condimentum
                                       </a>
@@ -780,7 +780,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Etiam ac rutrum
                                       </a>
@@ -788,7 +788,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec vitae ante ante
                                       </a>
@@ -796,7 +796,7 @@ export default function Header() {
                                     <li>
                                       <a
                                         className="dropdown-item nav-link nav_item"
-                                        href="#"
+                                        href="#!"
                                       >
                                         Donec porttitor
                                       </a>
@@ -807,7 +807,7 @@ export default function Header() {
                             </li>
                             <li className="mega-menu-col col-lg-5">
                               <div className="header-banner2">
-                                <a href="#"><img src="assets/images/menu_banner9.jpg" alt="menu_banner"/></a>
+                                <a href="#!"><img src="assets/images/menu_banner9.jpg" alt="menu_banner"/></a>
                                  
                               </div>
                             </li>
@@ -817,7 +817,7 @@ export default function Header() {
                       <li className="dropdown dropdown-mega-menu">
                         <a
                           className="dropdown-item nav-link dropdown-toggler"
-                          href="#"
+                          href="#!"
                           data-bs-toggle="dropdown"
                         >
                           <i className="flaticon-plugins"></i>{' '}
@@ -1153,7 +1153,7 @@ export default function Header() {
                       {/* <li className="dropdown">
                         <a
                           className="dropdown-toggle nav-link"
-                          href="#"
+                          href="#!"
                           data-bs-toggle="dropdown"
                         >
                           Pages
@@ -1222,7 +1222,7 @@ export default function Header() {
                       {/* <li className="dropdown dropdown-mega-menu">
                         <a
                           className="dropdown-toggle nav-link"
-                          href="#"
+                          href="#!"
                           data-bs-toggle="dropdown"
                         >
                           Products
@@ -1414,7 +1414,7 @@ export default function Header() {
                             <div className="col-lg-6">
                               <div className="header-banner">
                                 <div className="sale-banner">
-                                  <a className="hover_effect1" href="#">
+                                  <a className="hover_effect1" href="#!">
                                     <img
                                       src="assets/images/shop_banner_img7.jpg"
                                       alt="shop_banner_img7"
@@ -1427,7 +1427,7 @@ export default function Header() {
                             <div className="col-lg-6">
                               <div className="header-banner">
                                 <div className="sale-banner">
-                                  <a className="hover_effect1" href="#">
+                                  <a className="hover_effect1" href="#!">
                                     <img
                                       src="assets/images/shop_banner_img8.jpg"
                                       alt="shop_banner_img8"
@@ -1442,7 +1442,7 @@ export default function Header() {
                       {/* <li className="dropdown">
                         <a
                           className="dropdown-toggle nav-link"
-                          href="#"
+                          href="#!"
                           data-bs-toggle="dropdown"
                         >
                           Blog
@@ -1452,7 +1452,7 @@ export default function Header() {
                             <li>
                               <a
                                 className="dropdown-item menu-link dropdown-toggler"
-                                href="#"
+                                href="#!"
                               >
                                 Grids
                               </a>
@@ -1512,7 +1512,7 @@ export default function Header() {
                             <li>
                               <a
                                 className="dropdown-item menu-link dropdown-toggler"
-                                href="#"
+                                href="#!"
                               >
                                 Masonry
                               </a>
@@ -1556,7 +1556,7 @@ export default function Header() {
                             <li>
                               <a
                                 className="dropdown-item menu-link dropdown-toggler"
-                                href="#"
+                                href="#!"
                               >
                                 Single Post
                               </a>
@@ -1608,7 +1608,7 @@ export default function Header() {
                             <li>
                               <a
                                 className="dropdown-item menu-link dropdown-toggler"
-                                href="#"
+                                href="#!"
                               >
                                 List
                               </a>
@@ -1639,7 +1639,7 @@ export default function Header() {
                       <li className="dropdown ">
                         <a
                           className="nav-link"
-                          href="#"
+                          href="#!"
                           onClick={(e) => {
                             e.preventDefault()
                             window.location.href = `/shop`
@@ -1821,7 +1821,7 @@ export default function Header() {
                                         Sale 30% Off
                                       </h5>
                                       <a
-                                        href="#"
+                                        href="#!"
                                         className="btn btn-white rounded-0 btn-xs text-uppercase"
                                       >
                                         Shop Now

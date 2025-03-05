@@ -37,17 +37,17 @@ export default function Header() {
                     <span className="me-3">Télécharger App</span>
                     <ul className="icon_list text-center text-lg-start">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="fab fa-apple"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="fab fa-android"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="fab fa-windows"></i>
                         </a>
                       </li>
@@ -101,7 +101,7 @@ export default function Header() {
               <ul className="navbar-nav attr-nav align-items-center">
                 <li>
                   <a
-                    href="#"
+                    href="#!"
                     className="nav-link"
                     onClick={(e) => {
                       e.preventDefault()
@@ -112,7 +112,7 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="nav-link">
+                  <a href="#!" className="nav-link">
                     <i className="linearicons-heart"></i>
                     <span className="wishlist_count">0</span>
                   </a>
@@ -120,7 +120,7 @@ export default function Header() {
                 <li className="dropdown cart_dropdown">
                   <a
                     className="nav-link cart_trigger"
-                    href="#"
+                    href="#!"
                     data-bs-toggle="dropdown"
                     onClick={(e) => {
                       e.preventDefault()
@@ -140,10 +140,10 @@ export default function Header() {
                     ) : (
                       // <ul className="cart_list">
                       //   <li>
-                      //     <a href="#" className="item_remove">
+                      //     <a href="#!" className="item_remove">
                       //       <i className="ion-close"></i>
                       //     </a>
-                      //     <a href="#">
+                      //     <a href="#!">
                       //       <img
                       //         src="assets/images/cart_thamb1.jpg"
                       //         alt="cart_thumb1"
@@ -161,10 +161,10 @@ export default function Header() {
                       //     </span>
                       //   </li>
                       //   <li>
-                      //     <a href="#" className="item_remove">
+                      //     <a href="#!" className="item_remove">
                       //       <i className="ion-close"></i>
                       //     </a>
-                      //     <a href="#">
+                      //     <a href="#!">
                       //       <img
                       //         src="assets/images/cart_thamb2.jpg"
                       //         alt="cart_thumb2"
@@ -188,7 +188,7 @@ export default function Header() {
                           {cartItems.map((item) => (
                             <li key={item.id}>
                               <a
-                                href="#"
+                                href="#!"
                                 className="item_remove"
                                 onClick={() =>
                                   dispatch(removeFromCart(item.id))
@@ -196,7 +196,7 @@ export default function Header() {
                               >
                                 <i className="ion-close"></i>
                               </a>
-                              <a href="#">
+                              <a href="#!">
                                 <img src={item.picture} alt={item.libelle} />
                                 {item.libelle}
                               </a>
@@ -221,7 +221,7 @@ export default function Header() {
                           </p>
                           <p className="cart_buttons">
                             <a
-                              href="#"
+                              href="#!"
                               className="btn btn-fill-line view-cart"
                               onClick={(e) => {
                                 e.preventDefault()
@@ -231,7 +231,7 @@ export default function Header() {
                               Panier
                             </a>
                             <a
-                              href="#"
+                              href="#!"
                               className="btn btn-fill-out checkout"
                               onClick={(e) => {
                                 e.preventDefault()
@@ -313,7 +313,7 @@ export default function Header() {
                   </button>
                   <div className="pr_search_icon">
                     <a
-                      href="#"
+                      href="#!"
                       className="nav-link pr_search_trigger"
                       onClick={(e) => e.preventDefault()}
                     >
@@ -338,7 +338,7 @@ export default function Header() {
                       <li className="dropdown ">
                         <a
                           className="nav-link"
-                          href="#"
+                          href="#!"
                           onClick={(e) => {
                             e.preventDefault()
                             window.location.href = `/shop`
@@ -380,7 +380,7 @@ export default function Header() {
 
                   <div className="pr_search_icon">
                     <a
-                      href="#"
+                      href="#!"
                       className="nav-link pr_search_trigger"
                       onClick={(e) => e.preventDefault()}
                     >
@@ -428,7 +428,7 @@ export default function Header() {
                       <li className="dropdown ">
                         <a
                           className="nav-link"
-                          href="#"
+                          href="#!"
                           onClick={(e) => {
                             e.preventDefault()
                             window.location.href = `/shop`

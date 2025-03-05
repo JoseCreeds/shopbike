@@ -21,10 +21,10 @@ export default function Contact() {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#!">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Pages</a>
+                  <a href="#!">Pages</a>
                 </li>
                 <li className="breadcrumb-item active">Contact</li>
               </ol>
@@ -45,7 +45,7 @@ export default function Contact() {
           style={{
             textAlign: 'center',
             marginTop: '15px',
-            marginBottom: '-40px',
+            marginBottom: '-10px',
           }}
         >
           Ou avez-vous des suggestions, des éloges ou des critiques ? Alors

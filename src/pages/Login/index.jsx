@@ -19,10 +19,10 @@ export default function Login() {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#!">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Pages</a>
+                  <a href="#!">Pages</a>
                 </li>
                 <li className="breadcrumb-item active">Login</li>
               </ol>
@@ -79,7 +79,7 @@ export default function Login() {
                             </label>
                           </div>
                         </div>
-                        <a href="#">Mot de passe oublié ?</a>
+                        <a href="#!">Mot de passe oublié ?</a>
                       </div>
                       <div className="form-group mb-3">
                         <button
@@ -96,12 +96,12 @@ export default function Login() {
                     </div>
                     <ul className="btn-login list_none text-center">
                       <li>
-                        <a href="#" className="btn btn-facebook">
+                        <a href="#!" className="btn btn-facebook">
                           <i className="ion-social-facebook"></i>Facebook
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="btn btn-google">
+                        <a href="#!" className="btn btn-google">
                           <i className="ion-social-googleplus"></i>Google
                         </a>
                       </li>

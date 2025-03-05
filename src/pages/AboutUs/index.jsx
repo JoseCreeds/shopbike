@@ -24,10 +24,10 @@ export default function AboutUs() {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#!">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Pages</a>
+                  <a href="#!">Pages</a>
                 </li>
                 <li className="breadcrumb-item active">A propos</li>
               </ol>
@@ -254,22 +254,22 @@ export default function AboutUs() {
                     <img src={Team1} alt="team_img1" />
                     <ul className="social_icons social_style1">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-facebook"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-twitter"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-googleplus"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-instagram-outline"></i>
                         </a>
                       </li>
@@ -289,22 +289,22 @@ export default function AboutUs() {
                     <img src={Team2} alt="team_img2" />
                     <ul className="social_icons social_style4">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-facebook"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-twitter"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-googleplus"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-instagram-outline"></i>
                         </a>
                       </li>
@@ -324,22 +324,22 @@ export default function AboutUs() {
                     <img src={Team3} alt="team_img3" />
                     <ul className="social_icons social_style4">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-facebook"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-twitter"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-googleplus"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-instagram-outline"></i>
                         </a>
                       </li>
@@ -359,22 +359,22 @@ export default function AboutUs() {
                     <img src={Team4} alt="team_img4" />
                     <ul className="social_icons social_style4">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-facebook"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-twitter"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-googleplus"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-instagram-outline"></i>
                         </a>
                       </li>

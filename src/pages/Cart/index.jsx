@@ -28,10 +28,10 @@ export default function Cart() {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#!">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Pages</a>
+                  <a href="#!">Pages</a>
                 </li>
                 <li className="breadcrumb-item active">Panier</li>
               </ol>
@@ -72,12 +72,12 @@ export default function Cart() {
                         cartItems.map((item) => (
                           <tr key={item.id}>
                             <td className="product-thumbnail">
-                              <a href="#">
+                              <a href="#!">
                                 <img src={item.picture} alt={item.libelle} />
                               </a>
                             </td>
                             <td className="product-name" data-title="Product">
-                              <a href="#">{item.libelle}</a>
+                              <a href="#!">{item.libelle}</a>
                             </td>
                             <td className="product-price" data-title="Price">
                               €{item.price.toFixed(2)}
@@ -129,7 +129,7 @@ export default function Cart() {
                             </td>
                             <td className="product-remove" data-title="Remove">
                               <a
-                                href="#"
+                                href="#!"
                                 onClick={() =>
                                   dispatch(removeFromCart(item.id))
                                 }

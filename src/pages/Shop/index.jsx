@@ -96,10 +96,10 @@ export default function Shop() {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#!">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Pages</a>
+                  <a href="#!">Pages</a>
                 </li>
                 <li className="breadcrumb-item active">Magasin</li>
               </ol>
@@ -180,14 +180,14 @@ export default function Shop() {
                       <div className="product">
                         <Zoom>
                           <div className="product_img">
-                            <a href="#">
+                            <a href="#!">
                               <img src={product.picture} alt="product_img1" />
                             </a>
                             <div className="product_action_box">
                               <ul className="list_none pr_action_btn">
                                 <li className="add-to-cart">
                                   <a
-                                    href="#"
+                                    href="#!"
                                     onClick={(e) => {
                                       e.preventDefault()
                                       dispatch(addToCart(product))
@@ -197,18 +197,29 @@ export default function Shop() {
                                     To Cart
                                   </a>
                                 </li>
-                                <li>
-                                  <a href="#" className="popup-ajax">
+                                {/* <li>
+                                  <a href="#!" className="popup-ajax">
                                     <i className="icon-shuffle"></i>
                                   </a>
-                                </li>
+                                </li> */}
                                 <li>
-                                  <a href="#" className="popup-ajax">
-                                    <i className="icon-magnifier-add"></i>
+                                  <a
+                                    href="#!"
+                                    onClick={(e) => {
+                                      e.preventDefault()
+                                      const formattedLibelle =
+                                        product.libelle.replace(/\s+/g, '-')
+                                      navigate(
+                                        `/product/${product.id}/${formattedLibelle}`
+                                      )
+                                    }}
+                                    className="popup-ajax"
+                                  >
+                                    <i className="icon-eye"></i>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="#!">
                                     <i className="icon-heart"></i>
                                   </a>
                                 </li>
@@ -219,7 +230,7 @@ export default function Shop() {
                         <div className="product_info">
                           <h6 className="product_title">
                             <a
-                              href="#"
+                              href="#!"
                               onClick={(e) => {
                                 e.preventDefault()
                                 const formattedLibelle =
@@ -274,7 +285,7 @@ export default function Shop() {
                             <ul className="list_none pr_action_btn">
                               <li className="add-to-cart">
                                 <a
-                                  href="#"
+                                  href="#!"
                                   onClick={(e) => {
                                     e.preventDefault()
                                     dispatch(addToCart(product))
@@ -283,14 +294,14 @@ export default function Shop() {
                                   <i className="icon-basket-loaded"></i> Ajouter
                                 </a>
                               </li>
-                              <li>
-                                <a href="#" className="popup-ajax">
+                              {/* <li>
+                                <a href="#!" className="popup-ajax">
                                   <i className="icon-shuffle"></i>
                                 </a>
-                              </li>
+                              </li> */}
                               <li>
                                 <a
-                                  href="#"
+                                  href="#!"
                                   onClick={(e) => {
                                     e.preventDefault()
                                     const formattedLibelle =
@@ -300,11 +311,11 @@ export default function Shop() {
                                     )
                                   }}
                                 >
-                                  <i className="icon-magnifier-add"></i>
+                                  <i className="icon-eye"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="#">
+                                <a href="#!">
                                   <i className="icon-heart"></i>
                                 </a>
                               </li>
@@ -327,7 +338,7 @@ export default function Shop() {
                         }`}
                         onClick={prevPage}
                       >
-                        <a className="page-link" href="#">
+                        <a className="page-link" href="#!">
                           <i className="linearicons-arrow-left"></i>
                         </a>
                       </li>
@@ -341,7 +352,7 @@ export default function Shop() {
                           }`}
                           onClick={() => paginate(number)}
                         >
-                          <a className="page-link" href="#">
+                          <a className="page-link" href="#!">
                             {number}
                           </a>
                         </li>
@@ -355,7 +366,7 @@ export default function Shop() {
                           }`}
                           onClick={() => paginate(index + 1)}
                         >
-                          <a className="page-link" href="#">
+                          <a className="page-link" href="#!">
                             {index + 1}
                           </a>
                         </li>
@@ -367,7 +378,7 @@ export default function Shop() {
                         }`}
                         onClick={nextPage}
                       >
-                        <a className="page-link" href="#">
+                        <a className="page-link" href="#!">
                           <i className="linearicons-arrow-right"></i>
                         </a>
                       </li>
@@ -378,22 +389,22 @@ export default function Shop() {
                   <div className="col-12">
                     <ul className="pagination mt-3 justify-content-center pagination_style1">
                       <li className="page-item active">
-                        <a className="page-link" href="#">
+                        <a className="page-link" href="#!">
                           1
                         </a>
                       </li>
                       <li className="page-item">
-                        <a className="page-link" href="#">
+                        <a className="page-link" href="#!">
                           2
                         </a>
                       </li>
                       <li className="page-item">
-                        <a className="page-link" href="#">
+                        <a className="page-link" href="#!">
                           3
                         </a>
                       </li>
                       <li className="page-item">
-                        <a className="page-link" href="#">
+                        <a className="page-link" href="#!">
                           <i className="linearicons-arrow-right"></i>
                         </a>
                       </li>
@@ -407,7 +418,7 @@ export default function Shop() {
                     <h5 className="widget_title">Categories</h5>
                     <ul className="widget_categories">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <span className="categories_name">E-BIKE</span>
                           {/* <span className="categories_num">
                             ({productsList.length})
@@ -415,19 +426,19 @@ export default function Shop() {
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <span className="categories_name">TROTTINETTE</span>
                           {/* <span className="categories_num">(3)</span> */}
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <span className="categories_name">RENNRAD TEILE</span>
                           {/* <span className="categories_num">(5)</span> */}
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <span className="categories_name">OUTDOOR</span>
                           {/* <span className="categories_num">(3)</span> */}
                         </a>
@@ -494,7 +505,7 @@ export default function Shop() {
                           Jusqu&apos;à 30% de réduction
                         </h3>
                         <a
-                          href="#"
+                          href="#!"
                           className="btn btn-white rounded-0 btn-sm text-uppercase"
                         >
                           Commander
@@ -520,7 +531,7 @@ export default function Shop() {
                           Jusqu&apos;à 50% de réduction
                         </h5>
                         <a
-                          href="#"
+                          href="#!"
                           className="btn btn-white rounded-0 btn-sm text-uppercase"
                         >
                           Commander

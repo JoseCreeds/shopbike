@@ -20,7 +20,8 @@ function Home() {
   }, [])
   return (
     <>
-      <>{loading ? <Loader /> : <div></div>}</>
+      {/* <>{loading ? <Loader /> : <div></div>}</> */}
+      <Loader />
 
       <Banner />
 
@@ -34,7 +35,7 @@ function Home() {
             <div className="row">
               <div className="col-12">
                 <div className="sale-banner mb-3 mb-md-4">
-                  <a className="hover_effect1" href="#">
+                  <a className="hover_effect1" href="#!">
                     <img src={BannerImage33} alt="shop_banner_img11" />
                   </a>
                 </div>

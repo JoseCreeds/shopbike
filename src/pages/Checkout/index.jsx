@@ -124,10 +124,10 @@ export default function Checkout() {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#!">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Pages</a>
+                  <a href="#!">Pages</a>
                 </li>
                 <li className="breadcrumb-item active">Checkout</li>
               </ol>
@@ -214,7 +214,7 @@ export default function Checkout() {
                               </label>
                             </div>
                           </div>
-                          <a href="#">Mot de passe oublié ?</a>
+                          <a href="#!">Mot de passe oublié ?</a>
                         </div>
                         <div className="form-group mb-3">
                           <button
@@ -236,7 +236,7 @@ export default function Checkout() {
                     <i className="fas fa-tag"></i>Avez-vous un bon d&apos;achat
                     ?{' '}
                     <a
-                      href="#"
+                      href="#!"
                       data-bs-toggle="collapse"
                       className={isCouponOpen ? '' : 'collapsed'}
                       aria-expanded="false"

@@ -37,19 +37,19 @@ export default function Products() {
               <div key={product.id} className="col-lg-3 col-md-4 col-6">
                 <div className="product_box text-center">
                   <div className="product_img">
-                    <a href="#">
+                    <a href="#!">
                       <img src={product.picture} alt="furniture_img8" />
                     </a>
                     <div className="product_action_box">
                       <ul className="list_none pr_action_btn">
                         <li>
-                          <a href="#" className="popup-ajax">
+                          <a href="#!" className="popup-ajax">
                             <i className="icon-shuffle"></i>
                           </a>
                         </li>
                         <li>
                           <a
-                            href="#"
+                            href="#!"
                             className="popup-ajax"
                             onClick={(e) => {
                               e.preventDefault()
@@ -62,11 +62,11 @@ export default function Products() {
                               )
                             }}
                           >
-                            <i className="icon-magnifier-add"></i>
+                            <i className="icon-eye"></i>
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <a href="#!">
                             <i className="icon-heart"></i>
                           </a>
                         </li>
@@ -75,7 +75,7 @@ export default function Products() {
                   </div>
                   <div className="product_info">
                     <h6 className="product_title">
-                      <a href="#">{product.libelle}</a>
+                      <a href="#!">{product.libelle}</a>
                     </h6>
                     <div className="product_price">
                       <span className="price">€ {product.price}</span>
@@ -105,7 +105,7 @@ export default function Products() {
                     </div>
                     <div className="add-to-cart">
                       <a
-                        href="#"
+                        href="#!"
                         onClick={(e) => {
                           e.preventDefault()
                           dispatch(addToCart(product))

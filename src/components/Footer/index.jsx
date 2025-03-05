@@ -91,7 +91,7 @@ function Footer() {
                 <ul className="widget_links">
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/about-us`
@@ -102,7 +102,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/faq`
@@ -113,7 +113,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/contact-us`
@@ -124,7 +124,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/contact-us`
@@ -135,7 +135,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/contact-us`
@@ -143,7 +143,7 @@ function Footer() {
                     >
                       Contact
                     </a>
-                    {/* <a href="#">Contact Us</a> */}
+                    {/* <a href="#!">Contact Us</a> */}
                   </li>
                 </ul>
               </div>
@@ -155,11 +155,11 @@ function Footer() {
                 </h6>
                 <ul className="widget_links">
                   {/* <li>
-                    <a href="#">My Account</a>
+                    <a href="#!">My Account</a>
                   </li> */}
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/pc`
@@ -170,7 +170,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/pr`
@@ -181,7 +181,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/pe`
@@ -192,7 +192,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/ugc`
@@ -203,7 +203,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/pp`
@@ -214,7 +214,7 @@ function Footer() {
                   </li>
                   {/* <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/ugc`
@@ -225,7 +225,7 @@ function Footer() {
                   </li> */}
                   {/* <li>
                     <a
-                      href="#"
+                      href="#!"
                       onClick={(e) => {
                         e.preventDefault()
                         window.location.href = `/contact-us`
@@ -235,10 +235,10 @@ function Footer() {
                     </a>
                   </li> */}
                   {/* <li>
-                    <a href="#">Orders History</a>
+                    <a href="#!">Orders History</a>
                   </li>
                   <li>
-                    <a href="#">Order Tracking</a>
+                    <a href="#!">Order Tracking</a>
                   </li> */}
                 </ul>
               </div>
@@ -258,27 +258,27 @@ function Footer() {
             <div className="col-lg-6">
               <ul className="footer_payment text-center text-md-end">
                 <li>
-                  <a href="#">
+                  <a href="#!">
                     <img src={Visa} alt="visa" />
                   </a>
                 </li>{' '}
                 <li>
-                  <a href="#">
+                  <a href="#!">
                     <img src={Discover} alt="discover" />
                   </a>
                 </li>{' '}
                 <li>
-                  <a href="#">
+                  <a href="#!">
                     <img src={MasterCard} alt="master_card" />
                   </a>
                 </li>{' '}
                 <li>
-                  <a href="#">
+                  <a href="#!">
                     <img src={Paypal} alt="paypal" />
                   </a>
                 </li>{' '}
                 <li>
-                  <a href="#">
+                  <a href="#!">
                     <img src={AmaricanExpress} alt="amarican_express" />
                   </a>
                 </li>

@@ -38,14 +38,14 @@ export default function Products() {
                   <div key={piece.id} className="item">
                     <div className="product">
                       <div className="product_img">
-                        <a href="#" onClick={(e) => e.preventDefault()}>
+                        <a href="#!" onClick={(e) => e.preventDefault()}>
                           <img src={piece.picture} alt="product_img1" />
                         </a>
                         <div className="product_action_box">
                           <ul className="list_none pr_action_btn">
                             <li className="add-to-cart">
                               <a
-                                href="#"
+                                href="#!"
                                 onClick={(e) => {
                                   e.preventDefault()
                                   dispatch(addToCart(piece))
@@ -61,7 +61,7 @@ export default function Products() {
                       <div className="product_info">
                         <h6 className="product_title">
                           <a
-                            href="#"
+                            href="#!"
                             onClick={(e) => {
                               e.preventDefault()
                               const formattedLibelle = piece.libelle.replace(
@@ -116,14 +116,14 @@ export default function Products() {
                   <div key={piece.id} className="item">
                     <div className="product">
                       <div className="product_img">
-                        <a href="#" onClick={(e) => e.preventDefault()}>
+                        <a href="#!" onClick={(e) => e.preventDefault()}>
                           <img src={piece.picture} alt="product_img1" />
                         </a>
                         <div className="product_action_box">
                           <ul className="list_none pr_action_btn">
                             <li className="add-to-cart">
                               <a
-                                href="#"
+                                href="#!"
                                 onClick={(e) => {
                                   e.preventDefault()
                                   dispatch(addToCart(piece))
@@ -139,7 +139,7 @@ export default function Products() {
                       <div className="product_info">
                         <h6 className="product_title">
                           <a
-                            href="#"
+                            href="#!"
                             onClick={(e) => {
                               e.preventDefault()
                               const formattedLibelle = piece.libelle.replace(

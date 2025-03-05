@@ -18,10 +18,10 @@ export default function Shop() {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#!">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Pages</a>
+                  <a href="#!">Pages</a>
                 </li>
                 <li className="breadcrumb-item active">Product Detail</li>
               </ol>
@@ -47,7 +47,7 @@ export default function Shop() {
                       data-zoom-image="assets/images/product_zoom_img1.jpg"
                       alt="product_img1"
                     />
-                    <a href="#" className="product_img_zoom" title="Zoom">
+                    <a href="#!" className="product_img_zoom" title="Zoom">
                       <span className="linearicons-zoom-in"></span>
                     </a>
                   </div>
@@ -60,7 +60,7 @@ export default function Shop() {
                   >
                     <div className="item">
                       <a
-                        href="#"
+                        href="#!"
                         className="product_gallery_item active"
                         data-image="assets/images/product_img1.jpg"
                         data-zoom-image="assets/images/product_zoom_img1.jpg"
@@ -73,7 +73,7 @@ export default function Shop() {
                     </div>
                     <div className="item">
                       <a
-                        href="#"
+                        href="#!"
                         className="product_gallery_item"
                         data-image="assets/images/product_img1-2.jpg"
                         data-zoom-image="assets/images/product_zoom_img2.jpg"
@@ -86,7 +86,7 @@ export default function Shop() {
                     </div>
                     <div className="item">
                       <a
-                        href="#"
+                        href="#!"
                         className="product_gallery_item"
                         data-image="assets/images/product_img1-3.jpg"
                         data-zoom-image="assets/images/product_zoom_img3.jpg"
@@ -99,7 +99,7 @@ export default function Shop() {
                     </div>
                     <div className="item">
                       <a
-                        href="#"
+                        href="#!"
                         className="product_gallery_item"
                         data-image="assets/images/product_img1-4.jpg"
                         data-zoom-image="assets/images/product_zoom_img4.jpg"
@@ -117,7 +117,7 @@ export default function Shop() {
                 <div className="pr_detail">
                   <div className="product_description">
                     <h4 className="product_title">
-                      <a href="#">Blue Dress For Woman</a>
+                      <a href="#!">Blue Dress For Woman</a>
                     </h4>
                     <div className="product_price">
                       <span className="price">$45.00</span>
@@ -200,10 +200,10 @@ export default function Shop() {
                       >
                         <i className="icon-basket-loaded"></i> Add to cart
                       </button>
-                      <a className="add_compare" href="#">
+                      <a className="add_compare" href="#!">
                         <i className="icon-shuffle"></i>
                       </a>
-                      <a className="add_wishlist" href="#">
+                      <a className="add_wishlist" href="#!">
                         <i className="icon-heart"></i>
                       </a>
                     </div>
@@ -211,18 +211,18 @@ export default function Shop() {
                   <hr />
                   <ul className="product-meta">
                     <li>
-                      SKU: <a href="#">BE45VGRT</a>
+                      SKU: <a href="#!">BE45VGRT</a>
                     </li>
                     <li>
-                      Category: <a href="#">Clothing</a>
+                      Category: <a href="#!">Clothing</a>
                     </li>
                     <li>
                       Tags:{' '}
-                      <a href="#" rel="tag">
+                      <a href="#!" rel="tag">
                         Cloth
                       </a>
                       ,{' '}
-                      <a href="#" rel="tag">
+                      <a href="#!" rel="tag">
                         printed
                       </a>{' '}
                     </li>
@@ -232,27 +232,27 @@ export default function Shop() {
                     <span>Share:</span>
                     <ul className="social_icons">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-facebook"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-twitter"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-googleplus"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-youtube-outline"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-instagram-outline"></i>
                         </a>
                       </li>
@@ -535,7 +535,7 @@ export default function Shop() {
                         <div className="product_action_box">
                           <ul className="list_none pr_action_btn">
                             <li className="add-to-cart">
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-basket-loaded"></i> Add To
                                 Cart
                               </a>
@@ -554,7 +554,7 @@ export default function Shop() {
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-heart"></i>
                               </a>
                             </li>
@@ -615,7 +615,7 @@ export default function Shop() {
                         <div className="product_action_box">
                           <ul className="list_none pr_action_btn">
                             <li className="add-to-cart">
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-basket-loaded"></i> Add To
                                 Cart
                               </a>
@@ -634,7 +634,7 @@ export default function Shop() {
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-heart"></i>
                               </a>
                             </li>
@@ -696,7 +696,7 @@ export default function Shop() {
                         <div className="product_action_box">
                           <ul className="list_none pr_action_btn">
                             <li className="add-to-cart">
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-basket-loaded"></i> Add To
                                 Cart
                               </a>
@@ -715,7 +715,7 @@ export default function Shop() {
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-heart"></i>
                               </a>
                             </li>
@@ -774,7 +774,7 @@ export default function Shop() {
                         <div className="product_action_box">
                           <ul className="list_none pr_action_btn">
                             <li className="add-to-cart">
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-basket-loaded"></i> Add To
                                 Cart
                               </a>
@@ -793,7 +793,7 @@ export default function Shop() {
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-heart"></i>
                               </a>
                             </li>
@@ -854,7 +854,7 @@ export default function Shop() {
                         <div className="product_action_box">
                           <ul className="list_none pr_action_btn">
                             <li className="add-to-cart">
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-basket-loaded"></i> Add To
                                 Cart
                               </a>
@@ -873,7 +873,7 @@ export default function Shop() {
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="#!">
                                 <i className="icon-heart"></i>
                               </a>
                             </li>

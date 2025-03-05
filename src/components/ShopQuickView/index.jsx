@@ -16,7 +16,7 @@ const ProductPopup = ({ product, onClose }) => {
             <div id="pr_item_gallery" className="product_gallery_item">
               {product.gallery.map((img, index) => (
                 <div key={index} className="item">
-                  <a href="#" className="product_gallery_item">
+                  <a href="#!" className="product_gallery_item">
                     <img src={img} alt={`product_small_img${index + 1}`} />
                   </a>
                 </div>

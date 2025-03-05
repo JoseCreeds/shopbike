@@ -131,10 +131,10 @@ export default function ProductDetail({ initialQuantity = 1 }) {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#!">Home</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#">Pages</a>
+                  <a href="#!">Pages</a>
                 </li>
                 <li className="breadcrumb-item active">Product Detail</li>
               </ol>
@@ -184,7 +184,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                 <div className="pr_detail">
                   <div className="product_description">
                     <h4 className="product_title">
-                      <a href="#">{product.libelle}</a>
+                      <a href="#!">{product.libelle}</a>
                     </h4>
                     <div className="product_price">
                       <span className="price">€ {product.price}</span>
@@ -299,10 +299,10 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                       >
                         <i className="icon-basket-loaded"></i> Ajouter
                       </button>
-                      <a className="add_compare" href="#">
+                      <a className="add_compare" href="#!">
                         <i className="icon-shuffle"></i>
                       </a>
-                      <a className="add_wishlist" href="#">
+                      <a className="add_wishlist" href="#!">
                         <i className="icon-heart"></i>
                       </a>
                     </div>
@@ -310,10 +310,10 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                   <hr />
                   <ul className="product-meta">
                     <li>
-                      Référence: <a href="#">{product.ref}</a>
+                      Référence: <a href="#!">{product.ref}</a>
                     </li>
                     <li>
-                      Catégorie: <a href="#">{category.title}</a>
+                      Catégorie: <a href="#!">{category.title}</a>
                     </li>
                   </ul>
 
@@ -321,27 +321,27 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                     <span>Partager:</span>
                     <ul className="social_icons">
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-facebook"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-twitter"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-googleplus"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-youtube-outline"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="#!">
                           <i className="ion-social-instagram-outline"></i>
                         </a>
                       </li>
