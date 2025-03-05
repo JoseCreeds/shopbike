@@ -411,7 +411,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                         type="button"
                         role="tab"
                         aria-controls="Reviews"
-                        aria-selected="false"
+                        aria-selected="true"
                       >
                         Reviews
                       </button>
