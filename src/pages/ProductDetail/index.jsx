@@ -43,16 +43,8 @@ export default function ProductDetail({ initialQuantity = 1 }) {
     setSelectedSize(size)
   }
 
-  const [loading, setLoading] = useState(true)
   useEffect(() => {
     window.scrollTo(0, 0) // Remet la page en haut
-  }, [])
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1000) // Arrêter après 1s
-
-    return () => clearTimeout(timer) // Nettoyage du timer
   }, [])
 
   useEffect(() => {
@@ -140,7 +132,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
 
   return (
     <>
-      <>{loading ? <Loader /> : <div></div>}</>
+      <Loader />
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">

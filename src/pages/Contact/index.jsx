@@ -1,21 +1,12 @@
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import NewLetters from '@/components/NewLetters'
 import MapComponent from '@/components/MapComponent'
 import Loader from '@/utils/loader'
 
 export default function Contact() {
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 3000) // Arrêter après 5s
-
-    return () => clearTimeout(timer) // Nettoyage du timer
-  }, [])
   return (
     <>
-      <>{loading ? <Loader /> : <div></div>}</>
+      <Loader />
 
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
