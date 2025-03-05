@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom'
 import NewLetters from '@/components/NewLetters'
 import Loader from '@/utils/loader'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromCart, updateQuantity } from '@/store/slices/cartSlice'
 import './style.css'
 export default function Cart() {
+  const navigate = useNavigate()
+
   const cartItems = useSelector((state) => state.cart.cartItems)
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -72,12 +75,38 @@ export default function Cart() {
                         cartItems.map((item) => (
                           <tr key={item.id}>
                             <td className="product-thumbnail">
-                              <a href="#!">
+                              <a
+                                href="#!"
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  const formattedLibelle = item.libelle.replace(
+                                    /\s+/g,
+                                    '-'
+                                  )
+                                  navigate(
+                                    `/product/${item.id}/${formattedLibelle}`
+                                  )
+                                }}
+                              >
                                 <img src={item.picture} alt={item.libelle} />
                               </a>
                             </td>
                             <td className="product-name" data-title="Product">
-                              <a href="#!">{item.libelle}</a>
+                              <a
+                                href="#!"
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  const formattedLibelle = item.libelle.replace(
+                                    /\s+/g,
+                                    '-'
+                                  )
+                                  navigate(
+                                    `/product/${item.id}/${formattedLibelle}`
+                                  )
+                                }}
+                              >
+                                {item.libelle}
+                              </a>
                             </td>
                             <td className="product-price" data-title="Price">
                               €{item.price.toFixed(2)}

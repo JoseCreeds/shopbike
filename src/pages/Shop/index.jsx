@@ -338,7 +338,7 @@ export default function Shop() {
                         }`}
                         onClick={prevPage}
                       >
-                        <a className="page-link" href="#!">
+                        <a className="page-link" href="#">
                           <i className="linearicons-arrow-left"></i>
                         </a>
                       </li>
@@ -366,7 +366,7 @@ export default function Shop() {
                           }`}
                           onClick={() => paginate(index + 1)}
                         >
-                          <a className="page-link" href="#!">
+                          <a className="page-link" href="#">
                             {index + 1}
                           </a>
                         </li>
@@ -378,7 +378,7 @@ export default function Shop() {
                         }`}
                         onClick={nextPage}
                       >
-                        <a className="page-link" href="#!">
+                        <a className="page-link" href="#">
                           <i className="linearicons-arrow-right"></i>
                         </a>
                       </li>

@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { toast } from 'react-toastify'
 
 const initialState = {
   cartItems: JSON.parse(localStorage.getItem('cart')) || [],
@@ -22,6 +23,10 @@ const cartSlice = createSlice({
 
       // Mettre à jour localStorage
       localStorage.setItem('cart', JSON.stringify(state.cartItems))
+      //alert('Nouveau produit ajouté au panier')
+
+      //toast.success(`${product.libelle} ajouté au panier !`)
+      toast.success(`Nouveau produit ajouté au panier !`)
     },
     removeFromCart: (state, action) => {
       state.cartItems = state.cartItems.filter(

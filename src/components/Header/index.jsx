@@ -5,14 +5,20 @@ import LogoLight from '@/assets/images/logo_light.png'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromCart } from '@/store/slices/cartSlice'
-
+import { useEffect } from 'react'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-
+  useEffect(() => {
+    const dropdownElement = document.querySelector('.cart_trigger')
+    //if (window.innerWidth <= 768 && dropdownElement) {
+    if (window.innerWidth <= 1011 && dropdownElement) {
+      dropdownElement.removeAttribute('data-bs-toggle')
+    }
+  }, [])
   const cartItems = useSelector((state) => state.cart.cartItems)
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0)
   const totalPrice = cartItems.reduce(
@@ -135,54 +141,7 @@ export default function Header() {
                     </span>
                   </a>
                   <div className="cart_box cart_right dropdown-menu dropdown-menu-right">
-                    {cartItems.length === 0 ? (
-                      <p className="text-center p-3">Votre panier est vide</p>
-                    ) : (
-                      // <ul className="cart_list">
-                      //   <li>
-                      //     <a href="#!" className="item_remove">
-                      //       <i className="ion-close"></i>
-                      //     </a>
-                      //     <a href="#!">
-                      //       <img
-                      //         src="assets/images/cart_thamb1.jpg"
-                      //         alt="cart_thumb1"
-                      //       />
-                      //       Variable product 001
-                      //     </a>
-                      //     <span className="cart_quantity">
-                      //       {' '}
-                      //       1 x{' '}
-                      //       <span className="cart_amount">
-                      //         {' '}
-                      //         <span className="price_symbole">$</span>
-                      //       </span>
-                      //       78.00
-                      //     </span>
-                      //   </li>
-                      //   <li>
-                      //     <a href="#!" className="item_remove">
-                      //       <i className="ion-close"></i>
-                      //     </a>
-                      //     <a href="#!">
-                      //       <img
-                      //         src="assets/images/cart_thamb2.jpg"
-                      //         alt="cart_thumb2"
-                      //       />
-                      //       Ornare sed consequat
-                      //     </a>
-                      //     <span className="cart_quantity">
-                      //       {' '}
-                      //       1 x{' '}
-                      //       <span className="cart_amount">
-                      //         {' '}
-                      //         <span className="price_symbole">$</span>
-                      //       </span>
-                      //       81.00
-                      //     </span>
-                      //   </li>
-                      // </ul>
-
+                    {cartItems.length !== 0 && (
                       <>
                         <ul className="cart_list">
                           {cartItems.map((item) => (
@@ -420,6 +379,12 @@ export default function Header() {
                           // data-bs-toggle="dropdown"
                           className="nav-link"
                           href="/"
+                          onClick={() => {
+                            const menu =
+                              document.getElementById('navbarSidetoggle')
+                            menu.classList.remove('show') // Ferme le menu
+                            toggleMenu()
+                          }}
                         >
                           Home
                         </a>
@@ -430,6 +395,11 @@ export default function Header() {
                           className="nav-link"
                           href="#!"
                           onClick={(e) => {
+                            const menu =
+                              document.getElementById('navbarSidetoggle')
+                            menu.classList.remove('show') // Ferme le menu
+                            toggleMenu()
+
                             e.preventDefault()
                             window.location.href = `/shop`
                           }}
@@ -439,7 +409,16 @@ export default function Header() {
                         </a>
                       </li>
                       <li>
-                        <Link className="nav-link nav_item" to="/contact-us">
+                        <Link
+                          className="nav-link nav_item"
+                          to="/contact-us"
+                          onClick={() => {
+                            const menu =
+                              document.getElementById('navbarSidetoggle')
+                            menu.classList.remove('show') // Ferme le menu
+                            toggleMenu()
+                          }}
+                        >
                           Contact Us
                         </Link>
                       </li>
