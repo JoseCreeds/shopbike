@@ -1085,10 +1085,9 @@ export default function Header() {
                     <span>123-456-7689</span>
                   </div>
                 </nav>
-              </div> */}
+              </div>  */}
               <div className="col-lg-9 col-md-8 col-sm-6 col-9">
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                  {/* Bouton hamburger pour mobile */}
+                <nav className="navbar navbar-expand-lg">
                   <button
                     className="navbar-toggler"
                     type="button"
@@ -1097,11 +1096,15 @@ export default function Header() {
                     aria-controls="navbarSidetoggle"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
-                  >
-                    <span className="navbar-toggler-icon"></span>
-                  </button>
 
-                  {/* Icône de recherche */}
+                    // className="navbar-toggler side_navbar_toggler"
+                    // type="button"
+                    // data-bs-toggle="collapse"
+                    // data-bs-target="#navbarSidetoggle"
+                    // aria-expanded="false"
+                  >
+                    <span className="ion-android-menu"></span>
+                  </button>
                   <div className="pr_search_icon">
                     <a
                       href="#"
@@ -1111,15 +1114,13 @@ export default function Header() {
                       <i className="linearicons-magnifier"></i>
                     </a>
                   </div>
-
-                  {/* Menu avec bouton de fermeture */}
                   <div
                     className="collapse navbar-collapse mobile_side_menu"
                     id="navbarSidetoggle"
                   >
                     {/* Bouton de fermeture */}
                     <button
-                      className="btn-close"
+                      className="btn-close d-block d-lg-none"
                       type="button"
                       onClick={() => {
                         const menu = document.getElementById('navbarSidetoggle')
@@ -1129,12 +1130,17 @@ export default function Header() {
                     ></button>
 
                     <ul className="navbar-nav">
-                      <li className="nav-item">
-                        <a className="nav-link" href="/">
+                      <li className="dropdown">
+                        <a
+                          // data-bs-toggle="dropdown"
+                          className="nav-link"
+                          href="/"
+                        >
                           Home
                         </a>
                       </li>
-                      <li className="nav-item">
+
+                      <li className="dropdown ">
                         <a
                           className="nav-link"
                           href="#"
@@ -1142,19 +1148,18 @@ export default function Header() {
                             e.preventDefault()
                             window.location.href = `/shop`
                           }}
+                          // data-bs-toggle="dropdown"
                         >
                           Shop
                         </a>
                       </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/contact-us">
+                      <li>
+                        <Link className="nav-link nav_item" to="/contact-us">
                           Contact Us
                         </Link>
                       </li>
                     </ul>
                   </div>
-
-                  {/* Contact Phone */}
                   <div className="contact_phone contact_support">
                     <i className="linearicons-phone-wave"></i>
                     <span>123-456-7689</span>
