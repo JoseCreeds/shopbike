@@ -1017,7 +1017,7 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-9 col-md-8 col-sm-6 col-9">
+              {/* <div className="col-lg-9 col-md-8 col-sm-6 col-9">
                 <nav className="navbar navbar-expand-lg">
                   <button
                     className="navbar-toggler"
@@ -1080,6 +1080,81 @@ export default function Header() {
                       </li>
                     </ul>
                   </div>
+                  <div className="contact_phone contact_support">
+                    <i className="linearicons-phone-wave"></i>
+                    <span>123-456-7689</span>
+                  </div>
+                </nav>
+              </div> */}
+              <div className="col-lg-9 col-md-8 col-sm-6 col-9">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                  {/* Bouton hamburger pour mobile */}
+                  <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSidetoggle"
+                    aria-controls="navbarSidetoggle"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span className="navbar-toggler-icon"></span>
+                  </button>
+
+                  {/* Icône de recherche */}
+                  <div className="pr_search_icon">
+                    <a
+                      href="#"
+                      className="nav-link pr_search_trigger"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <i className="linearicons-magnifier"></i>
+                    </a>
+                  </div>
+
+                  {/* Menu avec bouton de fermeture */}
+                  <div
+                    className="collapse navbar-collapse mobile_side_menu"
+                    id="navbarSidetoggle"
+                  >
+                    {/* Bouton de fermeture */}
+                    <button
+                      className="btn-close"
+                      type="button"
+                      onClick={() => {
+                        const menu = document.getElementById('navbarSidetoggle')
+                        menu.classList.remove('show') // Ferme le menu
+                      }}
+                      aria-label="Close"
+                    ></button>
+
+                    <ul className="navbar-nav">
+                      <li className="nav-item">
+                        <a className="nav-link" href="/">
+                          Home
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a
+                          className="nav-link"
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault()
+                            window.location.href = `/shop`
+                          }}
+                        >
+                          Shop
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/contact-us">
+                          Contact Us
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Contact Phone */}
                   <div className="contact_phone contact_support">
                     <i className="linearicons-phone-wave"></i>
                     <span>123-456-7689</span>

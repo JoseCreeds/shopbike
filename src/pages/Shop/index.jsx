@@ -332,7 +332,17 @@ export default function Shop() {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" className="popup-ajax">
+                                <a
+                                  href="#"
+                                  onClick={(e) => {
+                                    e.preventDefault()
+                                    const formattedLibelle =
+                                      product.libelle.replace(/\s+/g, '-')
+                                    navigate(
+                                      `/product/${product.id}/${formattedLibelle}`
+                                    )
+                                  }}
+                                >
                                   <i className="icon-magnifier-add"></i>
                                 </a>
                               </li>
