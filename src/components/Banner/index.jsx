@@ -38,11 +38,26 @@ export default function Banner() {
                         <span className="text_default">50%</span> off
                         Aujourd&apos;hui !
                       </h5>
-                      <a
+                      {/* <a
                         className="btn btn-fill-out staggered-animation text-uppercase"
                         href="shop"
                         data-animation="slideInLeft"
                         data-animation-delay="1.5s"
+                      >
+                        Acheter maintenant
+                      </a> */}
+                      <a
+                        className="btn btn-fill-out text-uppercase d-none d-md-inline-block"
+                        href="shop"
+                        data-animation="slideInLeft"
+                        data-animation-delay="1.5s"
+                      >
+                        Acheter maintenant
+                      </a>
+
+                      <a
+                        className="btn btn-fill-out text-uppercase d-md-none"
+                        href="shop"
                       >
                         Acheter maintenant
                       </a>
