@@ -549,7 +549,7 @@ export default function Cart() {
                   </div>
                   {/* <a href="checkout" className="btn btn-fill-out"> */}
                   <a
-                    href={cartItems.length === 0 ? '#' : '/checkout'}
+                    href={cartItems.length === 0 ? '#!' : '/checkout'}
                     className={`btn btn-fill-out ${
                       cartItems.length === 0 ? 'disabled' : ''
                     }`}

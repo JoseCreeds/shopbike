@@ -48,7 +48,7 @@ export default function Banner() {
                       </a> */}
                       <a
                         className="btn btn-fill-out text-uppercase d-none d-md-inline-block"
-                        href="shop"
+                        href="/shop"
                         data-animation="slideInLeft"
                         data-animation-delay="1.5s"
                       >
