@@ -13,9 +13,8 @@ export default function Cart() {
 
   return (
     <>
-      {/* <!-- LOADER --> */}
       <Loader />
-      {/* <!-- END LOADER --> */}
+
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">

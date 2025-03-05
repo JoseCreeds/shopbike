@@ -8,6 +8,12 @@ export default function Checkout() {
   const dispatch = useDispatch()
   const [isAccountOpen, setIsAccountOpen] = useState(false)
   const [isOtherOpen, setIsOtherOpen] = useState(false)
+  const [isLoginOpen, setIsLoginOpen] = useState(false)
+  const [isCouponOpen, setIsCouponOpen] = useState(false)
+  const [rememberMe, setRememberMe] = useState(false)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [couponCode, setCouponCode] = useState('')
   //const [isCguCheck, setIsCguCheck] = useState(false)
   // Récupérer les éléments du panier depuis le Redux store
   const cartItems = useSelector((state) => state.cart.cartItems)
@@ -146,72 +152,83 @@ export default function Checkout() {
                     <a
                       href="#loginform"
                       data-bs-toggle="collapse"
-                      className="collapsed"
+                      className={isLoginOpen ? '' : 'collapsed'}
                       aria-expanded="false"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        setIsLoginOpen(!isLoginOpen)
+                      }}
                     >
                       Cliquez ici pour vous connecter.
                     </a>
                   </span>
                 </div>
-                <div
-                  className="panel-collapse collapse login_form"
-                  id="loginform"
-                >
-                  <div className="panel-body">
-                    <p>
-                      Si vous avez déjà acheté chez nous, veuillez saisir vos
-                      coordonnées dans les champs ci-dessous. Si vous êtes un
-                      nouveau client, veuillez vous rendre dans la section
-                      informations de paiement et d&apos;expédition.
-                    </p>
-                    <form method="post">
-                      <div className="form-group mb-3">
-                        <input
-                          type="text"
-                          required=""
-                          className="form-control"
-                          name="email"
-                          placeholder="Nom d'utilisateur ou adresse email  *"
-                        />
-                      </div>
-                      <div className="form-group mb-3">
-                        <input
-                          className="form-control"
-                          required=""
-                          type="password"
-                          name="password"
-                          placeholder="Mot de passe *"
-                        />
-                      </div>
-                      <div className="login_footer form-group mb-3">
-                        <div className="chek-form">
-                          <div className="custome-checkbox">
-                            <input
-                              className="form-check-input"
-                              type="checkbox"
-                              name="checkbox"
-                              id="remember"
-                              value=""
-                            />
-                            <label className="form-check-label">
-                              <span>Souviens-toi de moi</span>
-                            </label>
-                          </div>
+                {isLoginOpen && (
+                  <div
+                  // className="panel-collapse collapse login_form"
+                  // id="loginform"
+                  >
+                    <div className="panel-body">
+                      <p>
+                        Si vous avez déjà acheté chez nous, veuillez saisir vos
+                        coordonnées dans les champs ci-dessous. Si vous êtes un
+                        nouveau client, veuillez vous rendre dans la section
+                        informations de paiement et d&apos;expédition.
+                      </p>
+                      <form>
+                        <div className="form-group mb-3">
+                          <input
+                            type="text"
+                            required
+                            className="form-control"
+                            placeholder="Nom d'utilisateur ou adresse email  *"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                          />
                         </div>
-                        <a href="#">Mot de passe oublié ?</a>
-                      </div>
-                      <div className="form-group mb-3">
-                        <button
-                          type="submit"
-                          className="btn btn-fill-out btn-block"
-                          name="login"
-                        >
-                          Se connecter
-                        </button>
-                      </div>
-                    </form>
+                        <div className="form-group mb-3">
+                          <input
+                            className="form-control"
+                            required
+                            type="password"
+                            placeholder="Mot de passe *"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                          />
+                        </div>
+                        <div className="login_footer form-group mb-3">
+                          <div className="chek-form">
+                            <div className="custome-checkbox">
+                              <input
+                                className="form-check-input"
+                                type="checkbox"
+                                name="checkbox"
+                                id="remember"
+                                checked={rememberMe}
+                                onChange={(e) =>
+                                  setRememberMe(e.target.checked)
+                                }
+                              />
+                              <label className="form-check-label">
+                                <span>Souviens-toi de moi</span>
+                              </label>
+                            </div>
+                          </div>
+                          <a href="#">Mot de passe oublié ?</a>
+                        </div>
+                        <div className="form-group mb-3">
+                          <button
+                            type="submit"
+                            className="btn btn-fill-out btn-block"
+                            name="login"
+                          >
+                            Se connecter
+                          </button>
+                        </div>
+                      </form>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
               <div className="col-lg-6">
                 <div className="toggle_info">
@@ -219,42 +236,50 @@ export default function Checkout() {
                     <i className="fas fa-tag"></i>Avez-vous un bon d&apos;achat
                     ?{' '}
                     <a
-                      href="#coupon"
+                      href="#"
                       data-bs-toggle="collapse"
-                      className="collapsed"
+                      className={isCouponOpen ? '' : 'collapsed'}
                       aria-expanded="false"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        setIsCouponOpen(!isCouponOpen)
+                      }}
                     >
                       Cliquez ici pour entrer votre code promo.
                     </a>
                   </span>
                 </div>
-                <div
-                  className="panel-collapse collapse coupon_form"
-                  id="coupon"
-                >
-                  <div className="panel-body">
-                    <p>
-                      Si vous avez un code promo, veuillez l&apos;appliquer
-                      ci-dessous.
-                    </p>
-                    <div className="coupon field_form input-group">
-                      <input
-                        type="text"
-                        value=""
-                        className="form-control"
-                        placeholder="Code promo.."
-                      />
-                      <div className="input-group-append">
-                        <button
-                          className="btn btn-fill-out btn-sm"
-                          type="submit"
-                        >
-                          Appliquer coupon
-                        </button>
+                {isCouponOpen && (
+                  <div
+                  // className="panel-collapse collapse coupon_form"
+                  // id="coupon"
+                  >
+                    <div className="panel-body">
+                      <p>
+                        Si vous avez un code promo, veuillez l&apos;appliquer
+                        ci-dessous.
+                      </p>
+                      <div className="coupon field_form input-group">
+                        <input
+                          type="text"
+                          name="code"
+                          className="form-control"
+                          placeholder="Code promo.."
+                          value={couponCode}
+                          onChange={(e) => setCouponCode(e.target.value)}
+                        />
+                        <div className="input-group-append">
+                          <button
+                            className="btn btn-fill-out btn-sm"
+                            type="submit"
+                          >
+                            Appliquer coupon
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
             <div className="row">

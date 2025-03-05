@@ -20,7 +20,7 @@ import './style.css'
 
 export default function ProductDetail({ initialQuantity = 1 }) {
   const dispatch = useDispatch()
-
+  const [activeTab, setActiveTab] = useState('description')
   const [formData, setFormData] = useState({
     rating: 0,
     message: '',
@@ -372,7 +372,10 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                         Description
                       </a> */}
                       <button
-                        className="nav-link active"
+                        className={`nav-link active ${
+                          activeTab === 'description' ? 'active' : ''
+                        }`}
+                        onClick={() => setActiveTab('description')}
                         id="Description-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#Description"
@@ -398,7 +401,10 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                         Reviews
                       </a> */}
                       <button
-                        className="nav-link"
+                        className={`nav-link ${
+                          activeTab === 'reviews' ? 'active' : ''
+                        }`}
+                        onClick={() => setActiveTab('reviews')}
                         id="Reviews-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#Reviews"
@@ -412,105 +418,114 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                     </li>
                   </ul>
                   <div className="tab-content shop_info_tab">
-                    <div
-                      className="tab-pane fade show active"
-                      id="Description"
-                      role="tabpanel"
-                      aria-labelledby="Description-tab"
-                    >
-                      <p>{product.description}</p>
-                      <p>{product.description1}</p>
-                    </div>
-
-                    <div
-                      className="tab-pane fade"
-                      id="Reviews"
-                      role="tabpanel"
-                      aria-labelledby="Reviews-tab"
-                    >
-                      <div className="review_form field_form">
-                        <h5>Add a review</h5>
-                        <form className="row mt-3" onSubmit={handleSubmit}>
-                          <div className="form-group col-12 mb-3">
-                            <div className="star_rating">
-                              {[1, 2, 3, 4, 5].map((value) => (
-                                <span
-                                  key={value}
-                                  data-value={value}
-                                  onClick={() => handleStarClick(value)}
-                                  style={{
-                                    cursor: 'pointer',
-                                    color:
-                                      formData.rating >= value
-                                        ? 'gold'
-                                        : 'gray',
-                                  }}
-                                >
-                                  <i className="fas fa-star"></i>
-                                </span>
-                              ))}
-                            </div>
-                            {errors.rating && (
-                              <span className="text-danger">
-                                {errors.rating}
-                              </span>
-                            )}
-                          </div>
-
-                          <div className="form-group col-12 mb-3">
-                            <textarea
-                              placeholder="Votre avis *"
-                              className="form-control"
-                              name="message"
-                              rows="4"
-                              value={formData.message}
-                              onChange={handleChange}
-                            ></textarea>
-                            {errors.message && (
-                              <span className="text-danger">
-                                {errors.message}
-                              </span>
-                            )}
-                          </div>
-
-                          <div className="form-group col-md-6 mb-3">
-                            <input
-                              placeholder="Entrez votre nom *"
-                              className="form-control"
-                              name="name"
-                              type="text"
-                              value={formData.name}
-                              onChange={handleChange}
-                            />
-                            {errors.name && (
-                              <span className="text-danger">{errors.name}</span>
-                            )}
-                          </div>
-
-                          <div className="form-group col-md-6 mb-3">
-                            <input
-                              placeholder="Entrez votre email *"
-                              className="form-control"
-                              name="email"
-                              type="email"
-                              value={formData.email}
-                              onChange={handleChange}
-                            />
-                            {errors.email && (
-                              <span className="text-danger">
-                                {errors.email}
-                              </span>
-                            )}
-                          </div>
-
-                          <div className="form-group col-12 mb-3">
-                            <button type="submit" className="btn btn-fill-out">
-                              Soumettre l&apos;avis
-                            </button>
-                          </div>
-                        </form>
+                    {activeTab === 'description' && (
+                      <div
+                        className="tab-pane fade show active"
+                        id="Description"
+                        role="tabpanel"
+                        aria-labelledby="Description-tab"
+                      >
+                        <p>{product.description}</p>
+                        <p>{product.description1}</p>
                       </div>
-                    </div>
+                    )}
+
+                    {activeTab === 'reviews' && (
+                      <div
+                        className="tab-pane fade"
+                        id="Reviews"
+                        role="tabpanel"
+                        aria-labelledby="Reviews-tab"
+                      >
+                        <div className="review_form field_form">
+                          <h5>Add a review</h5>
+                          <form className="row mt-3" onSubmit={handleSubmit}>
+                            <div className="form-group col-12 mb-3">
+                              <div className="star_rating">
+                                {[1, 2, 3, 4, 5].map((value) => (
+                                  <span
+                                    key={value}
+                                    data-value={value}
+                                    onClick={() => handleStarClick(value)}
+                                    style={{
+                                      cursor: 'pointer',
+                                      color:
+                                        formData.rating >= value
+                                          ? 'gold'
+                                          : 'gray',
+                                    }}
+                                  >
+                                    <i className="fas fa-star"></i>
+                                  </span>
+                                ))}
+                              </div>
+                              {errors.rating && (
+                                <span className="text-danger">
+                                  {errors.rating}
+                                </span>
+                              )}
+                            </div>
+
+                            <div className="form-group col-12 mb-3">
+                              <textarea
+                                placeholder="Votre avis *"
+                                className="form-control"
+                                name="message"
+                                rows="4"
+                                value={formData.message}
+                                onChange={handleChange}
+                              ></textarea>
+                              {errors.message && (
+                                <span className="text-danger">
+                                  {errors.message}
+                                </span>
+                              )}
+                            </div>
+
+                            <div className="form-group col-md-6 mb-3">
+                              <input
+                                placeholder="Entrez votre nom *"
+                                className="form-control"
+                                name="name"
+                                type="text"
+                                value={formData.name}
+                                onChange={handleChange}
+                              />
+                              {errors.name && (
+                                <span className="text-danger">
+                                  {errors.name}
+                                </span>
+                              )}
+                            </div>
+
+                            <div className="form-group col-md-6 mb-3">
+                              <input
+                                placeholder="Entrez votre email *"
+                                className="form-control"
+                                name="email"
+                                type="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                              />
+                              {errors.email && (
+                                <span className="text-danger">
+                                  {errors.email}
+                                </span>
+                              )}
+                            </div>
+
+                            <div className="form-group col-12 mb-3">
+                              <button
+                                type="submit"
+                                className="btn btn-fill-out"
+                              >
+                                Soumettre l&apos;avis
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
