@@ -1,4 +1,5 @@
 //import LogoDarkr from '@/assets/images/logo_dark.png'
+import { useState } from 'react'
 import LogoDark from '@/assets/images/rijden.png'
 import LogoLight from '@/assets/images/logo_light.png'
 import { Link } from 'react-router-dom'
@@ -6,6 +7,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import { removeFromCart } from '@/store/slices/cartSlice'
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   const cartItems = useSelector((state) => state.cart.cartItems)
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0)
   const totalPrice = cartItems.reduce(
@@ -1088,23 +1095,21 @@ export default function Header() {
               </div>  */}
               <div className="col-lg-9 col-md-8 col-sm-6 col-9">
                 <nav className="navbar navbar-expand-lg">
-                  <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSidetoggle"
-                    aria-controls="navbarSidetoggle"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
+                  {!isMenuOpen && (
+                    <button
+                      className="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarSidetoggle"
+                      aria-controls="navbarSidetoggle"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                      onClick={toggleMenu}
+                    >
+                      <span className="ion-android-menu"></span>
+                    </button>
+                  )}
 
-                    // className="navbar-toggler side_navbar_toggler"
-                    // type="button"
-                    // data-bs-toggle="collapse"
-                    // data-bs-target="#navbarSidetoggle"
-                    // aria-expanded="false"
-                  >
-                    <span className="ion-android-menu"></span>
-                  </button>
                   <div className="pr_search_icon">
                     <a
                       href="#"
@@ -1119,15 +1124,22 @@ export default function Header() {
                     id="navbarSidetoggle"
                   >
                     {/* Bouton de fermeture */}
-                    <button
-                      className="btn-close d-block d-lg-none"
-                      type="button"
-                      onClick={() => {
-                        const menu = document.getElementById('navbarSidetoggle')
-                        menu.classList.remove('show') // Ferme le menu
-                      }}
-                      aria-label="Close"
-                    ></button>
+                    {isMenuOpen && (
+                      <button
+                        className="btn-close d-block d-lg-none"
+                        type="button"
+                        onClick={toggleMenu}
+                        aria-label="Close"
+                        style={{
+                          width: '30px',
+                          height: '30px',
+                          fontSize: '1.5rem',
+                          padding: '5px',
+                          color: '#ff0000',
+                          backgroundColor: 'transparent',
+                        }}
+                      ></button>
+                    )}
 
                     <ul className="navbar-nav">
                       <li className="dropdown">
