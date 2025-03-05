@@ -1,5 +1,10 @@
 //import { Link } from 'react-router-dom'
 import LogoDark from '@/assets/images/rijdenfooter.png'
+import Visa from '@/assets/images/visa.png'
+import Discover from '@/assets/images/discover.png'
+import MasterCard from '@/assets/images/master_card.png'
+import Paypal from '@/assets/images/paypal.png'
+import AmaricanExpress from '@/assets/images/amarican_express.png'
 
 function Footer() {
   return (
@@ -52,8 +57,8 @@ function Footer() {
 
       <div className="middle_footer small_pt pb_20">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-4 col-md-12 col-sm-12">
+          <div className="row mx-auto lg:max-w-80">
+            <div className="col-lg-6 col-md-12 col-sm-12">
               <div className="widget">
                 <div className="footer_logo">
                   <a href="/">
@@ -82,7 +87,7 @@ function Footer() {
             </div>
             <div className="col-lg-2 col-md-4 col-sm-6">
               <div className="widget">
-                <h6 className="widget_title">Liens utils</h6>
+                <h6 className="widget_title">INFORMATION</h6>
                 <ul className="widget_links">
                   <li>
                     <a
@@ -143,12 +148,47 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-2 col-md-4 col-sm-6">
+            <div className="col-lg-4 col-md-4 col-sm-6">
               <div className="widget">
-                <h6 className="widget_title">My Account</h6>
+                <h6 className="widget_title" style={{ textTransform: 'none' }}>
+                  Politique de la boutique
+                </h6>
                 <ul className="widget_links">
-                  <li>
+                  {/* <li>
                     <a href="#">My Account</a>
+                  </li> */}
+                  <li>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        window.location.href = `/pc`
+                      }}
+                    >
+                      Politique de confidentialité
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        window.location.href = `/pr`
+                      }}
+                    >
+                      Politique de remboursement
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        window.location.href = `/pe`
+                      }}
+                    >
+                      Politique d&apos;expédition
+                    </a>
                   </li>
                   <li>
                     <a
@@ -158,10 +198,32 @@ function Footer() {
                         window.location.href = `/ugc`
                       }}
                     >
-                      Condition générale d&apos;utilisation
+                      Politique d&apos;utilisation
                     </a>
                   </li>
                   <li>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        window.location.href = `/pp`
+                      }}
+                    >
+                      Politique de paiement
+                    </a>
+                  </li>
+                  {/* <li>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        window.location.href = `/ugc`
+                      }}
+                    >
+                      Condition générale d&apos;utilisation
+                    </a>
+                  </li> */}
+                  {/* <li>
                     <a
                       href="#"
                       onClick={(e) => {
@@ -171,60 +233,13 @@ function Footer() {
                     >
                       Returns
                     </a>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <a href="#">Orders History</a>
                   </li>
                   <li>
                     <a href="#">Order Tracking</a>
                   </li> */}
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-4 col-sm-12">
-              <div className="widget">
-                <h6 className="widget_title">Télécharger App</h6>
-                <ul className="app_list">
-                  <li>
-                    <a href="#">
-                      <img src="assets/images/f1.png" alt="f1" />
-                    </a>
-                  </li>{' '}
-                  <li>
-                    <a href="#">
-                      <img src="assets/images/f2.png" alt="f2" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="widget">
-                <h6 className="widget_title">Social</h6>
-                <ul className="social_icons">
-                  <li>
-                    <a href="#" className="sc_facebook">
-                      <i className="ion-social-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="sc_twitter">
-                      <i className="ion-social-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="sc_google">
-                      <i className="ion-social-googleplus"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="sc_youtube">
-                      <i className="ion-social-youtube-outline"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="sc_instagram">
-                      <i className="ion-social-instagram-outline"></i>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -244,33 +259,27 @@ function Footer() {
               <ul className="footer_payment text-center text-md-end">
                 <li>
                   <a href="#">
-                    <img src="assets/images/visa.png" alt="visa" />
+                    <img src={Visa} alt="visa" />
                   </a>
                 </li>{' '}
                 <li>
                   <a href="#">
-                    <img src="assets/images/discover.png" alt="discover" />
+                    <img src={Discover} alt="discover" />
                   </a>
                 </li>{' '}
                 <li>
                   <a href="#">
-                    <img
-                      src="assets/images/master_card.png"
-                      alt="master_card"
-                    />
+                    <img src={MasterCard} alt="master_card" />
                   </a>
                 </li>{' '}
                 <li>
                   <a href="#">
-                    <img src="assets/images/paypal.png" alt="paypal" />
+                    <img src={Paypal} alt="paypal" />
                   </a>
                 </li>{' '}
                 <li>
                   <a href="#">
-                    <img
-                      src="assets/images/amarican_express.png"
-                      alt="amarican_express"
-                    />
+                    <img src={AmaricanExpress} alt="amarican_express" />
                   </a>
                 </li>
               </ul>

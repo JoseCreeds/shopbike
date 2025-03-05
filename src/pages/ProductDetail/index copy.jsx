@@ -11,9 +11,12 @@ import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import { addToCart } from '@/store/slices/cartSlice'
 import './style.css'
-import OwlCarousel from 'react-owl-carousel'
-import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'owl.carousel/dist/assets/owl.theme.default.css'
+// import OwlCarousel from 'react-owl-carousel'
+// import 'owl.carousel/dist/assets/owl.carousel.css'
+// import 'owl.carousel/dist/assets/owl.theme.default.css'
+// import Slider from 'react-slick'
+// import 'slick-carousel/slick/slick.css'
+// import 'slick-carousel/slick/slick-theme.css'
 
 export default function ProductDetail({ initialQuantity = 1 }) {
   const dispatch = useDispatch()
@@ -40,16 +43,8 @@ export default function ProductDetail({ initialQuantity = 1 }) {
     setSelectedSize(size)
   }
 
-  const [loading, setLoading] = useState(true)
   useEffect(() => {
     window.scrollTo(0, 0) // Remet la page en haut
-  }, [])
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1000) // Arrêter après 1s
-
-    return () => clearTimeout(timer) // Nettoyage du timer
   }, [])
 
   useEffect(() => {
@@ -68,6 +63,10 @@ export default function ProductDetail({ initialQuantity = 1 }) {
       setProduct(foundProduct)
     }
   }, [id])
+
+  if (!product) {
+    return <p></p>
+  }
 
   // product part end
 
@@ -114,13 +113,26 @@ export default function ProductDetail({ initialQuantity = 1 }) {
     setQuantity(value)
   }
 
-  // const category = categorieList.find((cat) => cat.id === product.categorie)
-  const category = product.categorie
-    ? categorieList.find((cat) => cat.id === product.categorie)
-    : null
+  const category = categorieList.find((cat) => cat.id === product.categorie)
+
+  // const settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 2,
+  //   centerMode: false, // Désactive le mode centrage
+  //   centerPadding: '0px',
+  //   responsive: [
+  //     { breakpoint: 1199, settings: { slidesToShow: 3 } },
+  //     { breakpoint: 768, settings: { slidesToShow: 1 } },
+  //     { breakpoint: 481, settings: { slidesToShow: 1 } },
+  //   ],
+  // }
+
   return (
     <>
-      <>{loading ? <Loader /> : <div></div>}</>
+      <Loader />
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
@@ -603,42 +615,30 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                 </div>
               </div>
             </div>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-12">
                 <div className="small_divider"></div>
                 <div className="divider"></div>
                 <div className="medium_divider"></div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="row">
+            {/* <div className="row">
               <div className="col-12">
                 <div className="heading_s1">
                   <h3>Releted Products</h3>
                 </div>
                 <div
-                  // className="releted_product_slider carousel_slider owl-carousel owl-theme"
-                  className="product_slider product_grid "
+                  className=" product_list "
+                  style={{ marginBottom: '-10px', padding: '20px auto' }}
                 >
-                  <OwlCarousel
-                    className="releted_product_slider"
-                    loop
-                    margin={100}
-                    nav
-                    dots={false}
-                    navText={[
-                      '<i className="icon-left-open"></i>', // Flèche gauche
-                      '<i className="icon-right-open"></i>', // Flèche droite
-                    ]}
-                    responsive={{
-                      0: { items: 1 },
-                      481: { items: 2 },
-                      768: { items: 3 },
-                      1199: { items: 4 },
-                    }}
-                  >
-                    {productsList.map((product) => (
-                      <div key={product.id} className="item">
+                  <Slider {...settings}>
+                    {productsList.slice(0, 5).map((product) => (
+                      <div
+                        key={product.id}
+                        className="item"
+                        style={{ margin: '-30px auto', borderTop: '1px solid' }}
+                      >
                         <div className="product">
                           <div className="product_img">
                             <a href="shop-product-detail.html">
@@ -696,11 +696,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                               <span className="rating_num">(21)</span>
                             </div>
                             <div className="pr_desc">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Phasellus blandit massa enim.
-                                Nullam id varius nunc id varius nunc.
-                              </p>
+                              <p>Lorem ipsum dolor</p>
                             </div>
                             <div className="pr_switch_wrap">
                               <div className="product_color_switch">
@@ -716,10 +712,10 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                         </div>
                       </div>
                     ))}
-                  </OwlCarousel>
+                  </Slider>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* <!-- END SECTION SHOP --> */}

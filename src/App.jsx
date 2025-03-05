@@ -11,9 +11,14 @@ import Cart from '@/pages/Cart'
 import Checkout from '@/pages/Checkout'
 import Account from '@/pages/Account'
 import OrderCompleted from '@/pages/OrderCompleted'
-import TermCondition from '@/pages/Term_Condition'
 import ProductDetail from '@/pages/ProductDetail'
 import Shop from '@/pages/Shop'
+
+import TermCondition from '@/pages/Term_Condition'
+import Pc from '@/pages/Pc'
+import Pe from '@/pages/Pe'
+import Pp from '@/pages/Pp'
+import Pr from '@/pages/Pr'
 
 import NotFound from '@/pages/NotFound'
 
@@ -37,6 +42,10 @@ function App() {
         <Route path="/my-account" element={<Account />} />
         <Route path="/order-completed" element={<OrderCompleted />} />
         <Route path="/ugc" element={<TermCondition />} />
+        <Route path="/pc" element={<Pc />} />
+        <Route path="/pe" element={<Pe />} />
+        <Route path="/pp" element={<Pp />} />
+        <Route path="/pr" element={<Pr />} />
         <Route
           path="/product/:id/:libelle"
           element={<ProductDetail key={window.location.pathname} />}

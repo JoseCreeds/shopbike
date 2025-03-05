@@ -115,21 +115,6 @@ export default function ProductDetail({ initialQuantity = 1 }) {
 
   const category = categorieList.find((cat) => cat.id === product.categorie)
 
-  // const settings = {
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 2,
-  //   centerMode: false, // Désactive le mode centrage
-  //   centerPadding: '0px',
-  //   responsive: [
-  //     { breakpoint: 1199, settings: { slidesToShow: 3 } },
-  //     { breakpoint: 768, settings: { slidesToShow: 1 } },
-  //     { breakpoint: 481, settings: { slidesToShow: 1 } },
-  //   ],
-  // }
-
   return (
     <>
       <Loader />
@@ -375,7 +360,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                 <div className="tab-style3">
                   <ul className="nav nav-tabs" role="tablist">
                     <li className="nav-item">
-                      <a
+                      {/* <a
                         className="nav-link active"
                         id="Description-tab"
                         data-bs-toggle="tab"
@@ -385,23 +370,23 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                         aria-selected="true"
                       >
                         Description
-                      </a>
-                    </li>
-                    {/* <li className="nav-item">
-                      <a
-                        className="nav-link"
-                        id="Additional-info-tab"
+                      </a> */}
+                      <button
+                        className="nav-link active"
+                        id="Description-tab"
                         data-bs-toggle="tab"
-                        href="#Additional-info"
+                        data-bs-target="#Description"
+                        type="button"
                         role="tab"
-                        aria-controls="Additional-info"
-                        aria-selected="false"
+                        aria-controls="Description"
+                        aria-selected="true"
                       >
-                        Additional info
-                      </a>
-                    </li> */}
+                        Description
+                      </button>
+                    </li>
+
                     <li className="nav-item">
-                      <a
+                      {/* <a
                         className="nav-link"
                         id="Reviews-tab"
                         data-bs-toggle="tab"
@@ -411,7 +396,19 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                         aria-selected="false"
                       >
                         Reviews
-                      </a>
+                      </a> */}
+                      <button
+                        className="nav-link"
+                        id="Reviews-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#Reviews"
+                        type="button"
+                        role="tab"
+                        aria-controls="Reviews"
+                        aria-selected="false"
+                      >
+                        Reviews
+                      </button>
                     </li>
                   </ul>
                   <div className="tab-content shop_info_tab">
@@ -424,110 +421,13 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                       <p>{product.description}</p>
                       <p>{product.description1}</p>
                     </div>
-                    {/* <div
-                      className="tab-pane fade"
-                      id="Additional-info"
-                      role="tabpanel"
-                      aria-labelledby="Additional-info-tab"
-                    >
-                      <table className="table table-bordered">
-                        <tbody>
-                          <tr>
-                            <td>Capacity</td>
-                            <td>5 Kg</td>
-                          </tr>
-                          <tr>
-                            <td>Color</td>
-                            <td>Black, Brown, Red,</td>
-                          </tr>
-                          <tr>
-                            <td>Water Resistant</td>
-                            <td>Yes</td>
-                          </tr>
-                          <tr>
-                            <td>Material</td>
-                            <td>Artificial Leather</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div> */}
+
                     <div
                       className="tab-pane fade"
                       id="Reviews"
                       role="tabpanel"
                       aria-labelledby="Reviews-tab"
                     >
-                      {/* <div className="comments">
-                        <h5 className="product_tab_title">
-                          2 Review For <span>Blue Dress For Woman</span>
-                        </h5>
-                        <ul className="list_none comment_list mt-4">
-                          <li>
-                            <div className="comment_img">
-                              <img src="assets/images/user1.jpg" alt="user1" />
-                            </div>
-                            <div className="comment_block">
-                              <div className="rating_wrap">
-                                <div className="rating">
-                                  <div
-                                    className="product_rate"
-                                    style={{ width: '80%' }}
-                                  ></div>
-                                </div>
-                              </div>
-                              <p className="customer_meta">
-                                <span className="review_author">
-                                  Alea Brooks
-                                </span>
-                                <span className="comment-date">
-                                  March 5, 2018
-                                </span>
-                              </p>
-                              <div className="description">
-                                <p>
-                                  Lorem Ipsumin gravida nibh vel velit auctor
-                                  aliquet. Aenean sollicitudin, lorem quis
-                                  bibendum auctor, nisi elit consequat ipsum,
-                                  nec sagittis sem nibh id elit. Duis sed odio
-                                  sit amet nibh vulputate
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="comment_img">
-                              <img src="assets/images/user2.jpg" alt="user2" />
-                            </div>
-                            <div className="comment_block">
-                              <div className="rating_wrap">
-                                <div className="rating">
-                                  <div
-                                    className="product_rate"
-                                    style={{ width: '60%' }}
-                                  ></div>
-                                </div>
-                              </div>
-                              <p className="customer_meta">
-                                <span className="review_author">
-                                  Grace Wong
-                                </span>
-                                <span className="comment-date">
-                                  June 17, 2018
-                                </span>
-                              </p>
-                              <div className="description">
-                                <p>
-                                  It is a long established fact that a reader
-                                  will be distracted by the readable content of
-                                  a page when looking at its layout. The point
-                                  of using Lorem Ipsum is that it has a
-                                  more-or-less normal distribution of letters
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div> */}
                       <div className="review_form field_form">
                         <h5>Add a review</h5>
                         <form className="row mt-3" onSubmit={handleSubmit}>
@@ -615,107 +515,6 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                 </div>
               </div>
             </div>
-            {/* <div className="row">
-              <div className="col-12">
-                <div className="small_divider"></div>
-                <div className="divider"></div>
-                <div className="medium_divider"></div>
-              </div>
-            </div> */}
-
-            {/* <div className="row">
-              <div className="col-12">
-                <div className="heading_s1">
-                  <h3>Releted Products</h3>
-                </div>
-                <div
-                  className=" product_list "
-                  style={{ marginBottom: '-10px', padding: '20px auto' }}
-                >
-                  <Slider {...settings}>
-                    {productsList.slice(0, 5).map((product) => (
-                      <div
-                        key={product.id}
-                        className="item"
-                        style={{ margin: '-30px auto', borderTop: '1px solid' }}
-                      >
-                        <div className="product">
-                          <div className="product_img">
-                            <a href="shop-product-detail.html">
-                              <img src={product.picture} alt="product_img1" />
-                            </a>
-                            <div className="product_action_box">
-                              <ul className="list_none pr_action_btn">
-                                <li className="add-to-cart">
-                                  <a href="#">
-                                    <i className="icon-basket-loaded"></i> Add
-                                    To Cart
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="shop-compare.html">
-                                    <i className="icon-shuffle"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="shop-quick-view.html"
-                                    className="popup-ajax"
-                                  >
-                                    <i className="icon-magnifier-add"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <i className="icon-heart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div className="product_info">
-                            <h6 className="product_title">
-                              <a href="shop-product-detail.html">
-                                Blue Dress For Woman
-                              </a>
-                            </h6>
-                            <div className="product_price">
-                              <span className="price">$45.00</span>
-                              <del>$55.25</del>
-                              <div className="on_sale">
-                                <span>35% Off</span>
-                              </div>
-                            </div>
-                            <div className="rating_wrap">
-                              <div className="rating">
-                                <div
-                                  className="product_rate"
-                                  style={{ width: '80%' }}
-                                ></div>
-                              </div>
-                              <span className="rating_num">(21)</span>
-                            </div>
-                            <div className="pr_desc">
-                              <p>Lorem ipsum dolor</p>
-                            </div>
-                            <div className="pr_switch_wrap">
-                              <div className="product_color_switch">
-                                <span
-                                  className="active"
-                                  data-color="#87554B"
-                                ></span>
-                                <span data-color="#333333"></span>
-                                <span data-color="#DA323F"></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </Slider>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
         {/* <!-- END SECTION SHOP --> */}
