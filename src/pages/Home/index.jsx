@@ -9,7 +9,7 @@ import Loader from '@/utils/loader'
 function Home() {
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <Banner />
 
       <div className="main_content">
