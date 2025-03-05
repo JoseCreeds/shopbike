@@ -1141,7 +1141,7 @@ export default function Header() {
                           fontSize: '1.5rem',
                           padding: '5px',
                           color: '#ff0000',
-                          backgroundColor: 'transparent',
+                          // backgroundColor: 'transparent',
                         }}
                       ></button>
                     )}
