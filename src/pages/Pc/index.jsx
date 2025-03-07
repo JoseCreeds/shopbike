@@ -6,230 +6,222 @@ export default function Pc() {
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
-          {/* <!-- STRART CONTAINER --> */}
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="page-title">
-                <h1 style={{ textTransform: 'none' }}>
-                  Politique de confidentialité
-                </h1>
+                <h1 style={{ textTransform: 'none' }}>Datenschutzrichtlinie</h1>
               </div>
             </div>
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#!">Home</a>
+                  <a href="#!">Startseite</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#!">Pages</a>
+                  <a href="#!">Seiten</a>
                 </li>
-                <li className="breadcrumb-item active">Politique</li>
+                <li className="breadcrumb-item active">Datenschutz</li>
               </ol>
             </div>
           </div>
         </div>
-        {/* <!-- END CONTAINER--> */}
       </div>
+
       {/* <!-- END SECTION BREADCRUMB --> */}
 
       {/* <!-- START MAIN CONTENT --> */}
       <div className="main_content">
-        {/* <!-- STAT SECTION FAQ -->  */}
         <div className="section">
           <div className="container">
             <div className="row">
               <div className="col-12">
                 <div className="term_conditions">
-                  <h6>Nos conditions générales </h6>
+                  <h6>Unsere Allgemeinen Geschäftsbedingungen</h6>
                   <p>
-                    Bienvenue sur notre site de vente en ligne. Nous nous
-                    engageons à protéger votre vie privée et à respecter vos
-                    droits en matière de confidentialité. Cette politique de
-                    confidentialité décrit comment nous collectons, utilisons,
-                    partageons et protégeons vos informations personnelles
-                    lorsque vous utilisez notre site.
+                    Willkommen auf unserer Online-Verkaufswebsite. Wir
+                    verpflichten uns, Ihre Privatsphäre zu schützen und Ihre
+                    Datenschutzrechte zu wahren. Diese Datenschutzrichtlinie
+                    beschreibt, wie wir Ihre persönlichen Informationen sammeln,
+                    verwenden, teilen und schützen, wenn Sie unsere Website
+                    nutzen.
                   </p>
                   <p>
-                    En utilisant notre site, vous acceptez la collecte et
-                    l&apos;utilisation de vos informations conformément à cette
-                    politique.
+                    Durch die Nutzung unserer Website stimmen Sie der Sammlung
+                    und Nutzung Ihrer Informationen gemäß dieser Richtlinie zu.
                   </p>
                   <br />
-                  <h6>Informations que nous collectons</h6>
+                  <h6>Gesammelte Informationen</h6>
                   <p>
-                    Nous collectons des informations personnelles lorsque vous
-                    effectuez un achat, vous inscrivez sur notre site, vous vous
-                    abonnez à notre newsletter ou vous interagissez d&apos;une
-                    autre manière avec notre service.
+                    Wir sammeln persönliche Informationen, wenn Sie einen Kauf
+                    tätigen, sich auf unserer Website anmelden, unseren
+                    Newsletter abonnieren oder auf andere Weise mit unserem
+                    Service interagieren.
                   </p>
                   <p>
-                    Les types d&apos;informations que nous collectons incluent,
-                    sans s&apos;y limiter :
+                    Die Arten von Informationen, die wir sammeln, umfassen unter
+                    anderem:
                   </p>
                   <ol>
                     <li>
                       <strong>
-                        Informations d&apos;identification personnelle :
+                        Persönlich identifizierbare Informationen:
                       </strong>{' '}
-                      Nom, adresse e-mail, adresse postale, numéro de téléphone,
-                      informations de paiement.
+                      Name, E-Mail-Adresse, Postadresse, Telefonnummer,
+                      Zahlungsinformationen.
                     </li>
                     <li>
-                      <strong>Informations de commande :</strong> Produits
-                      achetés, montant de la commande, date et heure de la
-                      commande.
+                      <strong>Bestellinformationen:</strong> Gekaufte Produkte,
+                      Bestellbetrag, Datum und Uhrzeit der Bestellung.
                     </li>
                     <li>
-                      <strong> Informations techniques :</strong> Adresse IP,
-                      type de navigateur, système d&apos;exploitation, pages
-                      visitées, et autres informations relatives à votre
-                      interaction avec notre site.
+                      <strong>Technische Informationen:</strong> IP-Adresse,
+                      Browsertyp, Betriebssystem, besuchte Seiten und andere
+                      Informationen zu Ihrer Interaktion mit unserer Website.
                     </li>
                   </ol>
 
                   <br />
-                  <h6>Comment nous utilisons vos informations</h6>
-                  <p>Nous utilisons vos informations personnelles pour :</p>
+                  <h6>Wie wir Ihre Informationen verwenden</h6>
+                  <p>Wir verwenden Ihre persönlichen Informationen für:</p>
 
                   <ul>
-                    <li>Traiter et expédier vos commandes. </li>
+                    <li>Die Bearbeitung und den Versand Ihrer Bestellungen.</li>
                     <li>
-                      Vous envoyer des informations concernant votre commande
-                      (confirmation, suivi).{' '}
+                      Ihnen Informationen zu Ihrer Bestellung zu senden
+                      (Bestätigung, Verfolgung).
                     </li>
                     <li>
-                      Vous contacter pour des offres spéciales, promotions, et
-                      mises à jour de notre site (si vous avez consenti à
-                      recevoir des communications marketing).
+                      Sie zu kontaktieren, um Sonderangebote, Aktionen und
+                      Updates zu unserer Website zu senden (sofern Sie dem
+                      Erhalt von Marketingkommunikationen zugestimmt haben).
                     </li>
-                    <li>Améliorer l’expérience utilisateur sur notre site.</li>
                     <li>
-                      Assurer la sécurité de notre site et de vos informations.
+                      Die Benutzererfahrung auf unserer Website zu verbessern.
+                    </li>
+                    <li>
+                      Die Sicherheit unserer Website und Ihrer Informationen zu
+                      gewährleisten.
                     </li>
                   </ul>
 
                   <br />
-                  <h6>Comment nous protégeons vos informations</h6>
+                  <h6>Wie wir Ihre Informationen schützen</h6>
                   <p>
-                    Nous mettons en œuvre des mesures de sécurité techniques et
-                    organisationnelles appropriées pour protéger vos
-                    informations personnelles contre tout accès, divulgation,
-                    altération ou destruction non autorisés. Cela inclut
-                    l’utilisation de protocoles de sécurité pour le traitement
-                    des paiements (par exemple, le chiffrement SSL pour les
-                    transactions).
+                    Wir ergreifen geeignete technische und organisatorische
+                    Sicherheitsmaßnahmen, um Ihre persönlichen Informationen vor
+                    unbefugtem Zugriff, Offenlegung, Änderung oder Zerstörung zu
+                    schützen. Dies umfasst die Verwendung von
+                    Sicherheitsprotokollen für die Zahlungsabwicklung (z. B.
+                    SSL-Verschlüsselung für Transaktionen).
                   </p>
 
                   <br />
-                  <h6> Partage des informations</h6>
+                  <h6>Informationsweitergabe</h6>
                   <p>
-                    Nous ne vendons ni ne louons vos informations personnelles à
-                    des tiers. Cependant, nous pouvons partager des informations
-                    avec :
+                    Wir verkaufen oder vermieten Ihre persönlichen Informationen
+                    nicht an Dritte. Wir können jedoch Informationen mit
+                    folgenden Stellen teilen:
                   </p>
                   <ul>
                     <li>
-                      <strong>Nos prestataires de services :</strong> Ceux qui
-                      traitent les paiements, assurent la livraison des produits
-                      ou nous aident à gérer notre site.
+                      <strong>Unsere Dienstleister:</strong> Diese bearbeiten
+                      Zahlungen, sorgen für die Lieferung von Produkten oder
+                      helfen uns bei der Verwaltung unserer Website.
                     </li>
                     <li>
-                      <strong>Les autorités légales :</strong> Si nous sommes
-                      tenus de le faire pour respecter la loi, un règlement ou
-                      une procédure judiciaire.
+                      <strong>Rechtliche Behörden:</strong> Wenn wir gesetzlich
+                      dazu verpflichtet sind, dies zu tun, um Gesetze,
+                      Vorschriften oder gerichtliche Verfahren zu erfüllen.
                     </li>
                   </ul>
 
                   <br />
-                  <h6>Vos droits en matière de confidentialité</h6>
-                  <p>
-                    Conformément aux lois en vigueur, vous avez le droit de :
-                  </p>
+                  <h6>Ihre Datenschutzrechte</h6>
+                  <p>Gemäß den geltenden Gesetzen haben Sie das Recht,:</p>
                   <ul>
                     <li>
-                      Accéder à vos informations personnelles que nous détenons.
+                      Auf Ihre persönlichen Informationen zuzugreifen, die wir
+                      besitzen.
                     </li>
                     <li>
-                      Corriger ou mettre à jour vos informations personnelles.
+                      Ihre persönlichen Informationen zu korrigieren oder zu
+                      aktualisieren.
                     </li>
                     <li>
-                      Demander la suppression de vos informations personnelles,
-                      sous certaines conditions.
+                      Die Löschung Ihrer persönlichen Informationen zu
+                      verlangen, unter bestimmten Bedingungen.
                     </li>
                     <li>
-                      Vous opposer à l&apos;utilisation de vos informations pour
-                      des communications marketing.
+                      Der Nutzung Ihrer Informationen für Marketingkommunikation
+                      zu widersprechen.
                     </li>
                   </ul>
                   <p>
-                    Pour exercer ces droits, vous pouvez nous contacter à
-                    l&apos;adresse [votre-email@exemple.com].
+                    Um diese Rechte auszuüben, können Sie uns unter der Adresse
+                    {import.meta.env.VITE_SHOP_EMAIL} kontaktieren.
                   </p>
 
                   <br />
-                  <h6>Cookies et technologies similaires</h6>
+                  <h6>Cookies und ähnliche Technologien</h6>
                   <p>
-                    Nous utilisons des <strong>cookies</strong> et d&apos;autres
-                    technologies similaires pour améliorer votre expérience sur
-                    notre site. Les cookies sont de petits fichiers que nous
-                    plaçons sur votre appareil pour :
+                    Wir verwenden <strong>Cookies</strong> und andere ähnliche
+                    Technologien, um Ihre Erfahrung auf unserer Website zu
+                    verbessern. Cookies sind kleine Dateien, die wir auf Ihrem
+                    Gerät ablegen, um:
                   </p>
-                  <li>Sauvegarder vos préférences.</li>
-                  <li>Analyser l&apos;utilisation du site.</li>
-                  <li>Vous offrir une expérience plus personnalisée.</li>
+                  <li>Ihre Präferenzen zu speichern.</li>
+                  <li>Die Nutzung der Website zu analysieren.</li>
+                  <li>Eine personalisierte Erfahrung zu bieten.</li>
 
                   <p>
-                    Vous pouvez gérer ou désactiver les cookies dans les
-                    paramètres de votre navigateur, mais cela peut affecter
-                    certaines fonctionnalités de notre site.
-                  </p>
-
-                  <br />
-                  <h6>Liens vers des sites tiers</h6>
-                  <p>
-                    Notre site peut contenir des liens vers d&apos;autres sites
-                    Web. Nous ne sommes pas responsables des pratiques de
-                    confidentialité de ces sites tiers. Nous vous conseillons de
-                    lire leur politique de confidentialité avant de fournir vos
-                    informations personnelles.
+                    Sie können Cookies in den Einstellungen Ihres Browsers
+                    verwalten oder deaktivieren, aber dies kann einige
+                    Funktionen unserer Website beeinträchtigen.
                   </p>
 
                   <br />
-                  <h6>Modifications de la politique de confidentialité</h6>
+                  <h6>Links zu Dritten</h6>
                   <p>
-                    Nous nous réservons le droit de mettre à jour cette
-                    politique de confidentialité à tout moment. Nous publierons
-                    toute modification sur cette page et indiquerons la date de
-                    la dernière mise à jour en haut de la page.
+                    Unsere Website kann Links zu anderen Websites enthalten. Wir
+                    sind nicht verantwortlich für die Datenschutzpraktiken
+                    dieser Dritten. Wir empfehlen, deren Datenschutzrichtlinie
+                    zu lesen, bevor Sie persönliche Informationen weitergeben.
                   </p>
 
                   <br />
-                  <h6> Contactez-nous</h6>
+                  <h6>Änderungen der Datenschutzrichtlinie</h6>
                   <p>
-                    Si vous avez des questions ou des préoccupations concernant
-                    cette politique de confidentialité ou la manière dont nous
-                    traitons vos informations personnelles, veuillez nous
-                    contacter à l&apos;adresse suivante :
+                    Wir behalten uns das Recht vor, diese Datenschutzrichtlinie
+                    jederzeit zu aktualisieren. Alle Änderungen werden auf
+                    dieser Seite veröffentlicht und das Datum der letzten
+                    Aktualisierung wird oben auf der Seite angegeben.
+                  </p>
+
+                  <br />
+                  <h6>Kontaktieren Sie uns</h6>
+                  <p>
+                    Wenn Sie Fragen oder Bedenken zu dieser
+                    Datenschutzrichtlinie oder der Art und Weise, wie wir Ihre
+                    persönlichen Informationen behandeln, haben, kontaktieren
+                    Sie uns bitte unter:
                   </p>
 
                   <p>
-                    <strong>Email :</strong> [votre-email@exemple.com]
+                    <strong>Email:</strong> {import.meta.env.VITE_SHOP_EMAIL}
                   </p>
                   <p>
-                    <strong>Adresse :</strong> [adresse de l&apos;entreprise]
+                    <strong>Adresse:</strong> {import.meta.env.VITE_SHOP_EMAIL}
                   </p>
 
-                  <span>Dernière mise à jour : 05/01/2024</span>
+                  <span>Letzte Aktualisierung: 05/01/2024</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* <!-- END SECTION FAQ -->  */}
 
         <NewLetters />
       </div>
-      {/* <!-- END MAIN CONTENT --> */}
     </>
   )
 }

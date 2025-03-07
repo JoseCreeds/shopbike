@@ -9,7 +9,7 @@ import AmaricanExpress from '@/assets/images/amarican_express.png'
 function Footer() {
   return (
     <footer className="bg_gray">
-      <div className=" footer_top">
+      <div className="footer_top">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -21,8 +21,8 @@ function Footer() {
                         <i className="flaticon-shipped"></i>
                       </div>
                       <div className="icon_box_content">
-                        <h5>LIVRAISON GRATUITE</h5>
-                        <p>informations sur le transporteur</p>
+                        <h5>KOSTENLOSER VERSAND</h5>
+                        <p>Informationen zum Spediteur</p>
                       </div>
                     </div>
                   </div>
@@ -32,8 +32,8 @@ function Footer() {
                         <i className="flaticon-money-back"></i>
                       </div>
                       <div className="icon_box_content">
-                        <h5>Garantie de retour de 30 jours</h5>
-                        <p>Satisfaction ou remboursement</p>
+                        <h5>30 TAGE RÜCKGARANTIE</h5>
+                        <p>Zufriedenheit oder Rückerstattung</p>
                       </div>
                     </div>
                   </div>
@@ -43,8 +43,8 @@ function Footer() {
                         <i className="flaticon-support"></i>
                       </div>
                       <div className="icon_box_content">
-                        <h5>ASSISTANCE 24/7</h5>
-                        <p>Suivez vos commandes</p>
+                        <h5>RUND UM DIE UHR SUPPORT</h5>
+                        <p>Verfolgen Sie Ihre Bestellungen</p>
                       </div>
                     </div>
                   </div>
@@ -66,28 +66,30 @@ function Footer() {
                   </a>
                 </div>
                 <p className="mb-3">
-                  Achetez votre vélo de tendance en toute sécurité tout en
-                  bénéficiant de nos offres spéciales
+                  Kaufen Sie Ihr Trendfahrrad sicher und profitieren Sie von
+                  unseren Sonderangeboten
                 </p>
                 <ul className="contact_info">
                   <li>
                     <i className="ti-location-pin"></i>
-                    <p>123 Street, Old Trafford, NewYork, USA</p>
+                    <p>{import.meta.env.VITE_SHOP_LOCALISATION}</p>
                   </li>
                   <li>
                     <i className="ti-email"></i>
-                    <a href="mailto:info@sitename.com">info@sitename.com</a>
+                    <a href={`mailto:${import.meta.env.VITE_SHOP_EMAIL}`}>
+                      {import.meta.env.VITE_SHOP_EMAIL}
+                    </a>
                   </li>
                   <li>
                     <i className="ti-mobile"></i>
-                    <p>+ 457 789 789 65</p>
+                    <p>{import.meta.env.VITE_SHOP_PHONE}</p>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="col-lg-2 col-md-4 col-sm-6">
+            <div className="col-lg-3 col-md-4 col-sm-6">
               <div className="widget">
-                <h6 className="widget_title">INFORMATION</h6>
+                <h6 className="widget_title">INFORMATIONEN</h6>
                 <ul className="widget_links">
                   <li>
                     <a
@@ -97,20 +99,20 @@ function Footer() {
                         window.location.href = `/about-us`
                       }}
                     >
-                      A propos
+                      Über uns
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       href="#!"
                       onClick={(e) => {
                         e.preventDefault()
-                        window.location.href = `/faq`
+                        window.location.href = /faq
                       }}
                     >
                       FAQ
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a
                       href="#!"
@@ -119,7 +121,7 @@ function Footer() {
                         window.location.href = `/contact-us`
                       }}
                     >
-                      Localisation
+                      Standort
                     </a>
                   </li>
                   <li>
@@ -130,7 +132,7 @@ function Footer() {
                         window.location.href = `/contact-us`
                       }}
                     >
-                      Affiliates
+                      Partnerprogramme
                     </a>
                   </li>
                   <li>
@@ -141,22 +143,18 @@ function Footer() {
                         window.location.href = `/contact-us`
                       }}
                     >
-                      Contact
+                      Kontakt
                     </a>
-                    {/* <a href="#!">Contact Us</a> */}
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-6">
+            <div className="col-lg-3 col-md-4 col-sm-6">
               <div className="widget">
                 <h6 className="widget_title" style={{ textTransform: 'none' }}>
-                  Politique de la boutique
+                  Shop-Richtlinien
                 </h6>
                 <ul className="widget_links">
-                  {/* <li>
-                    <a href="#!">My Account</a>
-                  </li> */}
                   <li>
                     <a
                       href="#!"
@@ -165,7 +163,7 @@ function Footer() {
                         window.location.href = `/pc`
                       }}
                     >
-                      Politique de confidentialité
+                      Datenschutzrichtlinie
                     </a>
                   </li>
                   <li>
@@ -176,7 +174,7 @@ function Footer() {
                         window.location.href = `/pr`
                       }}
                     >
-                      Politique de remboursement
+                      Rückerstattungsrichtlinie
                     </a>
                   </li>
                   <li>
@@ -187,7 +185,7 @@ function Footer() {
                         window.location.href = `/pe`
                       }}
                     >
-                      Politique d&apos;expédition
+                      Versandrichtlinie
                     </a>
                   </li>
                   <li>
@@ -198,7 +196,7 @@ function Footer() {
                         window.location.href = `/ugc`
                       }}
                     >
-                      Politique d&apos;utilisation
+                      Nutzungsrichtlinie
                     </a>
                   </li>
                   <li>
@@ -209,37 +207,9 @@ function Footer() {
                         window.location.href = `/pp`
                       }}
                     >
-                      Politique de paiement
+                      Zahlungsrichtlinie
                     </a>
                   </li>
-                  {/* <li>
-                    <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/ugc`
-                      }}
-                    >
-                      Condition générale d&apos;utilisation
-                    </a>
-                  </li> */}
-                  {/* <li>
-                    <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/contact-us`
-                      }}
-                    >
-                      Returns
-                    </a>
-                  </li> */}
-                  {/* <li>
-                    <a href="#!">Orders History</a>
-                  </li>
-                  <li>
-                    <a href="#!">Order Tracking</a>
-                  </li> */}
                 </ul>
               </div>
             </div>
@@ -252,7 +222,7 @@ function Footer() {
           <div className="row">
             <div className="col-md-6">
               <p className="text-center text-md-start mb-md-0">
-                Droits d&apos;auteur © 2024 SHOPWISE. Tous droits réservés.
+                Urheberrecht © 2023 RIJDENX. Alle Rechte vorbehalten.
               </p>
             </div>
             <div className="col-lg-6">

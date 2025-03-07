@@ -1,15 +1,44 @@
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { loginUser } from '@/store/slices/authSlice'
+import { toast } from 'react-toastify'
+
 import NewLetters from '@/components/NewLetters'
 import Loader from '@/utils/loader'
 
 export default function Login() {
+  const dispatch = useDispatch()
+  const { loading, error } = useSelector((state) => state.auth)
+
+  const [userData, setUserData] = useState({
+    email: '',
+    password: '',
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setUserData({ ...userData, [name]: value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    dispatch(loginUser(userData)).then((result) => {
+      if (result.type === 'auth/login/fulfilled') {
+        //toast.success('Connexion réussie')
+        window.location.href = '/'
+      } else {
+        toast.error(error)
+      }
+    })
+  }
+
   return (
     <>
       <Loader />
 
-      {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
-          {/* <!-- STRART CONTAINER --> */}
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="page-title">
@@ -19,23 +48,20 @@ export default function Login() {
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#!">Home</a>
+                  <a href="#!">Startseite</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#!">Pages</a>
+                  <a href="#!">Seiten</a>
                 </li>
                 <li className="breadcrumb-item active">Login</li>
               </ol>
             </div>
           </div>
         </div>
-        {/* <!-- END CONTAINER--> */}
       </div>
-      {/* <!-- END SECTION BREADCRUMB --> */}
 
       {/* <!-- START MAIN CONTENT --> */}
       <div className="main_content">
-        {/* <!-- START LOGIN SECTION --> */}
         <div className="login_register_wrap section">
           <div className="container">
             <div className="row justify-content-center">
@@ -43,25 +69,29 @@ export default function Login() {
                 <div className="login_wrap">
                   <div className="padding_eight_all bg-white">
                     <div className="heading_s1">
-                      <h3>Connexion</h3>
+                      <h3>Login</h3>
                     </div>
-                    <form method="post">
+                    <form onSubmit={handleSubmit}>
                       <div className="form-group mb-3">
                         <input
                           type="text"
-                          required=""
-                          className="form-control"
                           name="email"
-                          placeholder="Your Email"
+                          value={userData.email}
+                          onChange={handleChange}
+                          className="form-control"
+                          placeholder="Ihre E-Mail"
+                          required
                         />
                       </div>
                       <div className="form-group mb-3">
                         <input
-                          className="form-control"
-                          required=""
                           type="password"
                           name="password"
-                          placeholder="Password"
+                          value={userData.password}
+                          onChange={handleChange}
+                          className="form-control"
+                          placeholder="Passwort"
+                          required
                         />
                       </div>
                       <div className="login_footer form-group mb-3">
@@ -75,40 +105,26 @@ export default function Login() {
                               value=""
                             />
                             <label className="form-check-label">
-                              <span>Se souvenir de moi</span>
+                              <span>Erinnere dich an mich</span>
                             </label>
                           </div>
                         </div>
-                        <a href="#!">Mot de passe oublié ?</a>
+                        <a href="#!">Passwort vergessen?</a>
                       </div>
                       <div className="form-group mb-3">
                         <button
-                          // type="submit"
+                          type="submit"
                           className="btn btn-fill-out btn-block"
                           name="login"
+                          disabled={loading}
                         >
-                          Se connecter
+                          {loading ? 'Lädt...' : 'Einloggen'}
                         </button>
                       </div>
                     </form>
-                    {/* <div className="different_login">
-                      <span> or</span>
-                    </div>
-                    <ul className="btn-login list_none text-center">
-                      <li>
-                        <a href="#!" className="btn btn-facebook">
-                          <i className="ion-social-facebook"></i>Facebook
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!" className="btn btn-google">
-                          <i className="ion-social-googleplus"></i>Google
-                        </a>
-                      </li>
-                    </ul> */}
+
                     <div className="form-note text-center">
-                      Vous n&apos;avez pas un compte ?{' '}
-                      <a href="signup">S&apos;inscrire</a>
+                      Sie haben kein Konto? <a href="signup">Registrieren</a>
                     </div>
                   </div>
                 </div>
@@ -116,9 +132,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-        {/* <!-- END LOGIN SECTION --> */}
       </div>
-      {/* <!-- END MAIN CONTENT --> */}
 
       <NewLetters />
     </>

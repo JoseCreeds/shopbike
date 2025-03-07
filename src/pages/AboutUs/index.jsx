@@ -18,29 +18,29 @@ export default function AboutUs() {
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="page-title">
-                <h1>A propos</h1>
+                <h1>Über uns</h1>
               </div>
             </div>
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#!">Home</a>
+                  <a href="#!">Startseite</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#!">Pages</a>
+                  <a href="#!">Seiten</a>
                 </li>
-                <li className="breadcrumb-item active">A propos</li>
+                <li className="breadcrumb-item active">Über uns</li>
               </ol>
             </div>
           </div>
         </div>
         {/* <!-- END CONTAINER--> */}
       </div>
+
       {/* <!-- END SECTION BREADCRUMB --> */}
 
       {/* <!-- START MAIN CONTENT --> */}
       <div className="main_content">
-        {/* <!-- STAT SECTION ABOUT -->  */}
         <div className="section">
           <div className="container">
             <img
@@ -50,53 +50,50 @@ export default function AboutUs() {
             />
 
             <div style={{ textAlign: 'center', marginTop: '40px' }}>
-              <h5 style={{ textTransform: 'uppercase' }}>A propos de nous</h5>
+              <h5 style={{ textTransform: 'uppercase' }}>Über uns</h5>
 
               <p>
-                <strong>{import.meta.env.VITE_SHOP_NAME}</strong> est un
-                revendeur spécialisé dans le vélo qui vous propose{' '}
+                <strong>{import.meta.env.VITE_SHOP_NAME}</strong> ist ein
+                spezialisierter Fahrradhändler, der Ihnen{' '}
                 <strong>
-                  des conseils adaptés à vos besoins, un service convivial et
-                  entretient
+                  maßgeschneiderte Beratung, freundlichen Service und Wartung
                 </strong>{' '}
-                et soigne{' '}
+                bietet und{' '}
                 <strong>
-                  vos vélos dans son propre atelier de réparation de vélos
+                  Ihre Fahrräder in seiner eigenen Fahrradwerkstatt pflegt
                 </strong>{' '}
                 .
               </p>
               <p>
-                Ce sont les fondements de notre entreprise. Un{' '}
-                <strong>large choix de vélos de marque</strong> est disponible
-                dans notre magasin de vélos.
+                Dies sind die Grundpfeiler unseres Unternehmens. Eine{' '}
+                <strong>große Auswahl an Markenfahrrädern</strong> ist in
+                unserem Fahrradgeschäft verfügbar.
               </p>
               <p>
-                Les deux-roues apportent plaisir et divertissement tout en
-                contribuant à une activité physique saine. Nous nous sommes
-                donné pour objectif de vous transmettre notre joie de faire du
-                vélo et de faire de l&apos;exercice. Nous fournissons donc des
-                conseils complets et professionnels, pouvons intégrer notre
-                <strong>connaissance des dernières tendances</strong> en matière
-                de vélos et de leurs accessoires dans la consultation et
-                expliquer les avantages et les inconvénients de certains vélos.
-                Cela nous permet de vous accompagner dans le choix du véhicule
-                qui vous convient exactement.
+                Zweiräder bringen Freude und Unterhaltung und tragen
+                gleichzeitig zu einer gesunden körperlichen Aktivität bei. Unser
+                Ziel ist es, Ihnen unsere Begeisterung für das Radfahren und die
+                Bewegung zu vermitteln. Daher bieten wir eine umfassende und
+                professionelle Beratung an, integrieren unser{' '}
+                <strong>Wissen über die neuesten Trends</strong> im Bereich
+                Fahrräder und Zubehör in die Beratung und erläutern die Vor- und
+                Nachteile bestimmter Modelle. So begleiten wir Sie bei der
+                Auswahl des passenden Fahrzeugs.
               </p>
 
               <p>
-                Notre magasin et atelier emploient uniquement des spécialistes
-                qui peuvent vous offrir <strong>un service compétent</strong> .
-                Des mécaniciens spécialisés remettront votre vélo sur les rails,
-                effectueront les réparations et vous assisteront en cas de
-                problème éventuel. Nos conseils ne s&apos;arrêtent pas après
-                l&apos;achat, nous sommes toujours heureux de vous aider par la
-                suite.
+                Unser Geschäft und unsere Werkstatt beschäftigen ausschließlich
+                Fachleute, die Ihnen einen <strong>kompetenten Service</strong>{' '}
+                bieten können. Spezialisierte Mechaniker bringen Ihr Fahrrad
+                wieder auf die Straße, führen Reparaturen durch und unterstützen
+                Sie bei eventuellen Problemen. Unsere Beratung endet nicht nach
+                dem Kauf – wir helfen Ihnen auch danach jederzeit gerne weiter.
               </p>
             </div>
 
             <div style={{ marginTop: '100px', textTransform: 'uppercase' }}>
-              <h4>NOTRE SERVICE POUR VOUS</h4>
-              <h4>CONSEILS COMPÉTENTS</h4>
+              <h4>UNSER SERVICE FÜR SIE</h4>
+              <h4>KOMPETENTE BERATUNG</h4>
             </div>
 
             <div
@@ -112,17 +109,17 @@ export default function AboutUs() {
               <div className="col-lg-6">
                 <div className="heading_s1">
                   <h3>
-                    Grâce aux conseils professionnels vous trouverez le vélo qui
-                    vous convient
+                    Dank professioneller Beratung finden Sie das passende
+                    Fahrrad
                   </h3>
                 </div>
                 <p style={{ fontSize: '14px' }}>
-                  Nous offrons à nos clients une sélection de marques et de
-                  modèles de premier ordre, associée aux conseils avisés de
-                  notre personnel spécialement formé. Cela vous donnera toutes
-                  les informations importantes sur les subtilités du marché
-                  dynamique des vélos électriques dont vous avez besoin pour
-                  prendre une décision d’achat véritablement éclairée.
+                  Wir bieten unseren Kunden eine Auswahl an erstklassigen Marken
+                  und Modellen, kombiniert mit der fundierten Beratung unseres
+                  speziell geschulten Personals. Dies gibt Ihnen alle wichtigen
+                  Informationen über die Feinheiten des dynamischen
+                  E-Bike-Marktes, die Sie für eine wirklich fundierte
+                  Kaufentscheidung benötigen.
                 </p>
               </div>
             </div>
@@ -134,28 +131,26 @@ export default function AboutUs() {
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="heading_s1">
-                  <h3>Service certifié dans l&apos;atelier de qualité</h3>
+                  <h3>Zertifizierter Service in der Qualitätswerkstatt</h3>
                 </div>
                 <p style={{ fontSize: '14px' }}>
-                  Tout comme la technologie du vélo s&apos;est développée
-                  rapidement ces dernières années, les exigences imposées à
-                  l&apos;atelier ont également augmenté. En tant que fiers
-                  détenteurs du certificat « Atelier Qualité », nous travaillons
-                  selon les normes les plus élevées et offrons à nos clients une
-                  sécurité maximale et un service exceptionnel dans tous les
-                  services de l&apos;atelier.
+                  Ebenso wie sich die Fahrradtechnologie in den letzten Jahren
+                  rasant weiterentwickelt hat, sind auch die Anforderungen an
+                  die Werkstatt gestiegen. Als stolze Inhaber des Zertifikats
+                  „Qualitätswerkstatt“ arbeiten wir nach höchsten Standards und
+                  bieten unseren Kunden maximale Sicherheit und
+                  außergewöhnlichen Service in allen Werkstattleistungen.
                 </p>
                 <p style={{ fontSize: '14px' }}>
-                  Afin de répondre aux exigences et aux demandes élevées, nous
-                  nous sommes soumis à des directives strictes qui sont
-                  constamment contrôlées par le TüV Nord. Outre les tests
-                  inopinés, cela comprend la formation continue de nos
-                  collaborateurs et l&apos;échange au sein du plus grand réseau
-                  européen de 960 revendeurs de vélos indépendants. De cette
-                  manière, nous garantissons toujours une connaissance
-                  actualisée des derniers développements en matière de
-                  technologie du vélo ainsi qu&apos;une optimisation constante
-                  des processus de l&apos;atelier.
+                  Um den hohen Anforderungen und Wünschen gerecht zu werden,
+                  haben wir uns strengen Richtlinien unterworfen, die regelmäßig
+                  vom TÜV Nord überprüft werden. Neben unangekündigten Prüfungen
+                  umfasst dies die kontinuierliche Weiterbildung unserer
+                  Mitarbeiter und den Austausch innerhalb des größten
+                  europäischen Netzwerks von 960 unabhängigen Fahrradhändlern.
+                  So gewährleisten wir stets aktuelles Wissen über die neuesten
+                  Entwicklungen in der Fahrradtechnologie sowie eine
+                  kontinuierliche Optimierung der Werkstattprozesse.
                 </p>
               </div>
               <div className="col-lg-6">
@@ -166,404 +161,8 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-        {/* <!-- END SECTION ABOUT -->  */}
-
-        {/* <!-- START SECTION WHY CHOOSE -->  */}
-        {/* <div className="section bg_light_blue2 pb_70">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-6 col-md-8">
-                <div className="heading_s1 text-center">
-                  <h2>Why Choose Us?</h2>
-                </div>
-                <p className="text-center leads">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore.
-                </p>
-              </div>
-            </div>
-            <div className="row justify-content-center">
-              <div className="col-lg-4 col-sm-6">
-                <div className="icon_box icon_box_style4 box_shadow1">
-                  <div className="icon">
-                    <i className="ti-pencil-alt"></i>
-                  </div>
-                  <div className="icon_box_content">
-                    <h5>Creative Design</h5>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <div className="icon_box icon_box_style4 box_shadow1">
-                  <div className="icon">
-                    <i className="ti-layers"></i>
-                  </div>
-                  <div className="icon_box_content">
-                    <h5>Flexible Layouts</h5>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-sm-6">
-                <div className="icon_box icon_box_style4 box_shadow1">
-                  <div className="icon">
-                    <i className="ti-email"></i>
-                  </div>
-                  <div className="icon_box_content">
-                    <h5>Email Marketing</h5>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        {/* <!-- END SECTION WHY CHOOSE -->  */}
-
-        {/* <!-- START SECTION TEAM --> */}
-        {/* <div className="section pb_70">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-6">
-                <div className="heading_s1 text-center">
-                  <h2>Our Team Members</h2>
-                </div>
-                <p className="text-center leads">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore.
-                </p>
-              </div>
-            </div>
-            <div className="row justify-content-center">
-              <div className="col-lg-3 col-sm-6">
-                <div className="team_box team_style1">
-                  <div className="team_img">
-                    <img src={Team1} alt="team_img1" />
-                    <ul className="social_icons social_style1">
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-googleplus"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-instagram-outline"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="team_content">
-                    <div className="team_title">
-                      <h5>John Muniz</h5>
-                      <span>Project Engineer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-sm-6">
-                <div className="team_box team_style1">
-                  <div className="team_img">
-                    <img src={Team2} alt="team_img2" />
-                    <ul className="social_icons social_style4">
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-googleplus"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-instagram-outline"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="team_content">
-                    <div className="team_title">
-                      <h5>Alea Brooks</h5>
-                      <span>Graphics Designer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-sm-6">
-                <div className="team_box team_style1">
-                  <div className="team_img">
-                    <img src={Team3} alt="team_img3" />
-                    <ul className="social_icons social_style4">
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-googleplus"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-instagram-outline"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="team_content">
-                    <div className="team_title">
-                      <h5>Anders Glick</h5>
-                      <span>Software Developer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-sm-6">
-                <div className="team_box team_style1">
-                  <div className="team_img">
-                    <img src={Team4} alt="team_img4" />
-                    <ul className="social_icons social_style4">
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-googleplus"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#!">
-                          <i className="ion-social-instagram-outline"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="team_content">
-                    <div className="team_title">
-                      <h5>Richard Tice</h5>
-                      <span>Web Developer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        {/* <!-- END SECTION TEAM --> */}
-
-        {/* <!-- START SECTION TESTIMONIAL --> */}
-        {/* <div className="section bg_redon">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-md-6">
-                <div className="heading_s1 text-center">
-                  <h2>Our Client Say!</h2>
-                </div>
-              </div>
-            </div>
-            <div className="row justify-content-center">
-              <div className="col-lg-9">
-                <div
-                  className="testimonial_wrap testimonial_style1 carousel_slider owl-carousel owl-theme nav_style2"
-                  data-nav="true"
-                  data-dots="false"
-                  data-center="true"
-                  data-loop="true"
-                  data-autoplay="true"
-                  data-items="1"
-                >
-                  <div className="testimonial_box">
-                    <div className="testimonial_desc">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. A aliquam amet animi blanditiis consequatur
-                        debitis dicta distinctio, enim error eum iste libero
-                        modi nam natus perferendis possimus quasi sint sit
-                        tempora voluptatem.
-                      </p>
-                    </div>
-                    <div className="author_wrap">
-                      <div className="author_img">
-                        <img
-                          src="assets/images/user_img1.jpg"
-                          alt="user_img1"
-                        />
-                      </div>
-                      <div className="author_name">
-                        <h6>Lissa Castro</h6>
-                        <span>Designer</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testimonial_box">
-                    <div className="testimonial_desc">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. A aliquam amet animi blanditiis consequatur
-                        debitis dicta distinctio, enim error eum iste libero
-                        modi nam natus perferendis possimus quasi sint sit
-                        tempora voluptatem.
-                      </p>
-                    </div>
-                    <div className="author_wrap">
-                      <div className="author_img">
-                        <img
-                          src="assets/images/user_img2.jpg"
-                          alt="user_img2"
-                        />
-                      </div>
-                      <div className="author_name">
-                        <h6>Alden Smith</h6>
-                        <span>Designer</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testimonial_box">
-                    <div className="testimonial_desc">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. A aliquam amet animi blanditiis consequatur
-                        debitis dicta distinctio, enim error eum iste libero
-                        modi nam natus perferendis possimus quasi sint sit
-                        tempora voluptatem.
-                      </p>
-                    </div>
-                    <div className="author_wrap">
-                      <div className="author_img">
-                        <img
-                          src="assets/images/user_img3.jpg"
-                          alt="user_img3"
-                        />
-                      </div>
-                      <div className="author_name">
-                        <h6>Daisy Lana</h6>
-                        <span>Designer</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="testimonial_box">
-                    <div className="testimonial_desc">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. A aliquam amet animi blanditiis consequatur
-                        debitis dicta distinctio, enim error eum iste libero
-                        modi nam natus perferendis possimus quasi sint sit
-                        tempora voluptatem.
-                      </p>
-                    </div>
-                    <div className="author_wrap">
-                      <div className="author_img">
-                        <img
-                          src="assets/images/user_img4.jpg"
-                          alt="user_img4"
-                        />
-                      </div>
-                      <div className="author_name">
-                        <h6>John Becker</h6>
-                        <span>Designer</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        {/* <!-- END SECTION TESTIMONIAL --> */}
-
-        {/* <!-- START SECTION SHOP INFO --> */}
-        {/* <div className="section pb_70">
-          <div className="container">
-            <div className="row g-0">
-              <div className="col-lg-4">
-                <div className="icon_box icon_box_style1">
-                  <div className="icon">
-                    <i className="flaticon-shipped"></i>
-                  </div>
-                  <div className="icon_box_content">
-                    <h5>Free Delivery</h5>
-                    <p>
-                      If you are going to use of Lorem, you need to be sure
-                      there anything
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="icon_box icon_box_style1">
-                  <div className="icon">
-                    <i className="flaticon-money-back"></i>
-                  </div>
-                  <div className="icon_box_content">
-                    <h5>30 Day Return</h5>
-                    <p>
-                      If you are going to use of Lorem, you need to be sure
-                      there anything
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4">
-                <div className="icon_box icon_box_style1">
-                  <div className="icon">
-                    <i className="flaticon-support"></i>
-                  </div>
-                  <div className="icon_box_content">
-                    <h5>27/4 Support</h5>
-                    <p>
-                      If you are going to use of Lorem, you need to be sure
-                      there anything
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        {/* <!-- END SECTION SHOP INFO --> */}
       </div>
+
       {/* <!-- END MAIN CONTENT --> */}
 
       <NewLetters />

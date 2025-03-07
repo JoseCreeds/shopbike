@@ -11,12 +11,7 @@ import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import { addToCart } from '@/store/slices/cartSlice'
 import './style.css'
-// import OwlCarousel from 'react-owl-carousel'
-// import 'owl.carousel/dist/assets/owl.carousel.css'
-// import 'owl.carousel/dist/assets/owl.theme.default.css'
-// import Slider from 'react-slick'
-// import 'slick-carousel/slick/slick.css'
-// import 'slick-carousel/slick/slick-theme.css'
+import { toast } from 'react-toastify'
 
 export default function ProductDetail({ initialQuantity = 1 }) {
   const dispatch = useDispatch()
@@ -83,18 +78,20 @@ export default function ProductDetail({ initialQuantity = 1 }) {
     e.preventDefault()
 
     let newErrors = {}
-    if (!formData.rating) newErrors.rating = 'Veuillez donner une note.'
-    if (!formData.message) newErrors.message = 'Le message est requis.'
-    if (!formData.name) newErrors.name = 'Le nom est requis.'
-    if (!formData.email) newErrors.email = "L'email est requis."
+    if (!formData.rating)
+      newErrors.rating = 'Bitte geben Sie eine Bewertung ab.'
+    if (!formData.message) newErrors.message = 'Die Nachricht ist erforderlich.'
+    if (!formData.name) newErrors.name = 'Der Name ist erforderlich.'
+    if (!formData.email)
+      newErrors.email = 'Die E-Mail-Adresse ist erforderlich.'
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors)
       return
     }
 
-    console.log('Formulaire soumis:', formData)
-    alert('Merci pour votre avis !')
+    //console.log('Formular eingereicht:', formData)
+    toast.success('Danke für Ihre Bewertung!')
   }
 
   // Quantity part
@@ -121,33 +118,31 @@ export default function ProductDetail({ initialQuantity = 1 }) {
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
-          {/* <!-- STRART CONTAINER --> */}
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="page-title">
-                <h1>Product Detail</h1>
+                <h1>Produktdetails</h1>
               </div>
             </div>
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#!">Home</a>
+                  <a href="#!">Startseite</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#!">Pages</a>
+                  <a href="#!">Seiten</a>
                 </li>
-                <li className="breadcrumb-item active">Product Detail</li>
+                <li className="breadcrumb-item active">Produktdetails</li>
               </ol>
             </div>
           </div>
         </div>
-        {/* <!-- END CONTAINER--> */}
       </div>
+
       {/* <!-- END SECTION BREADCRUMB --> */}
 
       {/* <!-- START MAIN CONTENT --> */}
       <div className="main_content">
-        {/* <!-- START SECTION SHOP --> */}
         <div className="section">
           <div className="container">
             <div className="row">
@@ -180,6 +175,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                   )}
                 </div>
               </div>
+
               <div className="col-lg-6 col-md-6">
                 <div className="pr_detail">
                   <div className="product_description">
@@ -196,7 +192,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                               product.old_price) *
                               100
                           )}
-                          % Off
+                          % Rabatt
                         </span>
                       </div>
                     </div>
@@ -215,18 +211,18 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                     <div className="product_sort_info">
                       <ul>
                         <li>
-                          <i className="linearicons-shield-check"></i> Garantie
-                          d&apos;un an
+                          <i className="linearicons-shield-check"></i> Ein Jahr
+                          Garantie
                         </li>
                         <li>
-                          <i className="linearicons-sync"></i> 3Politique de
-                          retour de 30 jours
+                          <i className="linearicons-sync"></i> 30 Tage
+                          Rückgaberecht
                         </li>
                       </ul>
                     </div>
 
                     <div className="pr_switch_wrap">
-                      <span className="switch_lable">Taille</span>
+                      <span className="switch_lable">Größe</span>
                       <div className="product_size_switch">
                         <span
                           onClick={() => handleSizeClick('xs')}
@@ -275,7 +271,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                           type="text"
                           name="quantity"
                           value={quantity}
-                          title="Qty"
+                          title="Menge"
                           className="qty"
                           size="4"
                           onChange={handleChangeQte}
@@ -297,7 +293,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                           dispatch(addToCart(product))
                         }}
                       >
-                        <i className="icon-basket-loaded"></i> Ajouter
+                        <i className="icon-basket-loaded"></i> Hinzufügen
                       </button>
                       <a className="add_compare" href="#!">
                         <i className="icon-shuffle"></i>
@@ -310,15 +306,15 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                   <hr />
                   <ul className="product-meta">
                     <li>
-                      Référence: <a href="#!">{product.ref}</a>
+                      Referenz: <a href="#!">{product.ref}</a>
                     </li>
                     <li>
-                      Catégorie: <a href="#!">{category.title}</a>
+                      Kategorie: <a href="#!">{category.title}</a>
                     </li>
                   </ul>
 
                   <div className="product_share">
-                    <span>Partager:</span>
+                    <span>Teilen:</span>
                     <ul className="social_icons">
                       <li>
                         <a href="#!">
@@ -350,27 +346,29 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                 </div>
               </div>
             </div>
+
             <div className="row">
               <div className="col-12">
                 <div className="large_divider clearfix"></div>
               </div>
             </div>
+
             <div className="row">
               <div className="col-12">
                 <div className="tab-style3">
                   <ul className="nav nav-tabs" role="tablist">
                     <li className="nav-item">
                       {/* <a
-                        className="nav-link active"
-                        id="Description-tab"
-                        data-bs-toggle="tab"
-                        href="#Description"
-                        role="tab"
-                        aria-controls="Description"
-                        aria-selected="true"
-                      >
-                        Description
-                      </a> */}
+            className="nav-link active"
+            id="Description-tab"
+            data-bs-toggle="tab"
+            href="#Description"
+            role="tab"
+            aria-controls="Description"
+            aria-selected="true"
+          >
+            Beschreibung
+          </a> */}
                       <button
                         className={`nav-link active ${
                           activeTab === 'description' ? 'active' : ''
@@ -384,22 +382,22 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                         // aria-controls="Description"
                         // aria-selected="true"
                       >
-                        Description
+                        Beschreibung
                       </button>
                     </li>
 
                     <li className="nav-item">
                       {/* <a
-                        className="nav-link"
-                        id="Reviews-tab"
-                        data-bs-toggle="tab"
-                        href="#Reviews"
-                        role="tab"
-                        aria-controls="Reviews"
-                        aria-selected="false"
-                      >
-                        Reviews
-                      </a> */}
+            className="nav-link"
+            id="Reviews-tab"
+            data-bs-toggle="tab"
+            href="#Reviews"
+            role="tab"
+            aria-controls="Reviews"
+            aria-selected="false"
+          >
+            Bewertungen
+          </a> */}
                       <button
                         className={`nav-link ${
                           activeTab === 'reviews' ? 'active' : ''
@@ -413,7 +411,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                         // aria-controls="Reviews"
                         // aria-selected="true"
                       >
-                        Reviews
+                        Bewertungen
                       </button>
                     </li>
                   </ul>
@@ -438,7 +436,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                         // aria-labelledby="Reviews-tab"
                       >
                         <div className="review_form field_form">
-                          <h5>Add a review</h5>
+                          <h5>Eine Bewertung hinzufügen</h5>
                           <form className="row mt-3" onSubmit={handleSubmit}>
                             <div className="form-group col-12 mb-3">
                               <div className="star_rating">
@@ -468,7 +466,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
 
                             <div className="form-group col-12 mb-3">
                               <textarea
-                                placeholder="Votre avis *"
+                                placeholder="Ihre Bewertung *"
                                 className="form-control"
                                 name="message"
                                 rows="4"
@@ -484,7 +482,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
 
                             <div className="form-group col-md-6 mb-3">
                               <input
-                                placeholder="Entrez votre nom *"
+                                placeholder="Geben Sie Ihren Namen ein *"
                                 className="form-control"
                                 name="name"
                                 type="text"
@@ -500,7 +498,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
 
                             <div className="form-group col-md-6 mb-3">
                               <input
-                                placeholder="Entrez votre email *"
+                                placeholder="Geben Sie Ihre E-Mail-Adresse ein *"
                                 className="form-control"
                                 name="email"
                                 type="email"
@@ -519,7 +517,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                                 type="submit"
                                 className="btn btn-fill-out"
                               >
-                                Soumettre l&apos;avis
+                                Bewertung abgeben
                               </button>
                             </div>
                           </form>
@@ -532,7 +530,6 @@ export default function ProductDetail({ initialQuantity = 1 }) {
             </div>
           </div>
         </div>
-        {/* <!-- END SECTION SHOP --> */}
       </div>
 
       <NewLetters />

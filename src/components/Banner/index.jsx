@@ -34,32 +34,23 @@ export default function Banner() {
                         data-animation="slideInLeft"
                         data-animation-delay="1s"
                       >
-                        Bénéficiez d&apos;une réduction de plus de{' '}
-                        <span className="text_default">50%</span> off
-                        Aujourd&apos;hui !
+                        Profitieren Sie heute von über{' '}
+                        <span className="text_default">50%</span> Rabatt!
                       </h5>
-                      {/* <a
-                        className="btn btn-fill-out staggered-animation text-uppercase"
-                        href="shop"
-                        data-animation="slideInLeft"
-                        data-animation-delay="1.5s"
-                      >
-                        Acheter maintenant
-                      </a> */}
                       <a
                         className="btn btn-fill-out text-uppercase d-none d-md-inline-block"
                         href="/shop"
                         data-animation="slideInLeft"
                         data-animation-delay="1.5s"
                       >
-                        Acheter maintenant
+                        Jetzt kaufen
                       </a>
 
                       <a
                         className="btn btn-fill-out text-uppercase d-md-none"
                         href="shop"
                       >
-                        Acheter maintenant
+                        Jetzt kaufen
                       </a>
                     </div>
                   </div>
@@ -81,16 +72,15 @@ export default function Banner() {
                         data-animation="slideInLeft"
                         data-animation-delay="0.5s"
                       >
-                        Trottinette Freestyle X-Limit
+                        Freestyle X-Limit Scooter
                       </h2>
                       <h5
                         className="mb-3 mb-sm-4 staggered-animation font-weight-light"
                         data-animation="slideInLeft"
                         data-animation-delay="1s"
                       >
-                        Bénéficiez d&apos;une réduction de plus de{' '}
-                        <span className="text_default">50%</span> off
-                        Aujourd&apos;hui !
+                        Profitieren Sie heute von über{' '}
+                        <span className="text_default">50%</span> Rabatt!
                       </h5>
                       <a
                         className="btn btn-fill-out staggered-animation text-uppercase"
@@ -98,7 +88,7 @@ export default function Banner() {
                         data-animation="slideInLeft"
                         data-animation-delay="1.5s"
                       >
-                        Acheter maintenant
+                        Jetzt kaufen
                       </a>
                     </div>
                   </div>
@@ -106,43 +96,6 @@ export default function Banner() {
               </div>
             </div>
           </div>
-          {/* <div
-            className="carousel-item background_bg"
-            style={{ backgroundImage: `url(${BannerImage3})` }}
-          >
-            <div className="banner_slide_content banner_content_inner">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-8 col-10">
-                    <div className="banner_content overflow-hidden">
-                      <h2
-                        className="staggered-animation"
-                        data-animation="slideInLeft"
-                        data-animation-delay="0.5s"
-                      >
-                        Beat Headphone
-                      </h2>
-                      <h5
-                        className="mb-3 mb-sm-4 staggered-animation font-weight-light"
-                        data-animation="slideInLeft"
-                        data-animation-delay="1s"
-                      >
-                        Taking your Viewing Experience to Next Level
-                      </h5>
-                      <a
-                        className="btn btn-fill-out staggered-animation text-uppercase"
-                        href="shop-left-sidebar.html"
-                        data-animation="slideInLeft"
-                        data-animation-delay="1.5s"
-                      >
-                        Shop Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
         <a
           className="carousel-control-prev"

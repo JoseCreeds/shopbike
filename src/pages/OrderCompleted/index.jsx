@@ -2,10 +2,12 @@ import NewLetters from '@/components/NewLetters'
 import Loader from '@/utils/loader'
 import './style.css'
 //import { useSelector } from 'react-redux'
+//import ls from '@/utils/setWithExpiration'
 
 export default function OrderCompleted() {
   //const cartItems = useSelector((state) => state.cart.cartItems)
   const cartItems = JSON.parse(localStorage.getItem('cartBackup')) || []
+  //const cartItems = ls.getWithExpiration('cartBackup') || []
 
   const subTotal = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -14,14 +16,7 @@ export default function OrderCompleted() {
   const total = subTotal
   const currentDate = new Date().toLocaleDateString('fr-FR')
 
-  const generateOrderNumber = () => {
-    const randomNumber = Math.floor(100 + Math.random() * 900)
-    return `BA${randomNumber}`
-  }
-
-  const orderNumber = generateOrderNumber()
-
-  const email = JSON.parse(localStorage.getItem('data')).normal?.email
+  const orderData = JSON.parse(localStorage.getItem('data')).normal
 
   return (
     <>
@@ -30,33 +25,33 @@ export default function OrderCompleted() {
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
-          {/* <!-- STRART CONTAINER --> */}
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="page-title">
-                <h1>Order Completed</h1>
+                <h1>Bestellung Abgeschlossen</h1>
               </div>
             </div>
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#!">Home</a>
+                  <a href="#!">Startseite</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#!">Pages</a>
+                  <a href="#!">Seiten</a>
                 </li>
-                <li className="breadcrumb-item active">Order Completed</li>
+                <li className="breadcrumb-item active">
+                  Bestellung Abgeschlossen
+                </li>
               </ol>
             </div>
           </div>
         </div>
-        {/* <!-- END CONTAINER--> */}
       </div>
+
       {/* <!-- END SECTION BREADCRUMB --> */}
 
       {/* <!-- START MAIN CONTENT --> */}
       <div className="main_content">
-        {/* <!-- START SECTION SHOP --> */}
         <div className="section">
           <div className="container">
             <div className="row justify-content-center">
@@ -64,50 +59,49 @@ export default function OrderCompleted() {
                 <div className="text-center order_complete">
                   <i className="fas fa-check-circle"></i>
                   <h3 style={{ color: '#FF324D' }}>
-                    Merci. Votre commande a été reçue.
+                    Danke. Ihre Bestellung wurde erhalten.
                   </h3>
                   <div className="container">
                     <div className="row justify-content-center text-center align-items-center">
                       <div className="col-12 col-md position-relative border-separator">
-                        <p>Num commande:</p>
-                        <h6>{orderNumber}</h6>
+                        <p>Bestellnummer:</p>
+                        <h6>{orderData.numCommande}</h6>
                       </div>
                       <div className="col-12 col-md position-relative border-separator">
-                        <p>Date:</p>
+                        <p>Datum:</p>
                         <h6>{currentDate}</h6>
                       </div>
                       <div className="col-12 col-md position-relative border-separator">
-                        <p>E-mail:</p>
-                        <h6>{email}</h6>
+                        <p>E-Mail:</p>
+                        <h6>{orderData.email}</h6>
                       </div>
                       <div className="col-12 col-md position-relative border-separator">
-                        <p>En tout:</p>
+                        <p>Gesamt:</p>
                         <h6>€ {total.toFixed(2)} </h6>
                       </div>
                       <div className="col-12 col-md position-relative border-separator-last">
-                        <p>Mode de paiement:</p>
-                        <h6>Virement bancaire direct</h6>
+                        <p>Zahlungsmethode:</p>
+                        <h6>Direktüberweisung</h6>
                       </div>
                     </div>
                   </div>
 
                   <p style={{ marginTop: '15px', textAlign: 'justify' }}>
-                    Veuillez indiquer le titulaire du compte (
-                    {import.meta.env.VITE_B_P_NAME}) ainsi que la finalité ou la
-                    référence de paiement (il s&apos;agit de votre numéro de
-                    commande à cinq chiffres, par exemple 15423) afin que notre
-                    banque puisse attribuer correctement votre commande et votre
-                    paiement. Cela empêche un remboursement car la banque ne
-                    peut pas lier votre commande à votre paiement et lancera un
-                    remboursement si vous ne précisez pas le titulaire exact du
-                    compte et l&apos;objet du paiement dans nos coordonnées
-                    bancaires. Une fois le paiement effectué, veuillez envoyer
-                    le reçu de paiement par email.
+                    Bitte geben Sie den Kontoinhaber (
+                    {import.meta.env.VITE_B_P_NAME}) sowie den Verwendungszweck
+                    oder die Zahlungsreferenz an (dies ist Ihre fünfstellige
+                    Bestellnummer, z. B. 15423), damit unsere Bank Ihre
+                    Bestellung und Zahlung korrekt zuordnen kann. Andernfalls
+                    wird eine Rückerstattung eingeleitet, da die Bank Ihre
+                    Bestellung nicht mit der Zahlung verknüpfen kann, wenn der
+                    genaue Kontoinhaber und der Verwendungszweck in unseren
+                    Bankdaten nicht angegeben werden. Nach erfolgter Zahlung
+                    senden Sie bitte den Zahlungsbeleg per E-Mail.
                   </p>
 
                   <div style={{ marginTop: '40px', textAlign: 'justify' }}>
                     <h4 style={{ textTransform: 'uppercase' }}>
-                      Nos coordonnées bancaires
+                      Unsere Bankdaten
                     </h4>
                     <p> {import.meta.env.VITE_B_P_NAME}:</p>
                   </div>
@@ -115,11 +109,11 @@ export default function OrderCompleted() {
                   <div className="container">
                     <div className="row justify-content-center text-center align-items-center">
                       <div className="col-12 col-md position-relative border-separator">
-                        <p>Banque:</p>
+                        <p>Bank:</p>
                         <h5>{import.meta.env.VITE_B_NAME}</h5>
                       </div>
                       <div className="col-12 col-md position-relative border-separator">
-                        <p>Numéro d&apos;identification bancaire:</p>
+                        <p>Bankleitzahl:</p>
                         <h5>{import.meta.env.VITE_NUM}</h5>
                       </div>
                       <div
@@ -134,7 +128,7 @@ export default function OrderCompleted() {
 
                   <div style={{ marginTop: '70px', textAlign: 'justify' }}>
                     <h4 style={{ textTransform: 'uppercase' }}>
-                      détails de la commande
+                      Bestelldetails
                     </h4>
                   </div>
 
@@ -142,15 +136,15 @@ export default function OrderCompleted() {
                     <table className="table">
                       <thead>
                         <tr>
-                          <th>Produit</th>
-                          <th>Total</th>
+                          <th>Produkt</th>
+                          <th>Gesamt</th>
                         </tr>
                       </thead>
                       <tbody>
                         {cartItems.length === 0 ? (
                           <tr>
                             <td colSpan="2" className="text-center">
-                              Votre panier est vide
+                              Ihr Warenkorb ist leer
                             </td>
                           </tr>
                         ) : (
@@ -171,17 +165,17 @@ export default function OrderCompleted() {
                       </tbody>
                       <tfoot>
                         <tr>
-                          <th>Sous-total</th>
+                          <th>Zwischensumme</th>
                           <td className="product-subtotal">
                             € {subTotal.toFixed(2)}
                           </td>
                         </tr>
                         <tr>
-                          <th>Livraison</th>
-                          <td>Livraison gratuite</td>
+                          <th>Versand</th>
+                          <td>Kostenloser Versand</td>
                         </tr>
                         <tr>
-                          <th>Total</th>
+                          <th>Gesamt</th>
                           <td className="product-subtotal">
                             € {total.toFixed(2)}
                           </td>
@@ -189,16 +183,11 @@ export default function OrderCompleted() {
                       </tfoot>
                     </table>
                   </div>
-
-                  {/* <a href="/" className="btn btn-fill-out">
-                    Continue Shopping
-                  </a> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* <!-- END SECTION SHOP --> */}
       </div>
 
       <NewLetters />

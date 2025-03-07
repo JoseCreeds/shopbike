@@ -6,163 +6,158 @@ export default function Pr() {
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
-          {/* <!-- STRART CONTAINER --> */}
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="page-title">
                 <h1 style={{ textTransform: 'none' }}>
-                  Politique de Remboursement
+                  Rückerstattungsrichtlinie
                 </h1>
               </div>
             </div>
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#!">Home</a>
+                  <a href="#!">Startseite</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#!">Pages</a>
+                  <a href="#!">Seiten</a>
                 </li>
-                <li className="breadcrumb-item active">Politique</li>
+                <li className="breadcrumb-item active">Richtlinie</li>
               </ol>
             </div>
           </div>
         </div>
-        {/* <!-- END CONTAINER--> */}
       </div>
+
       {/* <!-- END SECTION BREADCRUMB --> */}
 
-      {/* <!-- START MAIN CONTENT --> */}
       <div className="main_content">
-        {/* <!-- STAT SECTION FAQ -->  */}
         <div className="section">
           <div className="container">
             <div className="row">
               <div className="col-12">
                 <div className="term_conditions">
                   <p>
-                    Nous nous engageons à offrir à nos clients une expérience
-                    d&apos;achat agréable. Si pour une raison quelconque vous
-                    n&apos;êtes pas satisfait de votre achat, nous vous offrons
-                    une politique de remboursement claire et équitable. Cette
-                    politique décrit les conditions et la procédure pour
-                    demander un remboursement.
+                    Wir setzen uns dafür ein, unseren Kunden ein angenehmes
+                    Einkaufserlebnis zu bieten. Sollte aus irgendeinem Grund
+                    Ihre Zufriedenheit mit Ihrem Kauf nicht erfüllt sein, bieten
+                    wir eine klare und faire Rückerstattungsrichtlinie an. Diese
+                    Richtlinie beschreibt die Bedingungen und das Verfahren zur
+                    Beantragung einer Rückerstattung.
                   </p>
 
                   <br />
-                  <h6> Conditions de remboursement</h6>
+                  <h6> Rückerstattungsbedingungen</h6>
                   <p>
-                    Vous pouvez demander un remboursement si votre achat répond
-                    aux critères suivants :
+                    Sie können eine Rückerstattung beantragen, wenn Ihr Kauf die
+                    folgenden Kriterien erfüllt:
                   </p>
                   <ul>
                     <li>
-                      <strong>Article défectueux ou endommagé :</strong> Si
-                      l&apos;article que vous avez reçu est défectueux,
-                      endommagé ou ne correspond pas à la description fournie
-                      sur notre site.
+                      <strong>Defekter oder beschädigter Artikel:</strong> Wenn
+                      der Artikel, den Sie erhalten haben, defekt, beschädigt
+                      oder nicht der Beschreibung auf unserer Website
+                      entspricht.
                     </li>
                     <li>
-                      <strong>Erreurs de commande :</strong> Si vous avez reçu
-                      un article incorrect.
+                      <strong>Bestellfehler:</strong> Wenn Sie einen falschen
+                      Artikel erhalten haben.
                     </li>
                     <li>
-                      <strong>Retours dans les délais :</strong> Nous acceptons
-                      les demandes de remboursement dans un délai de 14 jours
-                      suivant la réception de l&apos;article.
+                      <strong>Rücksendung innerhalb der Frist:</strong> Wir
+                      akzeptieren Rückerstattungsanfragen innerhalb von 14 Tagen
+                      nach Erhalt des Artikels.
                     </li>
                   </ul>
 
                   <br />
-                  <h6>Processus de demande de remboursement</h6>
+                  <h6>Prozess der Rückerstattungsanfrage</h6>
                   <p>
-                    Si vous êtes éligible pour un remboursement, veuillez suivre
-                    les étapes suivantes :
+                    Wenn Sie für eine Rückerstattung berechtigt sind, befolgen
+                    Sie bitte die folgenden Schritte:
                   </p>
 
                   <ol>
                     <li>
-                      <strong>Contactez notre service client :</strong>{' '}
-                      Envoyez-nous un e-mail à [VotreEmail@exemple.com] avec
-                      votre numéro de commande, les détails de l&apos;article
-                      concerné et une photo si l&apos;article est endommagé ou
-                      défectueux.
+                      <strong>Kontaktieren Sie unseren Kundenservice:</strong>{' '}
+                      Senden Sie uns eine E-Mail an{' '}
+                      {import.meta.env.VITE_SHOP_EMAIL} mit Ihrer Bestellnummer,
+                      den Details des betroffenen Artikels und einem Foto, wenn
+                      der Artikel beschädigt oder defekt ist.
                     </li>
                     <li>
-                      <strong>Examinez la demande :</strong> Nous traiterons
-                      votre demande et vous répondrons dans les 2 à 5 jours
-                      ouvrables avec les instructions pour le retour de
-                      l&apos;article, si nécessaire.
+                      <strong>Überprüfung der Anfrage:</strong> Wir werden Ihre
+                      Anfrage bearbeiten und Ihnen innerhalb von 2 bis 5
+                      Werktagen eine Antwort mit den Anweisungen zur Rücksendung
+                      des Artikels geben, falls erforderlich.
                     </li>
                     <li>
-                      <strong>Retournez l&apos;article :</strong> Si
-                      l&apos;article doit être retourné, veuillez l&apos;envoyer
-                      à l&apos;adresse suivante : [Adresse du service de
-                      retours]
+                      <strong>Artikel zurücksenden:</strong> Wenn der Artikel
+                      zurückgesendet werden muss, senden Sie ihn bitte an die
+                      folgende Adresse: {import.meta.env.VITE_SHOP_LOCALISATION}
                     </li>
                     <p>
-                      Veuillez utiliser un service de livraison suivi pour le
-                      retour de l&apos;article afin d&apos;assurer une preuve de
-                      livraison.
+                      Bitte verwenden Sie einen Nachverfolgungsdienst für die
+                      Rücksendung des Artikels, um einen Nachweis über die
+                      Lieferung zu haben.
                     </p>
                     <li>
-                      <strong>Recevez votre remboursement :</strong> Une fois
-                      l&apos;article retourné et inspecté, nous procéderons à
-                      votre remboursement dans un délai de 7 à 10 jours
-                      ouvrables. Le remboursement sera effectué sur le mode de
-                      paiement initial utilisé lors de l&apos;achat.
+                      <strong>Erhalten Sie Ihre Rückerstattung:</strong> Nachdem
+                      der Artikel zurückgesendet und geprüft wurde, erfolgt Ihre
+                      Rückerstattung innerhalb von 7 bis 10 Werktagen. Die
+                      Rückerstattung wird auf die ursprünglich verwendete
+                      Zahlungsmethode vorgenommen.
                     </li>
                   </ol>
 
                   <br />
-                  <h6>Frais de retour</h6>
+                  <h6>Rücksendekosten</h6>
                   <p>
-                    Les frais de retour sont à votre charge, sauf si
-                    l&apos;article est défectueux ou si nous avons envoyé un
-                    produit incorrect. Si le produit est non conforme ou
-                    défectueux, nous prendrons en charge les frais de retour.
+                    Die Rücksendekosten gehen zu Ihren Lasten, es sei denn, der
+                    Artikel ist defekt oder wir haben ein falsches Produkt
+                    geliefert. Wenn das Produkt nicht korrekt oder defekt ist,
+                    übernehmen wir die Rücksendekosten.
                   </p>
 
                   <br />
-                  <h6>Retours en magasin</h6>
+                  <h6>Rücksendungen im Geschäft</h6>
                   <p>
-                    Si vous avez effectué un achat dans l&apos;un de nos
-                    magasins physiques, vous pouvez retourner l&apos;article
-                    dans le même magasin, sous réserve des conditions de retour
-                    en magasin. Veuillez consulter notre politique de retour en
-                    magasin sur notre site ou contacter notre équipe pour plus
-                    de détails.
+                    Wenn Sie einen Kauf in einem unserer physischen Geschäfte
+                    getätigt haben, können Sie den Artikel im selben Geschäft
+                    zurückgeben, unter den Bedingungen der Rücksendung im
+                    Geschäft. Bitte konsultieren Sie unsere Rückgabebedingungen
+                    im Geschäft auf unserer Website oder kontaktieren Sie unser
+                    Team für weitere Details.
                   </p>
 
                   <br />
-                  <h6>Délai de traitement des retours</h6>
+                  <h6>Verarbeitungszeit für Rücksendungen</h6>
                   <p>
-                    Une fois que nous avons reçu votre retour, il peut prendre
-                    jusqu&apos;à 7 jours ouvrables pour traiter votre demande et
-                    effectuer le remboursement. Nous vous enverrons un e-mail de
-                    confirmation une fois le remboursement effectué.
+                    Sobald wir Ihre Rücksendung erhalten haben, kann die
+                    Bearbeitung Ihrer Anfrage und die Rückerstattung bis zu 7
+                    Werktage in Anspruch nehmen. Wir senden Ihnen eine
+                    Bestätigungs-E-Mail, sobald die Rückerstattung vorgenommen
+                    wurde.
                   </p>
 
                   <br />
-                  <h6>Questions supplémentaires</h6>
+                  <h6>Weitere Fragen</h6>
                   <p>
-                    Si vous avez des questions concernant notre politique de
-                    remboursement ou si vous avez besoin d&apos;assistance
-                    supplémentaire, n&apos;hésitez pas à nous contacter à
-                    l&apos;adresse suivante : [VotreEmail@exemple.com].
+                    Wenn Sie Fragen zu unserer Rückerstattungsrichtlinie haben
+                    oder weitere Unterstützung benötigen, können Sie uns unter
+                    folgender Adresse kontaktieren:{' '}
+                    {import.meta.env.VITE_SHOP_EMAIL}.
                   </p>
 
-                  <span>Dernière mise à jour : 05/01/2024</span>
+                  <span>Letzte Aktualisierung: 05.01.2024</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* <!-- END SECTION FAQ -->  */}
 
         <NewLetters />
       </div>
-      {/* <!-- END MAIN CONTENT --> */}
     </>
   )
 }

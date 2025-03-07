@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify'
+//import ls from '@/utils/setWithExpiration'
 
 const initialState = {
   cartItems: JSON.parse(localStorage.getItem('cart')) || [],
@@ -26,7 +27,7 @@ const cartSlice = createSlice({
       //alert('Nouveau produit ajouté au panier')
 
       //toast.success(`${product.libelle} ajouté au panier !`)
-      toast.success(`Nouveau produit ajouté au panier !`)
+      toast.success(`Neues Produkt wurde zum Warenkorb hinzugefügt!`)
     },
     removeFromCart: (state, action) => {
       state.cartItems = state.cartItems.filter(
@@ -46,6 +47,8 @@ const cartSlice = createSlice({
     },
     clearCart: (state) => {
       localStorage.setItem('cartBackup', JSON.stringify(state.cartItems))
+      //86400000
+      //ls.setWithExpiration('cartBackup', JSON.stringify(state.cartItems), 15000)
       state.cartItems = []
       localStorage.setItem('cart', JSON.stringify([]))
     },

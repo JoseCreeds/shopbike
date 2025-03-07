@@ -19,18 +19,18 @@ export default function Products() {
             <div className="col-md-6">
               <div className="h text-center">
                 <h2 style={{ textTransform: 'uppercase' }}>
-                  vélo pour les professionnels
+                  Fahrräder für Fachleute
                 </h2>
               </div>
               <p className="text-center leads">
-                Nous sommes votre spécialiste du vélo électrique. Qu&apos;il
-                s&apos;agisse d&apos;un modèle d&apos;entrée de gamme ou
-                d&apos;un Pedelec haut de gamme, votre vélo est le bienvenu ici.
+                Wir sind Ihr Spezialist für E-Bikes. Ob es sich um ein
+                Einsteiger-Modell oder ein hochwertiges Pedelec handelt, Ihr
+                Fahrrad ist hier willkommen.
               </p>
             </div>
           </div>
 
-          {/* Product part */}
+          {/* Produktbereich */}
 
           <div className="row shop_container">
             {products.map((product) => (
@@ -87,7 +87,7 @@ export default function Products() {
                               product.old_price) *
                               100
                           )}
-                          % Off
+                          % Rabatt
                         </span>
                       </div>
                     </div>
@@ -112,7 +112,7 @@ export default function Products() {
                         }}
                         className="btn btn-fill-out btn-radius"
                       >
-                        <i className="icon-basket-loaded"></i> Ajouter
+                        <i className="icon-basket-loaded"></i> Hinzufügen
                       </a>
                     </div>
                   </div>
@@ -122,6 +122,7 @@ export default function Products() {
           </div>
         </div>
       </div>
+
       {/* <!-- END SECTION SHOP --> */}
     </>
   )

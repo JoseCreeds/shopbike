@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import ProtectedRoute from '@/components/ProtectedRoute'
 import Home from '@/pages/Home'
 import Contact from '@/pages/Contact'
 import AboutUs from '@/pages/AboutUs'
@@ -39,7 +40,14 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/my-account" element={<Account />} />
+        <Route
+          path="/my-account"
+          element={
+            <ProtectedRoute>
+              <Account />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/order-completed" element={<OrderCompleted />} />
         <Route path="/ugc" element={<TermCondition />} />
         <Route path="/pc" element={<Pc />} />

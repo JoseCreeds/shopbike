@@ -86,33 +86,33 @@ export default function Shop() {
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
-          {/* <!-- STRART CONTAINER --> */}
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="#">
-                <h3>Magasin de vélos</h3>
+                <h3>Fahrradgeschäft</h3>
               </div>
             </div>
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#!">Home</a>
+                  <a href="#!">Startseite</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#!">Pages</a>
+                  <a href="#!">Seiten</a> {/* Pages */}
                 </li>
-                <li className="breadcrumb-item active">Magasin</li>
+                <li className="breadcrumb-item active">Geschäft</li>{' '}
+                {/* Magasin */}
               </ol>
             </div>
           </div>
         </div>
         {/* <!-- END CONTAINER--> */}
       </div>
+
       {/* <!-- END SECTION BREADCRUMB --> */}
 
       {/* <!-- START MAIN CONTENT --> */}
       <div className="main_content">
-        {/* <!-- START SECTION SHOP --> */}
         <div className="section">
           <div className="container">
             <div className="row">
@@ -122,23 +122,6 @@ export default function Shop() {
                     <div className="row align-items-center mb-4 pb-1">
                       <div className="col-12">
                         <div className="product_header">
-                          {/* <div className="product_header_left">
-                            <div className="custom_select">
-                              <select className="form-control form-control-sm">
-                                <option value="order">Default sorting</option>
-                                <option value="popularity">
-                                  Sort by popularity
-                                </option>
-                                <option value="date">Sort by newness</option>
-                                <option value="price">
-                                  Sort by price: low to high
-                                </option>
-                                <option value="price-desc">
-                                  Sort by price: high to low
-                                </option>
-                              </select>
-                            </div>
-                          </div> */}
                           <div className="product_header_right">
                             <div className="products_view">
                               <a
@@ -146,7 +129,7 @@ export default function Shop() {
                                 className={`shorting_icon grid ${
                                   view === 'grid' ? 'active' : ''
                                 }`}
-                                onClick={handleGridView} // Change la vue en Grid
+                                onClick={handleGridView} // Ändert die Ansicht auf Grid
                               >
                                 <i className="ti-view-grid"></i>
                               </a>
@@ -155,7 +138,7 @@ export default function Shop() {
                                 className={`shorting_icon list ${
                                   view === 'list' ? 'active' : ''
                                 }`}
-                                onClick={handleListView} // Change la vue en List
+                                onClick={handleListView} // Ändert die Ansicht auf List
                               >
                                 <i className="ti-layout-list-thumb"></i>
                               </a>
@@ -172,8 +155,8 @@ export default function Shop() {
                   } `}
                   data-item="10"
                   data-item-show="4"
-                  data-finish-message="No More Item to Show"
-                  data-btn="Load More"
+                  data-finish-message="Keine weiteren Artikel zum Anzeigen"
+                  data-btn="Mehr Laden"
                 >
                   {currentItems.map((product) => (
                     <div key={product.id} className="col-md-4 col-6">
@@ -193,15 +176,15 @@ export default function Shop() {
                                       dispatch(addToCart(product))
                                     }}
                                   >
-                                    <i className="icon-basket-loaded"></i> Add
-                                    To Cart
+                                    <i className="icon-basket-loaded"></i> In
+                                    den Warenkorb
                                   </a>
                                 </li>
                                 {/* <li>
-                                  <a href="#!" className="popup-ajax">
-                                    <i className="icon-shuffle"></i>
-                                  </a>
-                                </li> */}
+                      <a href="#!" className="popup-ajax">
+                        <i className="icon-shuffle"></i>
+                      </a>
+                    </li> */}
                                 <li>
                                   <a
                                     href="#!"
@@ -253,7 +236,7 @@ export default function Shop() {
                                     product.old_price) *
                                     100
                                 )}
-                                % Off
+                                % Rabatt
                               </span>
                             </div>
                           </div>
@@ -271,16 +254,7 @@ export default function Shop() {
                           <div className="pr_desc">
                             <p>{product.description}</p>
                           </div>
-                          {/* <div className="pr_switch_wrap">
-                            <div className="product_color_switch">
-                              <span
-                                className="active"
-                                data-color="#87554B"
-                              ></span>
-                              <span data-color="#333333"></span>
-                              <span data-color="#DA323F"></span>
-                            </div>
-                          </div> */}
+
                           <div className="list_product_action_box">
                             <ul className="list_none pr_action_btn">
                               <li className="add-to-cart">
@@ -291,14 +265,15 @@ export default function Shop() {
                                     dispatch(addToCart(product))
                                   }}
                                 >
-                                  <i className="icon-basket-loaded"></i> Ajouter
+                                  <i className="icon-basket-loaded"></i>{' '}
+                                  Hinzufügen
                                 </a>
                               </li>
                               {/* <li>
-                                <a href="#!" className="popup-ajax">
-                                  <i className="icon-shuffle"></i>
-                                </a>
-                              </li> */}
+                    <a href="#!" className="popup-ajax">
+                      <i className="icon-shuffle"></i>
+                    </a>
+                  </li> */}
                               <li>
                                 <a
                                   href="#!"
@@ -331,7 +306,6 @@ export default function Shop() {
                 <div className="row">
                   <div className="col-12">
                     <ul className="pagination mt-3 justify-content-center pagination_style1">
-                      {/* Previous Button */}
                       <li
                         className={`page-item ${
                           currentPage === 1 ? 'disabled' : ''
@@ -342,21 +316,6 @@ export default function Shop() {
                           <i className="linearicons-arrow-left"></i>
                         </a>
                       </li>
-
-                      {/* Dynamically generated page numbers */}
-                      {/* {pageNumbers.map((number) => (
-                        <li
-                          key={number}
-                          className={`page-item ${
-                            currentPage === number ? 'active' : ''
-                          }`}
-                          onClick={() => paginate(number)}
-                        >
-                          <a className="page-link" href="#!">
-                            {number}
-                          </a>
-                        </li>
-                      ))} */}
 
                       {Array.from({ length: totalPages }, (_, index) => (
                         <li
@@ -385,44 +344,18 @@ export default function Shop() {
                     </ul>
                   </div>
                 </div>
-                {/* <div className="row">
-                  <div className="col-12">
-                    <ul className="pagination mt-3 justify-content-center pagination_style1">
-                      <li className="page-item active">
-                        <a className="page-link" href="#!">
-                          1
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link" href="#!">
-                          2
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link" href="#!">
-                          3
-                        </a>
-                      </li>
-                      <li className="page-item">
-                        <a className="page-link" href="#!">
-                          <i className="linearicons-arrow-right"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div> */}
               </div>
               <div className="col-lg-3 mt-4 pt-2 mt-lg-0 pt-lg-0 order-lg-2 order-1">
                 <div className="sidebar">
                   <div className="widget">
-                    <h5 className="widget_title">Categories</h5>
+                    <h5 className="widget_title">Kategorien</h5>
                     <ul className="widget_categories">
                       <li>
                         <a href="#!">
                           <span className="categories_name">E-BIKE</span>
                           {/* <span className="categories_num">
-                            ({productsList.length})
-                          </span> */}
+                ({productsList.length})
+              </span> */}
                         </a>
                       </li>
                       <li>
@@ -445,13 +378,13 @@ export default function Shop() {
                       </li>
                     </ul>
                   </div>
-                  {/* Filtre de prix */}
+                  {/* Preisfilter */}
                   <div className="widget">
-                    <h5 className="widget_title">Filtre</h5>
+                    <h5 className="widget_title">Filter</h5>
                     <div className="filter_price">
                       <div className="price_range">
                         <span>
-                          Prix: €{priceRange.min} - €{priceRange.max}
+                          Preis: €{priceRange.min} - €{priceRange.max}
                         </span>
                         {'  '}
                         <input
@@ -475,19 +408,6 @@ export default function Shop() {
                     </div>
                   </div>
 
-                  {/* <div className="widget">
-                    <h5 className="widget_title">Color</h5>
-                    <div className="product_color_switch">
-                      <span data-color="#87554B"></span>
-                      <span data-color="#333333"></span>
-                      <span data-color="#DA323F"></span>
-                      <span data-color="#2F366C"></span>
-                      <span data-color="#B5B6BB"></span>
-                      <span data-color="#B9C2DF"></span>
-                      <span data-color="#5FB7D4"></span>
-                      <span data-color="#2F366C"></span>
-                    </div>
-                  </div> */}
                   <div className="widget">
                     <div className="shop_banner">
                       <div className="banner_img overlay_bg_20">
@@ -499,16 +419,16 @@ export default function Shop() {
                       </div>
                       <div className="shop_bn_content2 text_white">
                         <h5 className="text-uppercase shop_subtitle">
-                          Nouvelle collection
+                          Neue Kollektion
                         </h5>
                         <h3 className="text-uppercase shop_title">
-                          Jusqu&apos;à 30% de réduction
+                          Bis zu 30% Rabatt
                         </h3>
                         <a
                           href="#!"
                           className="btn btn-white rounded-0 btn-sm text-uppercase"
                         >
-                          Commander
+                          Bestellen
                         </a>
                       </div>
                     </div>
@@ -525,16 +445,16 @@ export default function Shop() {
                       </div>
                       <div className="shop_bn_content2 text_white">
                         {/* <h5 className="text-uppercase shop_subtitle">
-                          Nouvelle collection
-                        </h5> */}
+              Neue Kollektion
+            </h5> */}
                         <h5 className="text-uppercase shop_title">
-                          Jusqu&apos;à 50% de réduction
+                          Bis zu 50% Rabatt
                         </h5>
                         <a
                           href="#!"
                           className="btn btn-white rounded-0 btn-sm text-uppercase"
                         >
-                          Commander
+                          Bestellen
                         </a>
                       </div>
                     </div>
@@ -542,10 +462,10 @@ export default function Shop() {
                 </div>
               </div>
             </div>
+
             <Pieces />
           </div>
         </div>
-        {/* <!-- END SECTION SHOP --> */}
       </div>
       {/* <!-- END MAIN CONTENT --> */}
 

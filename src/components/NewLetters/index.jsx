@@ -1,25 +1,43 @@
+import { useState } from 'react'
+import { toast } from 'react-toastify'
+
 function NewLetters() {
+  const [email, setEmail] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    if (email.trim()) {
+      toast.success('Abonnement erfolgreich!')
+      setEmail('')
+    } else {
+      toast.error('Bitte geben Sie eine gültige E-Mail-Adresse ein.')
+    }
+  }
+
   return (
     <div className="section bg_default small_pt small_pb">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-6">
             <div className="newsletter_text text_white">
-              <h3>Abonnez-vous à notre newsletter maintenant</h3>
+              <h3>Abonnieren Sie jetzt unseren Newsletter</h3>
               <p>
-                Inscrivez-vous à notre newsletter pour être sûr de ne rien
-                manquer !
+                Melden Sie sich für unseren Newsletter an, um nichts zu
+                verpassen!
               </p>
             </div>
           </div>
           <div className="col-md-6">
             <div className="newsletter_form2">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <input
-                  type="text"
-                  required=""
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   className="form-control rounded-0"
-                  placeholder="Enter Adresse Email"
+                  placeholder="Geben Sie Ihre E-Mail-Adresse ein"
                 />
                 <button
                   type="submit"
@@ -27,7 +45,7 @@ function NewLetters() {
                   name="submit"
                   value="Submit"
                 >
-                  S&apos;abonner
+                  Abonnieren
                 </button>
               </form>
             </div>

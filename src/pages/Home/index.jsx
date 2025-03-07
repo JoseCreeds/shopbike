@@ -9,24 +9,13 @@ import BannerImage33 from '@/assets/images/BannerImage3.avif'
 import Loader from '@/utils/loader'
 
 function Home() {
-  //const [loading, setLoading] = useState(true)
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false)
-  //   }, 1000) // Arrêter après 1s
-
-  //   return () => clearTimeout(timer) // Nettoyage du timer
-  // }, [])
   return (
     <>
-      {/* <>{loading ? <Loader /> : <div></div>}</> */}
       <Loader />
 
       <Banner />
 
       <div className="main_content">
-        {/* Peoducts part */}
         <Products />
 
         {/* <!-- START SECTION BANNER -->  */}

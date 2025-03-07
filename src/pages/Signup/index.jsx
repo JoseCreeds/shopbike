@@ -1,7 +1,43 @@
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { registerUser } from '@/store/slices/authSlice'
+import { toast } from 'react-toastify'
+
 import NewLetters from '@/components/NewLetters'
 import Loader from '@/utils/loader'
 
 export default function Signup() {
+  const dispatch = useDispatch()
+  const { loading, error } = useSelector((state) => state.auth)
+
+  const [userData, setUserData] = useState({
+    email: '',
+    password: '',
+    username: '',
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setUserData({ ...userData, [name]: value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    dispatch(registerUser(userData)).then((result) => {
+      if (result.type === 'auth/register/fulfilled') {
+        toast.success('Erfolgreiche Registrierung')
+        setUserData({
+          email: '',
+          password: '',
+          username: '',
+        })
+      } else {
+        toast.error(error)
+      }
+    })
+  }
+
   return (
     <>
       <Loader />
@@ -9,33 +45,30 @@ export default function Signup() {
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
-          {/* <!-- STRART CONTAINER --> */}
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="page-title">
-                <h1>Register</h1>
+                <h1>Registrieren</h1>
               </div>
             </div>
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#!">Home</a>
+                  <a href="#!">Startseite</a>
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#!">Pages</a>
+                  <a href="#!">Seiten</a>
                 </li>
-                <li className="breadcrumb-item active">Register</li>
+                <li className="breadcrumb-item active">Registrieren</li>
               </ol>
             </div>
           </div>
         </div>
-        {/* <!-- END CONTAINER--> */}
       </div>
+
       {/* <!-- END SECTION BREADCRUMB --> */}
 
-      {/* <!-- START MAIN CONTENT --> */}
       <div className="main_content">
-        {/* <!-- START LOGIN SECTION --> */}
         <div className="login_register_wrap section">
           <div className="container">
             <div className="row justify-content-center">
@@ -43,25 +76,40 @@ export default function Signup() {
                 <div className="login_wrap">
                   <div className="padding_eight_all bg-white">
                     <div className="#">
-                      <h3>Créer un compte</h3>
+                      <h3>Ein Konto erstellen</h3>
                     </div>
-                    <form method="post">
+                    <form onSubmit={handleSubmit}>
                       <div className="form-group mb-3">
                         <input
                           type="text"
-                          required=""
+                          name="username"
+                          value={userData.username}
+                          onChange={handleChange}
                           className="form-control"
-                          name="name"
-                          placeholder="Votre nom"
+                          placeholder="Ihr Name"
+                          required
                         />
                       </div>
                       <div className="form-group mb-3">
                         <input
                           type="text"
-                          required=""
-                          className="form-control"
                           name="email"
-                          placeholder="Votre email"
+                          value={userData.email}
+                          onChange={handleChange}
+                          className="form-control"
+                          placeholder="Ihre E-Mail"
+                          required
+                        />
+                      </div>
+                      <div className="form-group mb-3">
+                        <input
+                          type="password"
+                          className="form-control"
+                          name="password"
+                          value={userData.password}
+                          onChange={handleChange}
+                          placeholder="Passwort"
+                          required
                         />
                       </div>
                       <div className="form-group mb-3">
@@ -70,16 +118,7 @@ export default function Signup() {
                           required=""
                           type="password"
                           name="password"
-                          placeholder="Mot de passe"
-                        />
-                      </div>
-                      <div className="form-group mb-3">
-                        <input
-                          className="form-control"
-                          required=""
-                          type="password"
-                          name="password"
-                          placeholder="Confirmer mot de passe"
+                          placeholder="Passwort bestätigen"
                         />
                       </div>
                       <div className="login_footer form-group mb-3">
@@ -95,7 +134,7 @@ export default function Signup() {
                             />
                             <label className="form-check-label">
                               <span>
-                                J&apos;accepte ls termes et conditions.
+                                Ich akzeptiere die Geschäftsbedingungen.
                               </span>
                             </label>
                           </div>
@@ -103,18 +142,18 @@ export default function Signup() {
                       </div>
                       <div className="form-group mb-3">
                         <button
-                          // type="submit"
+                          type="submit"
                           className="btn btn-fill-out btn-block"
                           name="register"
+                          disabled={loading}
                         >
-                          S&apos;inscrire
+                          {loading ? 'Wird geladen...' : 'Registrieren'}
                         </button>
                       </div>
                     </form>
 
                     <div className="form-note text-center">
-                      Vous avez déjà un compte ?{' '}
-                      <a href="login">Se connecter</a>
+                      Haben Sie bereits ein Konto? <a href="login">Anmelden</a>
                     </div>
                   </div>
                 </div>
@@ -122,9 +161,7 @@ export default function Signup() {
             </div>
           </div>
         </div>
-        {/* <!-- END LOGIN SECTION --> */}
       </div>
-      {/* <!-- END MAIN CONTENT --> */}
 
       <NewLetters />
     </>

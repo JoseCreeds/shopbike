@@ -6,235 +6,228 @@ export default function TermCondition() {
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
-          {/* <!-- STRART CONTAINER --> */}
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="page-title">
                 <h1 style={{ textTransform: 'none' }}>
-                  Politique d&apos;Utilisation
+                  Nutzungsbedingungen {/* Politique d&apos;Utilisation */}
                 </h1>
               </div>
             </div>
             <div className="col-md-6">
               <ol className="breadcrumb justify-content-md-end">
                 <li className="breadcrumb-item">
-                  <a href="#!">Home</a>
+                  <a href="#!">Startseite</a> {/* Home */}
                 </li>
                 <li className="breadcrumb-item">
-                  <a href="#!">Pages</a>
+                  <a href="#!">Seiten</a> {/* Pages */}
                 </li>
-                <li className="breadcrumb-item active">Politique</li>
+                <li className="breadcrumb-item active">Richtlinie</li>{' '}
+                {/* Politique */}
               </ol>
             </div>
           </div>
         </div>
-        {/* <!-- END CONTAINER--> */}
       </div>
+
       {/* <!-- END SECTION BREADCRUMB --> */}
 
-      {/* <!-- START MAIN CONTENT --> */}
       <div className="main_content">
-        {/* <!-- STAT SECTION FAQ -->  */}
         <div className="section">
           <div className="container">
             <div className="row">
               <div className="col-12">
                 <div className="term_conditions">
                   <p>
-                    La présente <strong>Politique d&apos;Utilisation</strong>{' '}
-                    régit l&apos;accès et l&apos;utilisation de notre site web.
-                    En utilisant notre site, vous acceptez les termes et
-                    conditions suivants. Si vous n&apos;acceptez pas ces termes,
-                    veuillez ne pas utiliser notre site.
+                    Diese <strong>Nutzungsbedingungen</strong> regeln den Zugang
+                    und die Nutzung unserer Website. Durch die Nutzung unserer
+                    Website stimmen Sie den folgenden Bedingungen zu. Wenn Sie
+                    diesen Bedingungen nicht zustimmen, verwenden Sie bitte
+                    unsere Website nicht.
                   </p>
 
                   <br />
-                  <h6>Acceptation des Conditions</h6>
+                  <h6>Akzeptanz der Bedingungen</h6>
                   <p>
-                    En accédant ou en utilisant notre site, vous acceptez de
-                    vous conformer à cette politique d&apos;utilisation ainsi
-                    qu&apos;à toutes les lois et règlements en vigueur. Si vous
-                    n&apos;êtes pas d&apos;accord avec les termes de cette
-                    politique, vous devez immédiatement cesser d&apos;utiliser
-                    le site.
+                    Durch den Zugang oder die Nutzung unserer Website stimmen
+                    Sie zu, diese Nutzungsbedingungen sowie alle geltenden
+                    Gesetze und Vorschriften einzuhalten. Wenn Sie mit den
+                    Bedingungen dieser Politik nicht einverstanden sind, müssen
+                    Sie die Nutzung der Website sofort einstellen.
                   </p>
 
                   <br />
-                  <h6>Utilisation du Site</h6>
+                  <h6>Verwendung der Website</h6>
                   <p>
-                    Vous acceptez d&apos;utiliser notre site uniquement à des
-                    fins légales et conformément aux règles suivantes :
+                    Sie stimmen zu, unsere Website nur für legale Zwecke und
+                    gemäß den folgenden Regeln zu verwenden:
                   </p>
                   <ul>
                     <li>
-                      <strong>Respect des lois :</strong> Vous vous engagez à ne
-                      pas violer les lois locales, nationales ou internationales
-                      en utilisant notre site.
+                      <strong>Gesetzestreue:</strong> Sie verpflichten sich,
+                      keine lokalen, nationalen oder internationalen Gesetze bei
+                      der Nutzung unserer Website zu verletzen.
                     </li>
                     <li>
-                      <strong>Utilisation personnelle :</strong> Vous pouvez
-                      utiliser notre site uniquement pour vos besoins personnels
-                      et non commerciaux.
+                      <strong>Private Nutzung:</strong> Sie dürfen unsere
+                      Website nur für persönliche und nicht kommerzielle Zwecke
+                      nutzen.
                     </li>
                     <li>
-                      <strong>Interdiction d&apos;abus :</strong> Vous vous
-                      interdisez d&apos;utiliser notre site d&apos;une manière
-                      qui pourrait endommager, désactiver, surcharger ou altérer
-                      le fonctionnement du site ou interférer avec
-                      l&apos;utilisation d&apos;autres utilisateurs.
+                      <strong>Missbrauch verboten:</strong> Sie verpflichten
+                      sich, unsere Website nicht auf eine Weise zu nutzen, die
+                      den Betrieb der Website beschädigen, deaktivieren,
+                      überlasten oder beeinträchtigen oder die Nutzung durch
+                      andere Benutzer stören könnte.
                     </li>
                     <li>
-                      <strong>Accès restreint :</strong> Vous vous engagez à ne
-                      pas tenter d&apos;accéder à des parties du site pour
-                      lesquelles vous n&apos;êtes pas autorisé ou à contourner
-                      des mesures de sécurité.
+                      <strong>Beschränkter Zugang:</strong> Sie verpflichten
+                      sich, nicht zu versuchen, auf Teile der Website
+                      zuzugreifen, für die Sie nicht autorisiert sind, oder
+                      Sicherheitsmaßnahmen zu umgehen.
                     </li>
                   </ul>
 
                   <br />
-                  <h6>Création de Compte</h6>
+                  <h6>Kontoerstellung</h6>
                   <p>
-                    Pour certains services sur notre site, vous devrez créer un
-                    compte en fournissant des informations personnelles exactes
-                    et complètes. Vous êtes responsable de la confidentialité de
-                    vos informations de connexion et de toutes les activités qui
-                    se produisent sous votre compte.
+                    Für bestimmte Dienstleistungen auf unserer Website müssen
+                    Sie ein Konto erstellen und dabei genaue und vollständige
+                    persönliche Informationen angeben. Sie sind für die
+                    Vertraulichkeit Ihrer Anmeldedaten und für alle Aktivitäten
+                    verantwortlich, die unter Ihrem Konto stattfinden.
                   </p>
 
                   <ul>
                     <li>
-                      <strong>Responsabilité :</strong> Vous acceptez de nous
-                      informer immédiatement de toute utilisation non autorisée
-                      de votre compte ou de toute autre violation de la
-                      sécurité.
+                      <strong>Verantwortlichkeit:</strong> Sie verpflichten
+                      sich, uns unverzüglich über jede unbefugte Nutzung Ihres
+                      Kontos oder jede andere Sicherheitsverletzung zu
+                      informieren.
                     </li>
                   </ul>
 
                   <br />
-                  <h6> Contenu Utilisateur</h6>
+                  <h6>Benutzerinhalt</h6>
                   <p>
-                    Le site peut permettre aux utilisateurs de publier,
-                    soumettre ou partager du contenu. Vous êtes seul responsable
-                    de ce contenu et vous acceptez de ne pas publier de contenu
-                    illicite, offensant, diffamatoire ou autrement inapproprié.
+                    Die Website kann es Benutzern ermöglichen, Inhalte zu
+                    veröffentlichen, einzureichen oder zu teilen. Sie sind
+                    allein für diesen Inhalt verantwortlich und stimmen zu,
+                    keine illegalen, beleidigenden, verleumderischen oder
+                    anderweitig unangemessenen Inhalte zu veröffentlichen.
                   </p>
 
                   <ul>
                     <li>
-                      <strong>Licence accordée :</strong> En publiant du contenu
-                      sur notre site, vous nous accordez une licence non
-                      exclusive, transférable, sous-licenciable et gratuite
-                      d&apos;utiliser ce contenu dans le cadre de notre
-                      activité.
+                      <strong>Erteilte Lizenz:</strong> Durch das
+                      Veröffentlichen von Inhalten auf unserer Website gewähren
+                      Sie uns eine nicht-exklusive, übertragbare,
+                      unterlizenzierbare und gebührenfreie Lizenz zur Nutzung
+                      dieses Inhalts im Rahmen unserer Geschäftstätigkeit.
                     </li>
                   </ul>
 
                   <br />
-                  <h6>Propriété Intellectuelle</h6>
+                  <h6>Geistiges Eigentum</h6>
                   <p>
-                    Tous les contenus présents sur notre site (textes, images,
-                    vidéos, logos, marques, etc.) sont protégés par des droits
-                    de propriété intellectuelle, et leur utilisation est soumise
-                    à notre autorisation préalable.
+                    Alle Inhalte auf unserer Website (Texte, Bilder, Videos,
+                    Logos, Marken usw.) sind durch geistige Eigentumsrechte
+                    geschützt, und ihre Nutzung unterliegt unserer vorherigen
+                    Genehmigung.
                   </p>
 
                   <ul>
                     <li>
-                      <strong>Utilisation autorisée :</strong> Vous êtes
-                      autorisé à consulter le contenu de notre site uniquement à
-                      des fins personnelles et non commerciales. activité.
+                      <strong>Erlaubte Nutzung:</strong> Sie sind berechtigt,
+                      die Inhalte unserer Website nur zu persönlichen und
+                      nicht-kommerziellen Zwecken zu konsultieren.
                     </li>
                     <li>
-                      <strong>Interdiction de reproduction :</strong> Toute
-                      reproduction, distribution ou modification non autorisée
-                      de tout ou partie du contenu du site est strictement
-                      interdite.
+                      <strong>Reproduktion verboten:</strong> Jegliche unbefugte
+                      Reproduktion, Verbreitung oder Modifikation von Inhalten
+                      der Website ist strengstens untersagt.
                     </li>
                   </ul>
 
                   <br />
-                  <h6>Protection des Données</h6>
+                  <h6>Datenschutz</h6>
                   <p>
-                    Nous nous engageons à protéger vos données personnelles
-                    conformément à notre{' '}
-                    <strong>Politique de Confidentialité</strong>. Nous
-                    collectons et utilisons vos données uniquement dans le cadre
-                    de l&apos;exécution de notre service.
+                    Wir verpflichten uns, Ihre persönlichen Daten gemäß unserer{' '}
+                    <strong>Datenschutzrichtlinie</strong> zu schützen. Wir
+                    sammeln und verwenden Ihre Daten nur im Rahmen der
+                    Erbringung unseres Dienstes.
                   </p>
 
                   <ul>
                     <li>
-                      <strong>Consentement:</strong> En utilisant notre site,
-                      vous consentez à la collecte et à l&apos;utilisation de
-                      vos données conformément à notre politique de
-                      confidentialité.
+                      <strong>Zustimmung:</strong> Durch die Nutzung unserer
+                      Website stimmen Sie der Sammlung und Nutzung Ihrer Daten
+                      gemäß unserer Datenschutzrichtlinie zu.
                     </li>
                   </ul>
 
                   <br />
-                  <h6>Liens Externes</h6>
+                  <h6>Externe Links</h6>
                   <p>
-                    Notre site peut contenir des liens vers des sites web tiers.
-                    Nous ne contrôlons pas ces sites externes et ne sommes pas
-                    responsables de leur contenu, de leurs pratiques de
-                    confidentialité ou de leur sécurité.
+                    Unsere Website kann Links zu Drittanbieter-Websites
+                    enthalten. Wir kontrollieren diese externen Websites nicht
+                    und sind nicht verantwortlich für deren Inhalt,
+                    Datenschutzpraktiken oder Sicherheit.
                   </p>
 
                   <ul>
                     <li>
-                      <strong>Responsabilité:</strong> L&apos;utilisation de ces
-                      liens se fait à vos propres risques.
+                      <strong>Haftung:</strong> Die Nutzung dieser Links erfolgt
+                      auf eigenes Risiko.
                     </li>
                   </ul>
 
                   <br />
-                  <h6>Modifications du Site</h6>
+                  <h6>Änderungen an der Website</h6>
                   <p>
-                    Nous nous réservons le droit de modifier, suspendre ou
-                    interrompre toute fonctionnalité du site à tout moment, et
-                    ce, sans préavis. Nous pouvons également modifier cette
-                    politique d&apos;utilisation, auquel cas nous vous en
-                    informerons en affichant la version mise à jour sur cette
-                    page.
+                    Wir behalten uns das Recht vor, jederzeit ohne
+                    Vorankündigung Funktionen der Website zu ändern, auszusetzen
+                    oder zu unterbrechen. Wir können auch diese
+                    Nutzungsbedingungen ändern, und wir werden Sie informieren,
+                    indem wir die aktualisierte Version auf dieser Seite
+                    anzeigen.
                   </p>
 
                   <br />
-                  <h6>Limitation de Responsabilité</h6>
+                  <h6>Haftungsbeschränkung</h6>
                   <p>
-                    Dans la mesure autorisée par la loi, nous ne serons pas
-                    responsables des dommages directs, indirects, accessoires,
-                    spéciaux ou consécutifs résultant de l&apos;utilisation ou
-                    de l&apos;impossibilité d&apos;utiliser notre site, même si
-                    nous avons été informés de la possibilité de tels dommages.
+                    Soweit gesetzlich zulässig, haften wir nicht für direkte,
+                    indirekte, zufällige, spezielle oder Folgeschäden, die sich
+                    aus der Nutzung oder der Unmöglichkeit der Nutzung unserer
+                    Website ergeben, auch wenn wir auf die Möglichkeit solcher
+                    Schäden hingewiesen wurden.
                   </p>
 
                   <br />
-                  <h6> Indemnisation</h6>
+                  <h6>Schadenersatz</h6>
                   <p>
-                    Vous acceptez de nous indemniser et de nous dégager de toute
-                    responsabilité contre toute réclamation, perte, dommage,
-                    responsabilité, coût ou dépense (y compris les frais
-                    juridiques raisonnables) découlant de votre utilisation de
-                    notre site ou de votre violation des termes de cette
-                    politique d&apos;utilisation.
+                    Sie erklären sich bereit, uns von allen Ansprüchen,
+                    Verlusten, Schäden, Haftungen, Kosten oder Ausgaben
+                    (einschließlich angemessener Anwaltsgebühren) freizustellen,
+                    die aus Ihrer Nutzung unserer Website oder Ihrer Verletzung
+                    der Bedingungen dieser Nutzungsrichtlinie resultieren.
                   </p>
 
                   <br />
-                  <h6>Résiliation</h6>
+                  <h6>Beendigung</h6>
                   <p>
-                    Nous nous réservons le droit de suspendre ou de résilier
-                    votre accès à notre site à tout moment et sans préavis si
-                    nous estimons que vous avez violé cette politique
-                    d&apos;utilisation.
+                    Wir behalten uns das Recht vor, Ihren Zugang zu unserer
+                    Website jederzeit und ohne Vorankündigung zu sperren oder zu
+                    kündigen, wenn wir der Meinung sind, dass Sie diese
+                    Nutzungsbedingungen verletzt haben.
                   </p>
 
-                  <span>Dernière mise à jour : 05/01/2024</span>
+                  <span>Letzte Aktualisierung: 05.01.2024</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* <!-- END SECTION FAQ -->  */}
 
         <NewLetters />
       </div>

@@ -18,7 +18,6 @@ export default function Products() {
 
   return (
     <>
-      {/* Feature product */}
       {/* <!-- START SECTION SHOP --> */}
       <div className="section small_pt pb_20">
         <div className="container">
@@ -26,7 +25,9 @@ export default function Products() {
             <div className="col-md-12">
               <div className="heading_tab_header">
                 <div className="#">
-                  <h2>Équipez vos vélos avec les meilleurs accessoires</h2>
+                  <h2>
+                    Statten Sie Ihre Fahrräder mit den besten Zubehörteilen aus
+                  </h2>
                 </div>
               </div>
             </div>
@@ -45,6 +46,7 @@ export default function Products() {
                     1199: { slidesPerView: 3 },
                   }}
                 >
+                  {/* Durchlaufe die ersten zehn Produkte */}
                   {firstTenPieces.map((piece) => (
                     <SwiperSlide key={piece.id}>
                       <div className="product">
@@ -62,8 +64,8 @@ export default function Products() {
                                     dispatch(addToCart(piece))
                                   }}
                                 >
-                                  <i className="icon-basket-loaded"></i> Add To
-                                  Cart
+                                  <i className="icon-basket-loaded"></i> In den
+                                  Warenkorb
                                 </a>
                               </li>
                             </ul>
@@ -97,7 +99,7 @@ export default function Products() {
                                     piece.old_price) *
                                     100
                                 )}
-                                % Off
+                                % Rabatt
                               </span>
                             </div>
                           </div>
@@ -115,7 +117,7 @@ export default function Products() {
                     </SwiperSlide>
                   ))}
                 </Swiper>
-                <div style={{ margin: '20px auto' }}></div>
+                <div style={{ margin: '40px auto' }}></div>
                 <Swiper
                   modules={[Navigation, Pagination]}
                   spaceBetween={20}
@@ -127,6 +129,7 @@ export default function Products() {
                     1199: { slidesPerView: 3 },
                   }}
                 >
+                  {/* Durchlaufe die restlichen Produkte */}
                   {remainingPieces.map((piece) => (
                     <SwiperSlide key={piece.id}>
                       <div className="product">
@@ -144,8 +147,8 @@ export default function Products() {
                                     dispatch(addToCart(piece))
                                   }}
                                 >
-                                  <i className="icon-basket-loaded"></i> Add To
-                                  Cart
+                                  <i className="icon-basket-loaded"></i> In den
+                                  Warenkorb
                                 </a>
                               </li>
                             </ul>
@@ -179,7 +182,7 @@ export default function Products() {
                                     piece.old_price) *
                                     100
                                 )}
-                                % Off
+                                % Rabatt
                               </span>
                             </div>
                           </div>
@@ -202,6 +205,7 @@ export default function Products() {
           </div>
         </div>
       </div>
+
       {/* <!-- END SECTION SHOP --> */}
     </>
   )
