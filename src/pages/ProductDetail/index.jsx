@@ -13,6 +13,8 @@ import { addToCart } from '@/store/slices/cartSlice'
 import './style.css'
 import { toast } from 'react-toastify'
 
+import { Helmet } from 'react-helmet-async'
+
 export default function ProductDetail({ initialQuantity = 1 }) {
   const dispatch = useDispatch()
   const [activeTab, setActiveTab] = useState('description')
@@ -115,6 +117,21 @@ export default function ProductDetail({ initialQuantity = 1 }) {
   return (
     <>
       <Loader />
+
+      <Helmet>
+        <title>{product.libelle} | RijdenX</title>
+        <meta
+          name="description"
+          content={`Entdecken Sie das ${product.libelle}, ein leistungsstarkes und langlebiges Fahrrad. Ideal für Ihre urbanen Fahrten oder Outdoor-Abenteuer. Kaufen Sie es jetzt auf RijdenX.`}
+        />
+        <link
+          rel="canonical"
+          href={`https://rijdenx.com/product/${product.id}/${product.libelle
+            .replace(/\s+/g, '-')
+            .toLowerCase()}`}
+        />
+      </Helmet>
+
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">
@@ -152,7 +169,7 @@ export default function ProductDetail({ initialQuantity = 1 }) {
                     <div className="product_img_box">
                       <img
                         id="product_img"
-                        src={selectedImage}
+                        src={product.picture}
                         data-zoom-image={product.picture}
                         alt="product_img1"
                       />

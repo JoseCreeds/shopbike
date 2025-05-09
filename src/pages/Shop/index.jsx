@@ -10,6 +10,7 @@ import 'react-medium-image-zoom/dist/styles.css'
 import BannerLeftImg from '@/assets/images/sidebar_banner_img.webp'
 import BannerLeftImg2 from '@/assets/images/sidebar_banner_img2.webp'
 import Pieces from '@/components/Pieces'
+import { Helmet } from 'react-helmet-async'
 
 export default function Shop() {
   const dispatch = useDispatch()
@@ -83,6 +84,16 @@ export default function Shop() {
   return (
     <>
       <Loader />
+
+      <Helmet>
+        <title>Shop | RijdenX</title>
+        <meta
+          name="description"
+          content="Entdecken Sie RijdenX, Ihren Online-Shop, der auf den Verkauf von Fahrrädern, Elektrorollern und Zubehör spezialisiert ist. Nachhaltige und leistungsstarke Mobilitätslösungen zu wettbewerbsfähigen Preisen."
+        />
+        <link rel="canonical" href="https://rijdenx.com/shop" />
+      </Helmet>
+
       {/* <!-- START SECTION BREADCRUMB --> */}
       <div className="breadcrumb_section bg_gray page-title-mini">
         <div className="container">

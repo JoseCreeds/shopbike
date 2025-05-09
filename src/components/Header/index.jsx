@@ -2,13 +2,16 @@
 import { useState } from 'react'
 import LogoDark from '@/assets/images/rijden.png'
 import LogoLight from '@/assets/images/logo_light.png'
-import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+
 import { removeFromCart } from '@/store/slices/cartSlice'
 import { logout } from '@/store/slices/authSlice'
 import { useEffect } from 'react'
 export default function Header() {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const token = useSelector((state) => state.auth.token)
 
@@ -92,14 +95,7 @@ export default function Header() {
               <ul className="navbar-nav attr-nav align-items-center">
                 <li>
                   {!token ? (
-                    <a
-                      href="#!"
-                      className="nav-link"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/login`
-                      }}
-                    >
+                    <a href="/login" className="nav-link">
                       <i className="linearicons-user"></i>
                     </a>
                   ) : (
@@ -146,7 +142,19 @@ export default function Header() {
                               >
                                 <i className="ion-close"></i>
                               </a>
-                              <a href="#!">
+                              <a
+                                href="#!"
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  const formattedLibelle = item.libelle.replace(
+                                    /\s+/g,
+                                    '-'
+                                  )
+                                  navigate(
+                                    `/product/${item.id}/${formattedLibelle}`
+                                  )
+                                }}
+                              >
                                 <img src={item.picture} alt={item.libelle} />
                                 {item.libelle}
                               </a>
@@ -171,22 +179,14 @@ export default function Header() {
                           </p>
                           <p className="cart_buttons">
                             <a
-                              href="#!"
+                              href="/cart"
                               className="btn btn-fill-line view-cart"
-                              onClick={(e) => {
-                                e.preventDefault()
-                                window.location.href = `/cart`
-                              }}
                             >
                               Warenkorb
                             </a>
                             <a
-                              href="#!"
+                              href="/checkout"
                               className="btn btn-fill-out checkout"
-                              onClick={(e) => {
-                                e.preventDefault()
-                                window.location.href = `/checkout`
-                              }}
                             >
                               Bezahlen
                             </a>
@@ -274,29 +274,29 @@ export default function Header() {
                     id="navbarSidetoggle"
                   >
                     {/* Schließen-Button */}
-                    {isMenuOpen && (
-                      <button
-                        className="btn-close d-block d-lg-none"
-                        type="button"
-                        onClick={() => {
-                          const menu =
-                            document.getElementById('navbarSidetoggle')
-                          menu.classList.remove('show') // Menü schließen
-                          toggleMenu()
-                        }}
-                        aria-label="Schließen"
-                        style={{
-                          width: '30px',
-                          height: '30px',
-                          fontSize: '1.5rem',
-                          padding: '5px',
-                          color: '#ff0000',
-                          // backgroundColor: 'transparent',
-                        }}
-                      ></button>
-                    )}
 
                     <ul className="navbar-nav">
+                      {isMenuOpen && (
+                        <button
+                          className="btn-close d-block d-lg-none"
+                          type="button"
+                          onClick={() => {
+                            const menu =
+                              document.getElementById('navbarSidetoggle')
+                            menu.classList.remove('show') // Menü schließen
+                            toggleMenu()
+                          }}
+                          aria-label="Schließen"
+                          style={{
+                            width: '30px',
+                            height: '30px',
+                            fontSize: '1.5rem',
+                            padding: '5px',
+                            color: '#ff0000',
+                            // backgroundColor: 'transparent',
+                          }}
+                        ></button>
+                      )}
                       {token && (
                         <li className="dropdown">
                           <a
@@ -333,15 +333,15 @@ export default function Header() {
                       <li className="dropdown ">
                         <a
                           className="nav-link"
-                          href="#!"
-                          onClick={(e) => {
+                          href="/shop"
+                          onClick={() => {
                             const menu =
                               document.getElementById('navbarSidetoggle')
                             menu.classList.remove('show') // Menü schließen
                             toggleMenu()
 
-                            e.preventDefault()
-                            window.location.href = `/shop`
+                            // e.preventDefault()
+                            // window.location.href = `/shop`
                           }}
                           // data-bs-toggle="dropdown"
                         >
@@ -349,9 +349,9 @@ export default function Header() {
                         </a>
                       </li>
                       <li>
-                        <Link
-                          className="nav-link nav_item"
-                          to="/contact-us"
+                        <a
+                          className="nav-link"
+                          href="/contact-us"
                           onClick={() => {
                             const menu =
                               document.getElementById('navbarSidetoggle')
@@ -360,7 +360,7 @@ export default function Header() {
                           }}
                         >
                           Kontakt
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </div>

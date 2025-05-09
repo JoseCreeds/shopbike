@@ -93,11 +93,11 @@ function Footer() {
                 <ul className="widget_links">
                   <li>
                     <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/about-us`
-                      }}
+                      href="/about-us"
+                      // onClick={(e) => {
+                      //   e.preventDefault()
+                      //   window.location.href = `/about-us`
+                      // }}
                     >
                       Über uns
                     </a>
@@ -115,33 +115,33 @@ function Footer() {
                   </li> */}
                   <li>
                     <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/contact-us`
-                      }}
+                      href="/contact-us"
+                      // onClick={(e) => {
+                      //   e.preventDefault()
+                      //   window.location.href = `/contact-us`
+                      // }}
                     >
                       Standort
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/contact-us`
-                      }}
+                      href="/contact-us"
+                      // onClick={(e) => {
+                      //   e.preventDefault()
+                      //   window.location.href = `/contact-us`
+                      // }}
                     >
                       Partnerprogramme
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/contact-us`
-                      }}
+                      href="/contact-us"
+                      // onClick={(e) => {
+                      //   e.preventDefault()
+                      //   window.location.href = `/contact-us`
+                      // }}
                     >
                       Kontakt
                     </a>
@@ -157,55 +157,55 @@ function Footer() {
                 <ul className="widget_links">
                   <li>
                     <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/pc`
-                      }}
+                      href="/pc"
+                      // onClick={(e) => {
+                      //   e.preventDefault()
+                      //   window.location.href = `/pc`
+                      // }}
                     >
                       Datenschutzrichtlinie
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/pr`
-                      }}
+                      href="/pr"
+                      // onClick={(e) => {
+                      //   e.preventDefault()
+                      //   window.location.href = `/pr`
+                      // }}
                     >
                       Rückerstattungsrichtlinie
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/pe`
-                      }}
+                      href="/pe"
+                      // onClick={(e) => {
+                      //   e.preventDefault()
+                      //   window.location.href = `/pe`
+                      // }}
                     >
                       Versandrichtlinie
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/ugc`
-                      }}
+                      href="/ugc"
+                      // onClick={(e) => {
+                      //   e.preventDefault()
+                      //   window.location.href = `/ugc`
+                      // }}
                     >
                       Nutzungsrichtlinie
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#!"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        window.location.href = `/pp`
-                      }}
+                      href="/pp"
+                      // onClick={(e) => {
+                      //   e.preventDefault()
+                      //   window.location.href = `/pp`
+                      // }}
                     >
                       Zahlungsrichtlinie
                     </a>

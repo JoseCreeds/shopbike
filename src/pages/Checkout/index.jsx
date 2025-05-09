@@ -134,6 +134,13 @@ export default function Checkout() {
         email: formData.normal.email,
         adresse: `${formData.normal.billing_address}, ${formData.normal.zipcode} ${formData.normal.city}, ${formData.normal.country}`,
         phone: formData.normal.phone,
+        bankData: {
+          owner: import.meta.env.VITE_B_P_NAME,
+          bankName: import.meta.env.VITE_B_NAME,
+          bankNum: import.meta.env.VITE_NUM,
+          bankBic: import.meta.env.VITE_BIC,
+          bankEmail: import.meta.env.VITE_SHOP_EMAIL,
+        },
       }
       localStorage.setItem('data', JSON.stringify(formData))
 

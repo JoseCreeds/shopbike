@@ -1,7 +1,7 @@
-import piecesList from '@/data/pieces.js'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '@/store/slices/cartSlice'
+import piecesList from '@/data/pieces.js'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'

@@ -8,10 +8,21 @@ import Pieces from '@/components/Pieces'
 import BannerImage33 from '@/assets/images/BannerImage3.avif'
 import Loader from '@/utils/loader'
 
+import { Helmet } from 'react-helmet-async'
+
 function Home() {
   return (
     <>
       <Loader />
+
+      <Helmet>
+        <title>Startseite | RijdenX</title>
+        <meta
+          name="description"
+          content="Entdecken Sie RijdenX, Ihren Online-Shop, der auf den Verkauf von Fahrrädern, Elektrorollern und Zubehör spezialisiert ist. Nachhaltige und leistungsstarke Mobilitätslösungen zu wettbewerbsfähigen Preisen."
+        />
+        <link rel="canonical" href="https://rijdenx.com" />
+      </Helmet>
 
       <Banner />
 

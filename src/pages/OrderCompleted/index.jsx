@@ -61,6 +61,12 @@ export default function OrderCompleted() {
                   <h3 style={{ color: '#FF324D' }}>
                     Danke. Ihre Bestellung wurde erhalten.
                   </h3>
+                  <p style={{ marginTop: '15px', textAlign: 'justify' }}>
+                    Eine Bestätigung mit den Zahlungsdetails wurde an Ihre
+                    E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihr Postfach.
+                    Falls Sie die E-Mail nicht finden, schauen Sie bitte auch in
+                    Ihrem Spam-Ordner nach.
+                  </p>
                   <div className="container">
                     <div className="row justify-content-center text-center align-items-center">
                       <div className="col-12 col-md position-relative border-separator">
@@ -88,15 +94,16 @@ export default function OrderCompleted() {
 
                   <p style={{ marginTop: '15px', textAlign: 'justify' }}>
                     Bitte geben Sie den Kontoinhaber (
-                    {import.meta.env.VITE_B_P_NAME}) sowie den Verwendungszweck
-                    oder die Zahlungsreferenz an (dies ist Ihre fünfstellige
-                    Bestellnummer, z. B. 15423), damit unsere Bank Ihre
+                    {import.meta.env.VITE_B_P_NAME}) sowie den Zahlungsgrund
+                    oder die Zahlungsreferenz (das ist Ihre fünfstellige
+                    Bestellnummer, z. B. BA123) an, damit unsere Bank Ihre
                     Bestellung und Zahlung korrekt zuordnen kann. Andernfalls
                     wird eine Rückerstattung eingeleitet, da die Bank Ihre
-                    Bestellung nicht mit der Zahlung verknüpfen kann, wenn der
-                    genaue Kontoinhaber und der Verwendungszweck in unseren
-                    Bankdaten nicht angegeben werden. Nach erfolgter Zahlung
-                    senden Sie bitte den Zahlungsbeleg per E-Mail.
+                    Bestellung nicht mit der Zahlung in Verbindung bringen kann,
+                    wenn der genaue Kontoinhaber und der Zahlungsgrund nicht in
+                    unserer Bankverbindung angegeben sind. Sobald die Zahlung
+                    erfolgt ist, senden Sie bitte den Zahlungsbeleg per E-Mail:{' '}
+                    {import.meta.env.VITE_SHOP_EMAIL}
                   </p>
 
                   <div style={{ marginTop: '40px', textAlign: 'justify' }}>
